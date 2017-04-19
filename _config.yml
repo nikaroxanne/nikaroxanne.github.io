@@ -31,3 +31,5 @@ exclude:
   - Gemfile
   - Gemfile.lock
 permalink: /blog/:year/:month/:day/:title
+# Google services
+google_analytics: UA-97632940-1
