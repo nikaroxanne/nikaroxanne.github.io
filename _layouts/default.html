@@ -1,40 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
-	<head>
-  	<meta charset="utf-8">
-  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-  	<title>{{ page.title }}</title>
-	<!-- link to main stylesheet -->
-	<link rel="stylesheet" type="text/css" href="/css/main.css">
-  	<meta name="description" content="Nothing">
-  	<link rel="canonical" href="http://localhost:4000/">
-  	<link rel="alternate" type="application/rss+xml" title="o-nika" href="/feed.xml">
-  
-  
-	</head>
+	{% include head.html %}
 	<body>
-		<nav>
-	    	<ul>
-	        	<li><a href="/">Home</a></li>
-		        <li><a href="/bio">Biography</a></li>
-	        	<li><a href="/artistStatement">Artist Statement</a></li>
-	        	<li><a href="/blog">Blog</a></li>
-	    	</ul>
-		</nav>
+		{% include nav.html %}
 		<div class="container">
 			
 		{{ content }}
 			
 		</div><!-- /.container -->
-		<footer>
-	    	<ul>
-	        	<li><a href="nikakw@gmail.com">email</a></li>
-	        	<li><a href="https://github.com/nikaroxanne">github.com/{{ github_username }}</a></li>
-		</ul>
-		</footer>
+		{% include footer.html %}
 		{% if jekyll.environment == 'production' %}
 		{% include analytics.html %}
 		{% endif %}

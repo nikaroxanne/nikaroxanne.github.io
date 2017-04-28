@@ -1,0 +1,45 @@
+---
+layout: default
+title: Drawings
+permalink: /drawings/
+
+drawings:
+ - title: "mapping1" 
+   image: map1.jpg
+ - title: "mapping2"
+   image: map2.jpg
+   alt: map2
+ - title: "mapping3"
+   image: map3.jpg
+   alt: map3
+ - title: "mapping4"
+   image: map4.jpg
+   alt: map4
+ - title: "recognition"
+   image: recognition.jpg
+   alt: recognition
+ - title: "median"
+   image: median.jpg
+   alt: median
+ - title: "artificial"
+   image: artificial.JPG
+   alt: artificial
+---
+<!--
+<ul class = "drawings">
+	{% for drawing in site.drawings %}
+		<li>
+			<a href="{{site.baseurl}}{{site.imageloc}}/{{drawing.name}}" class="image">
+				<img src="{{site.baseurl}}{{site.imageloc}}/{{drawing.name}}" alt = "{{drawing.alt}}">
+				<h2> {{drawing.title}}>
+			</a>
+		</li>
+	{% endfor %}
+</ul>
+//-->
+
+{% for image in site.static_files %}
+	{%if image.path contains 'images/drawings' %}
+		<img src="{{site.baseurl}}{{image.path}}" alt ="image" />
+	{% endif %}
+{% endfor %}

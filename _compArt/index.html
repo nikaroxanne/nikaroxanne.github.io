@@ -1,0 +1,24 @@
+---
+layout: default
+title: Computer-Based Art
+permalink: /compArt/
+
+compArt:
+  - title: "triangulation"
+    image: lowpoly.jpg
+    alt: "lowpoly"
+
+---
+
+<div id = "compArt">
+	{% for item in site.compArt %}
+		<li>
+			<a href="{{site.baseurl}}{drawing.url}}">
+				<img src="{{compArt.image}}">
+				<h2> {{compArt.title}}>
+			</a>
+		</li>
+	{% endfor %}
+</div>
+	
+
