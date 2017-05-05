@@ -5,20 +5,21 @@ permalink: /paintings/
 
 paintings:
   - title: "Arith"
-    image: Arith.jpg
+    filename: Arith.jpg
     alt: "arith"
   - title: "it follows"
-    image: itfollows.jpg
+    filename: itfollows.jpg
     alt: "it follows"
 ---
 <ul class = "paintings">
 	{% for painting in site.paintings %}
-		<li>
-			<a href="{{site.baseurl}}{{site.imageloc}}/{{painting.name}}" class="image">
-				<img src="{{site.baseurl}}{{site.imageloc}}/{{painting.name}}" alt = "{{painting.alt}}">
-				<h2> {{painting.title}}>
-			</a>
-		</li>
+	<h2> {{painting.title}} </h2>
+		{% for image in site.static_files %}
+			{% if image.path contains 'images/paintings' %}
+					<a href="{{site.url}}/{{painting.filename}}" class="image">
+						<img src="{{site.url}}/{{image.path}}" alt = "{{painting.alt}}">
+					</a>
+			{% endif %}
+		{% endfor %}
 	{% endfor %}
 </ul>
-

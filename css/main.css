@@ -8,26 +8,32 @@ nav ul, footer ul {
     list-style: none;
     font-weight: bold;
 }
-nav ul li, footer ul li {
+
+footer ul li {
     display: inline;
     margin-right: 20px;
 }
+
 a {
     text-decoration: none;
     color: #999;
 }
+
 a:hover {
     text-decoration: underline;
 }
+
 h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
+
 p {
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
 }
+
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
@@ -42,20 +48,49 @@ ul.posts li {
     list-style: none;
 }
 
-li a, .dropbtn {
+.nav-container {
+	overflow: hidden;
+	background-color: #E6E6FA;
+	font-family: Arial;
+}
+
+.nav-container ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #D3D3D3;
+}
+
+.nav-container ul li {
+	float: left;
+}
+
+.nav-container ul li a {
 	display: inline-block;
-	color: black;
+	font-size: 16px;
+	color:  black;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
 }
 
-li a:hover, .dropdown:hover .dropbtn {
-	background-color: purple;
+.nav-container ul li.dropdown {
+	display: inline-block;
 }
 
-li.dropdown {
-	display: inline-block;
+.dropdown, .dropbtn {
+	cursor: pointer;
+	fontsize: 16px;
+	border: none;
+	outline: none;
+	color: black;
+	padding: 14px 16px;
+	background-color: inherit;
+}
+
+.nav-container li a:hover, .dropdown:hover .dropbtn {
+	background-color: light purple;
 }
 
 .dropdown-content {
@@ -78,6 +113,10 @@ li.dropdown {
 .dropdown-content a:hover {background-color: #f1f1f1}
 
 .dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.show {
 	display: block;
 }
 

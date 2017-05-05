@@ -7,11 +7,11 @@
 - title: "Artist Statement"
   href: "/artistStatement"
 
-- title: "/blog"
+- title: "Writing"
   href: "/blog"
 
-- title: "/portfolio"
-# href: "/portfolio"
+- title: "Portfolio"
+  href: "/portfolio"
   subcategories:
     - subtitle: "Paintings"
       subhref: "/paintings"

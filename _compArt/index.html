@@ -9,16 +9,15 @@ compArt:
     alt: "lowpoly"
 
 ---
-
-<div id = "compArt">
+<ul class = "compArt">
 	{% for item in site.compArt %}
-		<li>
-			<a href="{{site.baseurl}}{drawing.url}}">
-				<img src="{{compArt.image}}">
-				<h2> {{compArt.title}}>
-			</a>
-		</li>
+		<h2> {{item.title}} </h2>
+		{% for image in site.static_files %}
+			{% if image.path contains 'images/compArt' %}
+				<a href="{{site.url}}/{{image.path}}" class="image">
+					<img src="{{site.url}}/{{image.path}}" alt = "{{compArt.alt}}">
+				</a>
+			{% endif %}
+		{% endfor %}
 	{% endfor %}
-</div>
-	
-
+</ul>
