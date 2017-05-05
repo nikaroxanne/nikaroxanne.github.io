@@ -1,21 +1,21 @@
 - title: "Home"
-  href: "/"
+  href: /
 
 - title: "Biography"
-  href: "/bio"
+  href: /bio/
 
 - title: "Artist Statement"
   href: "/artistStatement"
 
 - title: "Writing"
-  href: "/blog"
+  href: /blog/
 
 - title: "Portfolio"
-  href: "/portfolio"
+  href: /portfolio
   subcategories:
     - subtitle: "Paintings"
-      subhref: "/paintings"
+      subhref: /paintings/
     - subtitle: "Drawings"
-      subhref: "/drawings"
+      subhref: /drawings/
     - subtitle: "Computer-based Art"
-      subhref: "/compArt"
+      subhref: /compArt/
