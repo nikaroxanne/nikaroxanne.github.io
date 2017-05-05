@@ -75,7 +75,7 @@ ul.posts li {
 	text-decoration: none;
 }
 
-.nav-container ul li.dropdown {
+li.dropdown {
 	display: inline-block;
 }
 
@@ -89,7 +89,7 @@ ul.posts li {
 	background-color: inherit;
 }
 
-.nav-container li a:hover, .dropdown:hover .dropbtn {
+li a:hover, .dropdown:hover .dropbtn {
 	background-color: light purple;
 }
 
@@ -114,6 +114,11 @@ ul.posts li {
 
 .dropdown:hover .dropdown-content {
 	display: block;
+}
+
+.active {
+	background-color: #DCDCDC;
+	color: black;
 }
 
 .show {

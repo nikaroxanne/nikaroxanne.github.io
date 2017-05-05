@@ -1,25 +1,26 @@
+
 <nav>
 	<div class = "nav-container">
 		<ul>
 			{% for item in site.data.nav %}	
-				{% if item.subcategories != null %}
+				{% if item.subfolderitems != null %}
 					<div class = "dropdown">
 					<button onclick= "clickfunc()" class = "dropbtn"> 
-						<li class="{% if item.href == page.url %}active{% endif %}">
-							<a href= "{{site.url}}{{ item.href }}"> {{ item.title }}</a> 
+						<li class="{% if item.url == page.url %}active{% endif %}">
+							<a href= "{{ item.url }}"> {{ item.title }}</a> 
 						</li> 
 					</button>
 						<div class = "dropdown-content" id = "myDropdown">
-						{% for subcategory in item.subcategories %}
+						{% for entry in item.subfolderitems %}
 							<li>
-								<a href= "{{site.url}}{{item.href}}{{subcategory.subhref}}"> {{ subcategory.subtitle}}</a>
+								<a href= "{{item.url}}{{entry.url}}"> {{ entry.title}}</a>
 							</li>
 						{% endfor %}
 						</div>
 					</div>
 				{% else %}
-					<li class = "{% if item.href == page.url %}active{% endif %}>
-						<a href = "{{site.url}}{{ item.href }}">{{item.title}}</a>
+					<li class = "{% if item.url == page.url %}active{% endif %}>
+						<a href = "{{ item.url }}">{{item.title}}</a>
 					</li>
 				{% endif %}
 			{% endfor %}
