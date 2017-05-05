@@ -5,21 +5,21 @@
 				{% if item.subcategories != null %}
 					<div class = "dropdown">
 					<button onclick= "clickfunc()" class = "dropbtn"> 
-						<li><a href= "{{ site.url }} {{ item.url }}"> {{ item.title }} 
-							{% if item.link == page.url %}class="active"{% endif %}
+						<li><a href= "/{{ item.href }}"> {{ item.title }} 
+							{% if item.href == page.url %}class="active"{% endif %}
 						</a></li> 
 					</button>
 						<div class = "dropdown-content" id = "myDropdown">
 						{% for subcategory in item.subcategories %}
-							<li><a href= "{{site.url}}{{subcategory.subhref}}"> {{ subcategory.subtitle}}
+							<li><a href= "/{{subcategory.subhref}}"> {{ subcategory.subtitle}}
 							</a></li>
 						{% endfor %}
 						</div>
 					</div>
 				{% else %}
 					<li>
-						<a href = "{{site.url}}{{ item.href }}">{{item.title}} 
-							{% if item.link == page.url %}class="active"{% endif %}
+						<a href = "/{{ item.href }}">{{item.title}} 
+							{% if item.href == page.url %}class="active"{% endif %}
 						</a>
 					</li>
 				{% endif %}
