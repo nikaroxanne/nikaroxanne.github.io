@@ -1,0 +1,14 @@
+---
+layout: page
+title: Portfolio
+---
+	<h1>{{ page.title }}</h1>
+	<div class = "background">
+		{% for image in site.static_files %}
+			{% if image.path contains 'images/compArt/recognition' %}
+				<a href="{{site.url}}/{{image.path}}" class="image">
+					<img src="{{site.url}}/{{image.path}}" alt = "Triangulation commencement">
+				</a>
+			{% endif %}
+		{% endfor %}
+	</div>

@@ -19,3 +19,6 @@
       url: /drawings
     - subtitle: "Computer-based Art"
       url: /compArt
+
+- title: "Triangulation"
+  url: "/triangulation"
