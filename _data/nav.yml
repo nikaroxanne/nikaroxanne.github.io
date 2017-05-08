@@ -5,20 +5,21 @@
   url: "/bio"
 
 - title: "Artist Statement"
-  url: /artistStatement
+  url: "/artistStatement"
 
 - title: "Writing"
   url: "/blog"
+
+- title: "Triangulation"
+  url: "/triangulation"
 
 - title: "Portfolio"
   url: "/portfolio"
   subfolderitems:
     - subtitle: "Paintings"
-      url: /paintings
+      url: "/paintings"
     - subtitle: "Drawings"
-      url: /drawings
+      url: "/drawings"
     - subtitle: "Computer-based Art"
-      url: /compArt
+      url: "/compArt"
 
-- title: "Triangulation"
-  url: "/triangulation"
