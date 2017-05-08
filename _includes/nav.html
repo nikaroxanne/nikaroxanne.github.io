@@ -12,7 +12,7 @@
 						<div class = "dropdown-content" id = "myDropdown">
 						{% for entry in item.subfolderitems %}
 							<li>
-								<a href= "{{site.url}}{{entry.url}}"> {{ entry.title}}</a>
+								<a href= "{{site.url}}{{item.url}}{{entry.url}}"> {{ entry.title}}</a>
 							</li>
 						{% endfor %}
 						</div>
