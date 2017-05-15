@@ -1,29 +1,21 @@
 <nav>
-	<div class= "nav-container">
-		<ul>
-			{% for item in site.data.nav %}	
-				{% if item.subfolderitems != null %}
-					<div class = "dropdown">
-					<button onclick= "clickFunc()" class = "dropbtn"> 
-						<li>
-							<a href= "{{site.url}}{{ item.url }}"  class="{% if item.url == page.url %}active{% endif %}"> {{ item.title }}</a> 
-						</li> 
+	<div class="nav-container">
+		{% for item in site.data.nav %}	
+			{% if item.subfolderitems != null %}
+				<div class="dropdown">
+					<button onclick= "clickFunc()" class="dropbtn"> 
+						<a href= "{{site.url}}{{ item.url }}"  class="{% if item.url == page.url %}active{% endif %}"> {{ item.title }}</a> 
 					</button>
-						<div class = "dropdown-content" id = "myDropdown">
+					<div id="myDropdown" class="dropdown-content">
 						{% for entry in item.subfolderitems %}
-							<li>
 								<a href= "{{site.url}}{{item.url}}{{entry.url}}"> {{ entry.title}}</a>
-							</li>
 						{% endfor %}
-						</div>
 					</div>
-				{% else %}
-					<li>
-						<a href = "{{site.url}}{{item.url}}" class="{% if item.url == page.url %}active{% endif %}">{{item.title}}</a>
-					</li>
-				{% endif %}
-			{% endfor %}
-		</ul>
+				</div>
+			{% else %}
+					<a href = "{{site.url}}{{item.url}}" class="{% if item.url == page.url %}active{% endif %}">{{item.title}}</a>
+			{% endif %}
+		{% endfor %}
 	</div>
 </nav>
 
@@ -33,7 +25,7 @@
 		}
 
 		window.onclick = function(e){
-			if(!e.target.matches('.dropbtn.')) {
+			if(!e.target.matches('.dropbtn')) {
 				var dropdowns = document.getElementsByClassName("dropdown-content");
 				var i;
 				for (i=0; i < dropdowns.length; i++) {
