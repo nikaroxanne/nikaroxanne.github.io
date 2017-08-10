@@ -10,6 +10,7 @@ body {
 	background-color: #696969;
 }
 
+
 .nav-container a {
 	float: left;
 	font-size: 16px;
@@ -17,62 +18,66 @@ body {
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
+	background-color: black;
+	display: block;
+}
+
+.dropdown {
+	float: left;
+	overflow: hidden;
 }
 
 
-.dropdown a {
-	float:left;
-	font-size: 16px;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-
-.dropdown, .dropbtn {
-	cursor: pointer;
+.dropdown, .dropbtn a {
+	position: relative;
 	font-size: 16px;
 	border: none;
 	outline: none;
 	color: white;
 	padding: 14px 16px;
-	display: inherit;
+	background-color: inherit;
 }
 
-.nav-container a:hover, .dropdown:hover .dropbtn {
-	background-color: #E6E6FA;
+.nav-container a:hover, .dropdown:hover .dropbtn a {
+	background-color: red;
+}
+
+.dropdown {
+	display: inline-block;
 }
 
 .dropdown-content {
 	display: none;
-	position: relative;
-	background-color: #f9f9f9;
+	position: absolute;
+	background-color: black;
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0, 0.2);
 	z-index: 1;
 }
 
 .dropdown-content a {
-	float: none;
-	color: black;
-	padding: 12px 16px;
+	color: white;
+	padding: 7px 8px;
 	text-decoration: none;
 	display: block;
 	text-align: left;
 }
 
 .dropdown-content a:hover {
-	background-color: #f1f1f1;
+	background-color: blue;
 }
 
-.active {
-	background-color: blue;	
-}
-
-.show {
+.dropdown:hover .dropdown-content { 
 	display: block;
 }
 
+.active {
+	background-color: green;	
+}
+
+@media screen and (max-width: 400px) {
+	.nav-container a {float: none;}
+}
 
 footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
