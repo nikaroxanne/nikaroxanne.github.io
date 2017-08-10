@@ -28,14 +28,12 @@ body {
 }
 
 
-.dropdown, .dropbtn a {
-	position: relative;
+.dropbtn a {
 	font-size: 16px;
 	border: none;
 	outline: none;
 	color: white;
 	padding: 14px 16px;
-	background-color: inherit;
 }
 
 .nav-container a:hover, .dropdown:hover .dropbtn a {
@@ -50,13 +48,14 @@ body {
 	display: none;
 	position: absolute;
 	background-color: black;
-	min-width: 160px;
+	min-width: 60px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0, 0.2);
 	z-index: 1;
 }
 
 .dropdown-content a {
 	color: white;
+	font-size: 16px;
 	padding: 7px 8px;
 	text-decoration: none;
 	display: block;
