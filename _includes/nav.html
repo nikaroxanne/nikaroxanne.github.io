@@ -6,7 +6,7 @@
 					<a href= "{{site.url}}{{ item.url }}"  class="{% if item.url == page.url %}active{% endif %}"> {{ item.title }}</a> 
 					<div class="dropdown-content">
 						{% for entry in item.subfolderitems %}
-								<a href= "{{site.url}}{{item.url}}{{entry.url}}"> {{ entry.title}}</a>
+								<a href= "{{site.url}}{{item.url}}{{entry.url}}"> {{ entry. subtitle}}</a>
 						{% endfor %}
 					</div>
 				</li>
