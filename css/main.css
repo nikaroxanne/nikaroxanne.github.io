@@ -6,41 +6,36 @@ body {
 .nav-container {
 	overflow: hidden;
     	font-family:'Helvetica', 'Arial', 'Sans-Serif';
-	font-weight: bold;
 	background-color: #696969;
 }
 
 
 .nav-container a {
 	float: left;
-	font-size: 16px;
+	font-size: 14px;
 	color: white;
 	text-align: center;
-	padding: 14px 16px;
+	padding: 12px 14px;
 	text-decoration: none;
 	background-color: black;
 	display: block;
 }
 
-.dropdown {
-	float: left;
-	overflow: hidden;
-}
-
 
 .dropbtn a {
-	font-size: 16px;
+	font-size: 14px;
 	border: none;
 	outline: none;
 	color: white;
-	padding: 14px 16px;
+	padding: 12px 14px;
 }
 
-.nav-container a:hover, .dropdown:hover .dropbtn a {
+.nav-container a:hover{
 	background-color: red;
 }
 
 .dropdown {
+	position: relative;
 	display: inline-block;
 }
 
@@ -48,7 +43,7 @@ body {
 	display: none;
 	position: absolute;
 	background-color: black;
-	min-width: 60px;
+	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0, 0.2);
 	z-index: 1;
 }
@@ -56,17 +51,17 @@ body {
 .dropdown-content a {
 	color: white;
 	font-size: 16px;
-	padding: 7px 8px;
+	text-align: left;
+	padding: 14px 16px;
 	text-decoration: none;
 	display: block;
-	text-align: left;
 }
 
 .dropdown-content a:hover {
 	background-color: blue;
 }
 
-.dropdown:hover .dropdown-content { 
+.dropdown:hover .dropdown-content{ 
 	display: block;
 }
 
@@ -74,8 +69,8 @@ body {
 	background-color: green;	
 }
 
-@media screen and (max-width: 400px) {
-	.nav-container a {float: none;}
+@media screen and (max-width: 600px) {
+	.nav-container a .dropdown-content a {float: none;}
 }
 
 footer ul {
