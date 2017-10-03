@@ -6,6 +6,18 @@ body, html {
 	height: 100%;
 }
 
+.gallery {
+	width: 100%;
+	height: auto;
+	padding: 20px;
+	display: block;
+}
+
+.col img {
+	margin-top: 12px;
+	width: 100%;
+}
+
 .row::after {
 	content: "";
 	clear: both;
@@ -15,7 +27,10 @@ body, html {
 /*for mobile*/
 
 [class*="col-"] {
-	width: 100%;
+	float: left;
+	width: 25%;
+	display: block;
+	padding: 10px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -185,4 +200,5 @@ ul.posts li {
 img {
 	max-width: 100%;
 	height: auto;
+	display: inline-block;
 }
