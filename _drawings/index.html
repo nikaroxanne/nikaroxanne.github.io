@@ -27,7 +27,7 @@ drawings:
 ---
 <div class = "gallery">
 	<div class = "row">
-		<div class = "col-m-4 col-4">
+		<div class = "col-sm-12 col-m-4 col-4">
 			{% for drawing in site.drawings %}
 				{% for image in site.static_files %}
 					{% if image.path contains 'images/drawings/maps' %}
@@ -38,7 +38,7 @@ drawings:
 				{% endfor %}
 			{% endfor %}
 		</div>
-		<div class = "col-m-4 col-4">
+		<div class = "col-sm-12 col-m-4 col-4">
 			{% for drawing in site.drawings %}
 				{% for image in site.static_files %}
 					{% if image.path contains 'images/drawings/algo' %}
@@ -49,7 +49,7 @@ drawings:
 				{% endfor %}
 			{% endfor %}
 		</div>
-		<div class = "col-m-4 col-4">
+		<div class = "col-sm-12 col-m-4 col-4">
 			{% for drawing in site.drawings %}
 				{% for image in site.static_files %}
 					{% if image.path contains 'images/drawings/history' %}
