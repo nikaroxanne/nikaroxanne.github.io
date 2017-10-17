@@ -1,25 +1,25 @@
-- title: "Home"
+- title: "HOME"
   url: "/"
 
-- title: "Biography"
+- title: "BIOGRAPHY"
   url: "/bio"
 
-- title: "Artist Statement"
+- title: "ARTIST STATEMENT"
   url: "/artistStatement"
 
-- title: "Writing"
+- title: "WRITING"
   url: "/blog"
 
-- title: "Triangulation"
+- title: "TRIANGULATION"
   url: "/triangulation"
 
-- title: "Portfolio"
+- title: "PORTFOLIO"
   url: "/portfolio"
   subfolderitems:
-    - subtitle: "Paintings"
+    - subtitle: "PAINTINGS"
       url: "/paintings"
-    - subtitle: "Drawings"
+    - subtitle: "DRAWINGS"
       url: "/drawings"
-    - subtitle: "Computer-based Art"
+    - subtitle: "COMPUTER ART"
       url: "/compArt"
 
