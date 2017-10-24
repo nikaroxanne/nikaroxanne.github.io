@@ -152,8 +152,8 @@ body, html {
 
 .hero-image {
 	padding: 10px;
-	background-image: url('/assets/images/general/firebackground.jpg'); 
-	height: 80vh;
+	background-image: url('/assets/images/compArt/lowpoly.jpg'); 
+	height: 100vh;
 	width: auto;
 	position: relative;
 	background-position: center center;
