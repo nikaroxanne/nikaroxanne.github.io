@@ -2,7 +2,8 @@
 layout: page
 title: Triangulation
 ---
-	
+	<img id = "nika" src="/assets/images/triangulation/nikaInitial.jpg" alt="nika">
+	<canvas id="myTriangleCanvas"></canvas>	
 	<div class = "maintext">
 		<h1> Applications of Delaunay Triangulation Algorithms and Edge Flipping in Facial Recognition</h1>
 		<h2> (subtitle: Make Yourself Cubist) </h2> 
@@ -278,3 +279,11 @@ GG ( NNG ( DT
 </ul>
 
 </div>
+
+<script>
+var canvas = document.getElementById("myTriangleCanvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = black;
+var img = document.getElementbyId("nika");
+ctx.drawImage(img, 10, 10);
+</script>

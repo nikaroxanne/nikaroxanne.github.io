@@ -6,6 +6,15 @@ body, html {
 	height: 100%;
 }
 
+canvas {
+	width: 600px;
+	height: 600px;
+}
+.nika {
+	width: 600px;
+	height: 600px;
+}
+
 .gallery {
 	width: 100%;
 	height: auto;
