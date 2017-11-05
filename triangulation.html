@@ -2,7 +2,7 @@
 layout: page
 title: Triangulation
 ---
-	<img id = "nika" src="/assets/images/triangulation/nikaInitial.jpg" alt="nika">
+<div id = "graphic">
 	<canvas id="myTriangleCanvas"></canvas>	
 	<div class = "maintext">
 		<h1> Applications of Delaunay Triangulation Algorithms and Edge Flipping in Facial Recognition</h1>
@@ -246,7 +246,7 @@ GG ( NNG ( DT
 
 	<li><a href= "https://mgold.github.io/Triangulating-Star-Shaped-Polygon/"> Michael Goldstein's Triangulation Project from a COMP163 class </a> </li>
 
-	<li><a href="http://www.learnopencv.com/image-recognition-and-object-detection-part1/"></a></li>
+	<li><a href="http://www.learnopencv.com/image-recognition-and-object-detection-part1/">Image Recognition and Object Detection: OpenCV</a></li>
 
 	<li><a href="http://aircconline.com/vlsics/V6N5/6515vlsi02.pdf/"> Paper </a></li>
 
@@ -256,15 +256,15 @@ GG ( NNG ( DT
 	
 	<li><a href= "https://forum.processing.org/two/discussion/3705/vertices-of-chain-shape-are-too-close-together-help"></a></li>
 	
-	<li><a href= "https://www.geometrictools.com/Documentation/Skeletons.pdf"></a></li>
+	<li><a href= "https://www.geometrictools.com/Documentation/Skeletons.pdf">Skeletonization</a></li>
 
-	<li><a href= "https://cseweb.ucsd.edu/~yfreund/papers/IntroToBoosting.pdf"></a></li>
+	<li><a href= "https://cseweb.ucsd.edu/~yfreund/papers/IntroToBoosting.pdf">Intro to Boosting</a></li>
 
 	<li><a href= "http://www.vision.caltech.edu/html-files/EE148-2005-Spring/pprs/viola04ijcv.pdf"> Viola-Jones Algorithm </a></li>
 
 	<li><a href= "http://libweb.surrey.ac.uk/library/skills/Number%20Skills%20Leicester/page_19.htm"></a></li>
 
-	<li><a href= "http://www.winspc.com/what-is-spc/ask-the-expert/305-what-is-a-standard-deviation-and-how-do-i-compute-it"></a></li>
+	<li><a href= "http://www.winspc.com/what-is-spc/ask-the-expert/305-what-is-a-standard-deviation-and-how-do-i-compute-it">Computing Standard Deviation</a></li>
 
 	<li><a href= "http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_matcher/py_matcher.html"></a></li>
 
@@ -278,12 +278,15 @@ GG ( NNG ( DT
 
 </ul>
 
-</div>
-
 <script>
-var canvas = document.getElementById("myTriangleCanvas");
-var ctx = canvas.getContext("2d");
-ctx.fillStyle = black;
-var img = document.getElementbyId("nika");
-ctx.drawImage(img, 10, 10);
+	var canvas = document.getElementById("myTriangleCanvas");
+	var ctx = canvas.getContext("2d");
+	var imageObj = new Image();
+	imageObj.onload = function() {
+		ctx.drawImage(imageObj, 10, 10, 600, 600);
+	};
+	imageObj.src = "/assets/images/triangulation/nikaInitial.jpg";
 </script>
+
+
+</div>
