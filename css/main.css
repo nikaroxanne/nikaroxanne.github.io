@@ -7,75 +7,116 @@ body, html {
 }
 
 #graphic {
-	background-color: #dcdcdc;
+	margin: 10px;
+	background-color: #f5f5f5;
 }
 
 
-#sections {
+.parallax {
+	width: 100%;
+	text-align: center;
+	overflow-x: hidden;
+	overflow-y: auto;
 	position: relative;
 	display: inline-block;
-	text-align: center;
+}
+
+.parallax__layer {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 	width: 100%;
+	height: auto;
+}
+
+.parallax__layer.content {
+	padding: 20px;
+	text-align: center;
+}
+
+/*.parallax__group {
+	position: relative;
+	text-align: center;
+	height: 100vh;
+	padding: 20px;
 	top: 0px;
-}
+}*/
 
-section.module:last-child {
+.parallax__group:last-child {
 	margin-bottom: 0;
 }
 
-section.module h2 {
-	margin-bottom: 40px;
-	font-size: 30px;
+.parallax__layer--base {
+	top: 20px;
+	padding: 20px 10px;
 }
 
-section.module p {
-	margin-bottom: 40px;
-	font-size: 16px;
-	font-weight: 300;
+.parallax__layer--back{
+	height: 100vh;
+	background-position: 50% 50%;
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-image: url('/assets/images/triangulation/metal1.jpg');
+	color: white;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 200;
 }
 
-section.module p:last-child {
-	margin-bottom: 0;
+.container {
+	max-width: 960px;
+	margin: 0 auto;
 }
-
-section.module.content {
-	padding: 40px 10px;
-}
+/*
 
 section.module.parallax {
-	height: 600px;
+	height: 100vh;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
+	background-image: url('assets/images/triangulation/metal1.jpg');
+	z-index: 100;
+}
+*/
+
+.parallax__layer p {
+	margin-bottom: : 40px;
+	font-size: 16px;
+	font-weight: 300;
 }
 
-section.module.parallax h1 {
+.parallax__layer h1 {
 	color: rgb(255, 255, 255, 0.8);
 	font-size: 48px;
 	line-height: 600px;
 	font-weight: 700;
 	text-align: center;
 	text-transform: uppercase;
+	position: relative;
 	text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-section.module.parallax-* {
-	background-image: url("assets/images/triangulation/metal1.jpg");
+.parallax__layer h2 {
+	margin-bottom: 20px;
+	font-size: 30px;
 }
 
+
 @media all and (min-width: 600px) {
-	section.module h2 {
+	.parallax__layer h2 {
 		font-size: 42px;
 	}
 
-	section.module p {
+	.parallax__layer p {
 		font-size: 20px;
 	}
 }
 
 @media all and (min-width: 960px) {
-	section.module.parallax h1 {
+	.parallax__layer h1 {
 		font-size: 160px;
 	}
 }
@@ -98,6 +139,33 @@ canvas {
 	overflow: scroll;
 }
 */
+
+table {
+	width: 100%
+	height: auto;
+	padding: 10px;
+}
+
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 5px;
+	text-align: left;
+}
+
+table#archive_sources th{
+	background-color: black;
+	color: white;
+}
+
+h2.livingarchive {
+	text-align: center;
+	font-size: 36px;
+	font-weight: 200px;
+}
 
 .gallery {
 	width: 100%;

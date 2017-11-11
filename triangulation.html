@@ -3,91 +3,98 @@ layout: page
 title: Triangulation
 ---
 <div id = "graphic">
-	<div id="sections">
-		<section class = "module content">
-			<h2> Applications of Delaunay Triangulation Algorithms and Edge Flipping in Facial Recognition</h2>
-			<h3> (subtitle: Make Yourself Cubist) </h3> 
+	<div class="parallax">
+		<div id = "module1" class ="parallax__group">
+			<div class="parallax__layer parallax__layer--base">
+				<h2> Applications of Delaunay Triangulation Algorithms and Edge Flipping in Facial Recognition</h2>
+				<h3> (subtitle: Make Yourself Cubist) </h3> 
 
-			<div class = "content"> 
-				<p>There is a brief moment in the interim, between pressing the screen and when a cascade of filter options appear, when the Snapchat screen makes itself vulnerable — or seemingly so. Perhaps the algorithm (point location, triangulation, alpha mask generation, etc.) is simply not fast enough to go unnoticed. Or perhaps, in hinting a glimpse at your triangular decomposition, a user  feels that tantalizing endorphin-surging rush of peeking behind the curtain as the Wizard soliloquizes about the mysteries of the “cloud."</p>
+				<div class = "content"> 
+					<p>There is a brief moment in the interim, between pressing the screen and when a cascade of filter options appear, when the Snapchat screen makes itself vulnerable — or seemingly so. Perhaps the algorithm (point location, triangulation, alpha mask generation, etc.) is simply not fast enough to go unnoticed. Or perhaps, in hinting a glimpse at your triangular decomposition, a user  feels that tantalizing endorphin-surging rush of peeking behind the curtain as the Wizard soliloquizes about the mysteries of the “cloud."</p>
 
-				<p>Or perhaps, like most users, you never noticed the triangular mesh on your hurried way to transfigure yourself into some canonical dog-eared millennial archetype. That’s about to change. </p>
+					<p>Or perhaps, like most users, you never noticed the triangular mesh on your hurried way to transfigure yourself into some canonical dog-eared millennial archetype. That’s about to change. </p>
+				</div>
+
+				<div class = "content"> 
+					<h4> Why? </h4>
+				</div>
+
+				<div class = "content"> 
+					<p>We delineate spaces without thinking. This is a way to think about how we create referential landmarks to ourselves and to other points. This is an exploration of space, divisions of space and the landmarks we forget to notice on the landscapes that we most frequently apotheosize and excoriate concurrently — our own faces.</p>
+				</div>
 			</div>
-
-			<div class = "why"> 
-				<h4> Why? </h4>
+			<div class = "parallax__layer parallax__layer--back">
+				<div class="content_label">
+					<h3> 1. Introduction </h3>
+				</div>
 			</div>
+		</div>
 
-			<div class = "content"> 
-				<p>We delineate spaces without thinking. This is a way to think about how we create referential landmarks to ourselves and to other points. This is an exploration of space, divisions of space and the landmarks we forget to notice on the landscapes that we most frequently apotheosize and excoriate concurrently — our own faces.</p>
+		<div id="module-2" class= "parallax__group">
+			<div class = "parallax__layer parallax__layer--base">
+				<div class = "content"> 
+					<p>Understanding the process of triangulating a selected face region (i.e. what we need so we can put a cutesy infantilizing dog filter on it!) requires understanding how a computer understands a photograph. </p>
+
+					<p>A pixel - unit of measurement - a square on your screen - the number of which per inch (the correct usage of “ppi” not “dpi” will earn you bonus points with the 𝜋 people who care and put you ~3𝜎 away from the fickle favors of the general population, but now you know) can reveal more and more ugly details of any given image.</p>
+				</div> 
+
+				<div class = "content">
+					<p>A single pixel contains a wealth of knowledge that is both bountiful and generally rather accessible; there are no offshore Cayman Islands accounts for pixel info — not yet, anyways.</p> 
+				</div>
+
+				<div class = "content">
+					<p>Image pixels are stored as one-dimensional arrays. While we view an image as having two dimensions (Euclidean x,y coordinates or “height” and “width”), the pixels are stored in one contiguous strip. A pixel at location (x,y) in a picture is indexed in the pixel array at [x+ y*width]. This is good for space and time efficiency — indexing a pixel is O(1), memory allocation is slightly cleaner — but annoying for figuring out where pixel(x,y) actually is in an array that is one-dimensional.   Essentially, this is just some annoying math. Numbers are hard.</p> 
+				</div>
+
+				<div class = "content">
+					<p>The input image that is generally fed to the filtering framework used by Snapchat and other similar products of image-filtering/manipulation, is complex. The sheer wealth of information available in pixel data is useful for performing complex operations. It is not useful when trying to distill an image into a basic framework — a skeletal structure if you will (not really the best term to use here but “skeletonization” makes an appearance in div 3 and we’re just trying to evoke some Egon Schiele conceptualizations of the emaciated body of an image so hold tight)</p> 
+				</div>
+
+
+				<div class = "content">
+					<p>A myriad of factors can make an image salt-and-peppered with noise, which comes through generally as a grainy quality. And although this vintage aesthetic may appeal to those who self-qualify as the Instagram elite, its origins are in fact rooted in a materiality linked to manufacturing. We won't call this an artifact here but, understanding that noise is an element of photography that dates back to earlier analog origins, we can conceptualize this simply: The input image is convoluted. So we are going to convolute it.   (Note: Computational geometry is basically Sylvia Plath with shapes; lots of moody introspective analysis of interior layers, slant rhyme, and self-destructive decomposition of those layers.)</p> 
+				</div>
 			</div>
-
-		</section>
-		<section class = "module parallax parallax-1">
-			<section class="content">
-				<h3> 1. Refinement using Gaussian filter </h3>
-			</section>
-		</section>
-
-		<section class="module content">
-			<div class = "content"> 
-				<p>Understanding the process of triangulating a selected face region (i.e. what we need so we can put a cutesy infantilizing dog filter on it!) requires understanding how a computer understands a photograph. </p>
-
-				<p>A pixel - unit of measurement - a square on your screen - the number of which per inch (the correct usage of “ppi” not “dpi” will earn you bonus points with the 𝜋 people who care and put you ~3𝜎 away from the fickle favors of the general population, but now you know) can reveal more and more ugly details of any given image.</p>
-			</div> 
-
-			<div class = "content">
-				<p>A single pixel contains a wealth of knowledge that is both bountiful and generally rather accessible; there are no offshore Cayman Islands accounts for pixel info — not yet, anyways.</p> 
-			</div>
-
-			<div class = "content">
-				<p>Image pixels are stored as one-dimensional arrays. While we view an image as having two dimensions (Euclidean x,y coordinates or “height” and “width”), the pixels are stored in one contiguous strip. A pixel at location (x,y) in a picture is indexed in the pixel array at [x+ y*width]. This is good for space and time efficiency — indexing a pixel is O(1), memory allocation is slightly cleaner — but annoying for figuring out where the fuck pixel(x,y) actually is in an array that is one-dimensional.  Essentially, this is just some annoying math. Numbers are hard.</p> 
-			</div>
-
-			<div class = "content">
-				<p>The input image that is generally fed to the filtering framework used by Snapchat and other similar products of image-filtering/manipulation, is complex. The sheer wealth of information available in pixel data is useful for performing complex operations. It is not useful when trying to distill an image into a basic framework — a skeletal structure if you will (not really the best term to use here but “skeletonization” makes an appearance in section 3 and we’re just trying to evoke some Egon Schiele conceptualizations of the emaciated body of an image so hold tight)</p> 
-			</div>
-
-
-			<div class = "content">
-				<p>A myriad of factors can make an image salt-and-peppered with noise, which comes through generally. The input image is convoluted. So we are going to convolute it.  (Note: Computational geometry is basically Sylvia Plath with shapes; lots of moody introspective analysis of interior layers, slant rhyme, and self-destructive decomposition of those layers.)</p> 
-			</div>
-		</section>
 		
-		<section class = "module parallax parallax-2">
-			<section class="content">
-				<h2>Convolution</h2>
-			</section>
-		</section>
-
-
-		<section class="module content">
-			<div class = "content">
-				<p>Take a picture. Put another over it. This is like every problematic makeover scene in every teen movie that defined my early years before I found Hal Ashby and Agnès Varda: whatever veneer you choose to smear over the face of the original image will make it unequivocally better than its previous iteration. Did you know that self-hate is a native data structure to the JPEG??  We’re really never going to get to making shapes.</p> 
+			<div class = "parallax__layer parallax__layer--back">
+				<div class="content_label">
+					<h2>2. Convolution</h2>
+				</div>
 			</div>
+	</div>
 
+	<div id = "module3" class = "parallax__group">
+		<div class="parallax__layer parallax__layer--base">
 			<div class = "content">
-				<p>Remember how I said that the image is made of pixels that are not really divided in Euclidean terms but in those of a one-dimensional array?  We’re going to throw that out the window for a Euclidean moment (it’s a vector joke. What’s the magnitude/direction of that fuck we’re throwing out the window? -infinity.)</p> 
+				<p>Take a picture. Put another over it. This is like every problematic makeover scene in every teen movie that defined my early years before I found Hal Ashby and Agnès Varda: whatever veneer you choose to smear over the face of the original image will make it unequivocally better than its previous iteration. Did you know that self-hate is a native data type to the JPEG?   </p>
+				<p> We’re really never going to get to making shapes.</p> 
 			</div>
+<!-- 
+			<div class = "content">
+				<p>Remember how I said that the image is made of pixels that are not really divided in Euclidean terms but in those of a one-dimensional array?   We’re going to throw that out the window for a Euclidean moment (it’s a vector joke. What’s the magnitude/direction of that fuck we’re throwing out the window? -infinity.)</p> 
+			</div> -->
 
 			<div class = "content">
 				<p>Pretend that we are looking at a really cheesy window from a Sr.Kindergarten art class — refined enough to not just be a box, but not really elevated enough to understand that most windows aren’t just tacky divisions of four equal, Chicklet pieces of glass stuck together by an X, tilted 45 degrees. </p> 
 			</div>
 
 			<div class = "content">
-				<p>The window is a 2x2 matrix. The JPEG IMAGE WINDOW *WOW* is also a matrix for these purposes. A convolution is like putting a piece of stained glass over a window pane — it does not technically alter the original data of the image, but it does alter our view — we “convolve” an image with a convolution matrix, by passing a small amount of window paint across the //</p> 
+				<p>The window is a 2x2 matrix. The JPEG IMAGE WINDOW *WOW* is also a matrix for these purposes. A convolution is like putting a piece of stained glass over a window pane — it does not technically alter the original data of the image, but it does alter our view — we “convolve” an image with a convolution matrix, by passing a small amount of window paint / across the / window pane. </p>
+			</div>
+<!-- 
+				across the //</p> 
 				<p>window pane</p> 
 				<p>(Sorry// I know this is pain</p> 
 				<p>full of so many puns.)</p> 
-			</div>
+			</div> -->
 
 
 			<div class = "content">
-				<p>Once you’ve painted the window with this convolution matrix, the image will look different. A swipe of lipstick and sad.jpeg becomes missCongeniality.jpeg to our program’s eyes.  Ceci n’est pas une fenêtre? Remember, we’re not looking at something real — we’re looking at a representation of something real. It’s not really your face on the screen, it’s a representation of your face on the screen that you have been fooled to believe is truth; your face is actually just malleable numbers organized into a straight line. </p> 
+				<p>Once you’ve painted the window with this convolution matrix, the image will look different. A swipe of lipstick and sad.jpeg becomes missCongeniality.jpeg to our program’s eyes.   </p>
+				
+				<p>Ceci n’est pas une fenêtre? Remember, we’re not looking at something real — we’re looking at a representation of something real. It’s not really your face on the screen, it’s a representation of your face on the screen that you have been fooled to believe is truth; your face is actually just malleable numbers organized into a straight line. </p> 
 			</div>
 
-		</section>
-		<section class = "module content">	
 			<div class = "content">
 				<p>Next, having calculated the average brightness of each pixel using a convolution matrix, we can normalize these values with a Gaussian filter.</p>
 			</div>
@@ -124,16 +131,17 @@ title: Triangulation
 
 			</ul>
 
-		</section>
+		</div>
 
-		<section class = "module parallax parallax-3">
-			<section class="content">
-				<h2> 3. Face Detection </h2>
-			</section>
-		</section>
+		<div class = "parallax__layer parallax__layer--back">
+				<div class="content_label">
+					<h2> 3. Face Detection </h2>
+				</div>
+			</div>
+		</div>
 
-		<section class = "module content">
-		
+	<div id = "module4" class = "parallax__group">
+		<div class = "parallax__layer parallax__layer--base">
 
 			<div class = "content"> 
 				<p>Face detection in an image essentially works in two parts here: (I) detection of the “blob,” or “contour” or “shape” of what is recognized as a face; (II) detection of the landmark points that make up a face — i.e. eyes, nose, mouth, jawline.</p> 
@@ -148,27 +156,70 @@ title: Triangulation
 			<a href ="http://www.magicandlove.com/blog/2013/04/05/the-new-face-detection-and-processing/"></a> 
 
 
-		</section>
+		</div>
 
-		<section class = "module parallax parallax-4">
-			<section class="content">
+		<div class = "parallax__layer parallax__layer--back">
+			<div class="content_label">
 				<h2>4. Point Location </h2>
-			</section>
-		</section>
+			</div>
+		</div>
+	</div>
 
-		<section class="module content">
+	<div id="module5" class="parallax__group">
+		<div class="parallax__layer parallax__layer--base">
 			<div class = "content"> 
-				<p>The first step is simply recognizing a face in a given input image.</p> 
+				<p>To be able to generate filters, image manipulations on our bounxing-box-designated face region, we will have to first locate the "landmark points" that make up a face. Landmark points can be understood as a very basic division of the face into eyes, ears, mouth and nose, but distilled to a few key coordinates for each. In a sense, a rather emoji-like rendering of your face is distilled from all of the information. Isn't it nice to know that you can be reduced to a post-human version of yourself faster than you can say ex-Machina?</p> 
+
+				<p> Let's understand how to do that. </p>
+			</div>
+
+		
+
+			<div class = "content">
+			<h3> Facial Landmarks </h3>
+				<p>We want to determine “facial landmarks.”  There are several different libraries used commonly for Machine Learning related to facial detection/ recognition which rely on libraries of hand-drawn facial landmarks on “generic” faces (this is perhaps playing into standards of Euro-centric standards of Western beauty and “accepted” facial structures — an important point to note that I will not delve into here but which can be explored <a href="https://www.theatlantic.com/technology/archive/2016/04/the-underlying-bias-of-facial-recognition-systems/476991/">here</a> and <a href="https://www.theguardian.com/technology/2017/may/28/joy-buolamwini-when-algorithms-are-racist-facial-recognition-bias">here</a> and more in-depth <a href = "https://www.ajlunited.org/">here</a> ).</p> 
+			</div>
+
+			<div class = "content">
+				<p>These libraries (i.e. iBUG etc) use these input facial “maps” as a guide — once interest points are detected, the generic 68-point mapping of facial landmarks can be used to refine and adjust the location of the landmarks on an input image. </p> 
+			</div>
+
+			<div class = "content">
+				<p>Euclidean distances between detected interest points and the location of landmarks on inputted maps can verify or discard interest points until an approximate set of 68 points (or more or less, depending on the library) is determined.</p> 
+			</div>
+
+			<div class = "content">
+				<p>For this visualization, I have chosen to forgo utilizing ML technologies and external libraries of facial landmarks for simplicity’s sake. I used a singular image of my own face as a baseline. In the narcissistic spirit of selfie-culture, I have leaned closer and closer to the shimmering crystalline screen and will likely fall in, drown and become a flower of my own namesake (Nika has really cute Greek origins that align me closely with the inspiration for an athletic shoe company, so this prophetic mythological destiny is already pretty deterministically (O(nlogn)) fated) -- but someone has to bear the burden of being a suffering artist for the sake of computational geometry (let the spirit of Sylvia Plath guide me on this single-source-shortest-path towards my goal. </p>
+
+			<div class="content">
+				<p> Using reference images from the 68-landmark-point model, I approximated this path on my face. This process strangely parallels the source material used in databases for these libraries -- I am using hand-drawn approximations to use as a comparative model. This is a rather naive, perhaps brute-force way of approximating facial features, but it accomplishes the task needed for this visualization — which is simply, to make your face “Cubist” via a triangulation mesh. </p> 
+			</div>
+			
+			<div class = "content">
+				<p> This base image -- selfie with self-approximated landmark points -- was then condensed further: using a quadtree data structure, I stored the Euclidean coordinate for all of the 68-landmark points. This serves to ease nearest-neighbor classification in subsequent stages. Quadtrees are the logical right shift of binary trees -- you divide in two and then two again. Each node has four children rather than two. Quadtrees are also helpful for pattern recognition and matching in images because they so closely correspond to an understanding of two dimensional space -- octrees are the three-dimensional equivalent for approximating similar relationships.
+				</p>
+			</div>
+
+			<div class = "content">
+				<p>Back to our original input image, 
+
+				</p>
+
+			</div>
+				<div class="content">
 				<p> a) Create alpha mask to determine threshold — separate face from background </p>
 			 	<a href="http://homepages.inf.ed.ac.uk/rbf/HIPR2/threshld.htm"></a>
 			 </div>
 
 			<div class = "content"> 
-				<p>b) Use convolution matrix of Sobel Edge Detection algorithm to “smooth” image; poetically, this is the blurring of lines that separate our bodies from the space that surrounds them; algorithmically, this is a way to quantize pixel brightness values to refine the pool of potential landmarks while still retaining the majority of original “edges” in an image.</p> 
+				<p>b) Use convolution matrix of Gaussian filter to “smooth” image; poetically, this is the blurring of lines that separate our bodies from the space that surrounds them; algorithmically, this is a way to quantize pixel brightness values to refine the pool of potential landmarks while still retaining the majority of original “edges” in an image.</p> 
 			</div>
 
+			<div class = "content">
+				<p> c) Use Sobel edge-detection algorithm on smoothed image. This will detect "edges" (places where there is a large brightness shift between adjacent pixels (pixels that are located either vertically or horizontally next to one another but NOT those pixels that are located next to each other on a diagonal).</p>
+			</div>
 			<div class = "content"> 
-				<p>c) Use Shi-Tomasi Corner Detection - using the stack of detected edge pixels, we can use this smaller data set to determine “corners” — which we will then then refine to interest points.</p> 
+				<p> d) Use Shi-Tomasi Corner Detection - using the stack of detected edge pixels, we can use this smaller data set to determine “corners” — which we will then then refine to interest points.</p> 
 				<a href="http://www.ai.mit.edu/courses/6.891/handouts/shi94good.pdf">Shi-Tomasi Corner Detection Algorithm</a>
 				<a href="http://www.cse.psu.edu/~rtc12/CSE486/lecture06.pdf"></a>
 				<a href="https://classes.soe.ucsc.edu/cmpe264/Fall06/Lec5.pdf"></a>
@@ -177,24 +228,7 @@ title: Triangulation
 			</div>
 
 			<div class = "content">
-			<h3> Facial Landmarks </h3>
-				<p>This is the step where we determine “facial landmarks.”  There are several different libraries used commonly for Machine Learning related to facial detection/ recognition which rely on libraries of hand-drawn facial landmarks on “generic” faces (this is perhaps playing into standards of Euro-centric standards of Western beauty and “accepted” facial structures — an important point to note that I will not delve into here but which can be explored here <a href="https://www.theatlantic.com/technology/archive/2016/04/the-underlying-bias-of-facial-recognition-systems/476991/">here</a> and <a href="https://www.theguardian.com/technology/2017/may/28/joy-buolamwini-when-algorithms-are-racist-facial-recognition-bias">here</a> and more in-depth <a href = "https://www.ajlunited.org/">here</a> ).</p> 
-			</div>
-
-			<div class = "content">
-				<p>These libraries (i.e. iBUG etc) use these input facial “maps” as a guide — once interest points are detected, the generic 68-point mapping of facial landmarks can be used to refine and adjust the location of the landmarks on an input image. </p> 
-			</div>
-
-			<div class = "content">
-				<p>Euclidean distances between detected interest points and the location of landmarks on inputted maps can verify or discard interest points until an approximate set of 68 points is determined.</p> 
-			</div>
-
-			<div class = "content">
-				<p>For this visualization, I have chosen to forgo utilizing ML technologies and external libraries of facial landmarks for simplicity’s sake. I used a singular image of my own face, manipulated in Adobe PhotoShop to add my approximations for the 68 landmark points, as an alpha mask and compared detected corner points to those 68 landmark points. This is a rather naive, perhaps brute-force way of approximating facial features, but it accomplishes the task needed for this visualization — which is simply, to make your face “Cubist” via a triangulation mesh. </p> 
-			</div>
-
-			<div class = "content">
-				<p> Using a 3x3 matrix of input pixels (reasoning for which comes from this article: ), we calculate the average difference in pixel brightness to find areas — to be further refined to points — of high contrast. Why?</p>
+				<p> Using a 3x3 matrix of input pixels (reasoning for which comes from this article: ), we calculate the average difference in pixel brightness to find areas — to be further refined to points — of high contrast.  Why?</p>
 			</div>
 
 			<div class = "content">
@@ -213,15 +247,17 @@ title: Triangulation
 			<a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.420.7883&rep=rep1&type=pdf"></a>
 			<a href= "http://aircconline.com/vlsics/V6N5/6515vlsi02.pdf"></a>
 			 
-		</section>
-		
-		<section class = "module parallax parallax-5">
-			<section class="content">
-				<h2>Skeletonization </h2>
-			</section>
-		</section>
+		</div>
+	</div>
 
-		<section class = "module content">
+	<div id = "module 6" class="parallax__group">
+		<div class = "parallax__layer parallax__layer--back">
+			<div class="content_label">
+				<h2>5. Skeletonization </h2>
+			</div>
+		</div>
+
+		<div class = "parallax__layer parallax__layer--base">
 			<div class="text">
 				
 				<p>Not an early Tim Burton claymation flick, Skeletonization is the process by which layers of a form are successively peeled away so as to reveal a final, bare-bones polygonal chain — a skeleton.</p> 
@@ -233,7 +269,7 @@ title: Triangulation
 			<a href= "https://en.wikipedia.org/wiki/M%C3%B6bius_transformation">Mobius Transformation</a>
 
 			<div class = "text">
-				<h2> 4. Convex Hull </h2>
+				<h2> 5. Convex Hull </h2>
 				<p> So we have points. That’s nice. Remember when your 2nd grade art teacher critiqued your family portrait because you drew the faces askew and the dots for the eyes melting into the bottom of the chin and you told her to go fuck herself because André Breton would really enjoy your embrace of a visual perspective that veered away from conventional aesthetics and more towards a way of seeing that embraced the ideal of rêver en éveillant? (I wouldn’t know, I skipped second grade but I felt that this would be a good time for you to unload some emotional baggage. That’s really the entire point of AI isn’t it? (See Her)).</p> 
 			</div>
 
@@ -256,7 +292,7 @@ title: Triangulation
 			</div>
 
 			<div class = "content">
-				<p>Astoundingly, a convex hull, while a frame within a frame (so fucking meta, I know. Please don’t start sobbing.), is also a beautiful way of demarcating space. We want the smallest boundary. Almost as though we want the boundary that can hug all of its points while still remaining aloof (do you get the portrait now, Ms. Richards?! Symbolism is not something I invented when I was seven, it’s a really poignant device for explaining relational aesthetics without implicating an explicit narrative in a work.)</p>
+				<p>Astoundingly, a convex hull, while a frame within a frame (meta, wow)), is also a beautiful way of demarcating space. We want the smallest boundary. Almost as though we want the boundary that can hug all of its points while still remaining aloof (do you get the portrait now, Ms. Richards?! Symbolism is not something I invented when I was seven, it’s a really poignant device for explaining relational aesthetics without implicating an explicit narrative in a work.)</p>
 			  </div>
 
 			<div class="content">
@@ -265,30 +301,34 @@ title: Triangulation
 
 
 			<div class = "content">
-				<p>I’m using a linear time algorithm simply because I like Chazelle’s elegance the most. If you want to look at some Jarvis march thing, please just Google it. </p>
+				<p>I’m using a linear time algorithm simply because I like Chazelle’s elegance the most. If you want to look at something else, I will refer you to Jarvis March or  </p>
 			</div>
-		</section>
+		</div>
+	</div>
 
-		<section class = "module parallax parallax-6">
-			<section class="content">
+	<div id = "module6" class="parallax__group">
+		<div class = "parallax__layer parallax__layer--back">
+			<div class="content_label">
 				<h2>6. Triangulation</h2>
-			</section>
-		</section>
+			</div>
+		</div>
 
-		<section class = "module content">
+		<div class = "parallax__layer parallax__layer--base">
 
 			<div class = "content">
 				<p>Sets of three are not fun if you want a college romance but they are nice when you are looking for ways to group points sets in a way that will translate to an even distribution of space and a division of a convex polygon into pieces that are “the most stable shape.” </p>
 			</div>
-		</section>
+		</div>
+	</div>
 
-		<section class = module parallax parallax-7>
-			<section class="content">
+	<div id= "module7" class="parallax__group">
+		<div class = "parallax__layer parallax__layer--back">
+			<div class="content_label">
 				<h2>7. Delaunay Triangulation </h2>
-			</section>
-		</section>
+			</div>
+		</div>
 
-		<section class="module content">
+		<div class="parallax__layer parallax__layer--base">
 
 			<div class = "content">
 				<p>It is called the “most beautiful triangulation” amazingly not because it buys into the 90s heroin chic aesthetic of emaciation = beauty, but because, rather than preferring the thinnest triangles, this triangulation prefers an organization of triangles which maximize the minimum angle in each triangle. </p>
@@ -303,15 +343,13 @@ title: Triangulation
 				<p>Here you go. </p>
 			</div>
 
-		</section>	
+		</div>	
 
-		<section class = "module parallax parallax-8">
-			<section class="content">
-				<h2>8. Voronoi </h2>
-			</section>
-		</section>
+		
+	</div>
 
-		<section class="module content">
+	<div id = "module8" class="parallax__group">
+		<div class="parallax__layer parallax__layer--base">
 
 			<div class = "content">
 				<p>Voronoi is a tie-breaker algorithm — it determines the delineations between points such that the dividing line between each two input points is equidistant from those two points. A medial axis, if you will.</p> 
@@ -333,15 +371,49 @@ title: Triangulation
 			<div class = "content">
 				<p>GG ( NNG ( DT </p>
 			</div>
-		</section>
+		</div>
 
-		<section class = "module parallax parallax-9">
-			<section class="content">
+		<div class = "parallax__layer parallax__layer--back">
+			<div class="content_label">
+				<h2>8. Voronoi </h2>
+			</div>
+		</div>
+
+	</div>
+
+	<div id = "module9" class="parallax__group">
+		<div class = "parallax__layer parallax__layer--back>
+			<div class="content">
 				<h2> References: </h2>
-			</section>
-		</section>
+			</div>
+		</div>
 
-		<section class = "module content">
+		<div class = "parallax__layer parallax__layer--base">
+			<h3> Academic Papers </h3>
+			<ul class = "references">
+				<li>
+					R. Herpers and G. Sommer
+					<a href="https://link.springer.com/chapter/10.1007/978-3-642-72201-1_26">“An Attentive Processing Strategy for the Analysis of Facial Features”</a>
+				</li>
+				<li>
+					Peiyun Hu, Deva Ramanan Robotics Institute Carnegie Mellon University
+					<a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Hu_Finding_Tiny_Faces_CVPR_2017_paper.pdf">“Finding Tiny Faces”</a>
+				</li>
+				<li>
+					Dani Lischinski
+					<a href= "http://www.karlchenofhell.org/cppswp/lischinski.pdf">“Incremental Delaunay Triangulation”</a>
+				</li>
+
+				<li>
+					Hervé Jégou Inria, Rennes, & Andrew Zisserman, Dept. of Engineering Science, University of Oxford
+					<a href="https://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Jegou_Triangulation_Embedding_and_2014_CVPR_paper.pdf">“Triangulation embedding and democratic aggregation for image search”</a>
+				</li>
+
+				<li>
+					Marc Alexa et al. 
+					<a href="http://www.sci.utah.edu/~shachar/Publications/crpss.pdf">“Computing and Rendering Point Set Surfaces”</a>
+				</li>
+			</ul>
 			
 			<h3> General Resources: </h3>
 			<ul class = "references">
@@ -378,9 +450,8 @@ title: Triangulation
 				<li><a href="http://aircconline.com/vlsics/V6N5/6515vlsi02.pdf"></a></li>
 
 				<li><a href="http://www.wisdom.weizmann.ac.il/~irani/PAPERS/InDefenceOfNN_CVPR08.pdf">In Defense of Nearest-Neighbor Classification</a></li>
-
 			</ul>
-		</section>
+		</div>
 	</div>
 	<canvas id="myTriangleCanvas"></canvas>	
 </div>
@@ -397,4 +468,3 @@ title: Triangulation
 </script>
  -->
 
-</div>
