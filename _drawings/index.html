@@ -52,7 +52,7 @@ drawings:
 		<div class = "col-sm-12 col-m-4 col-4">
 			{% for drawing in site.drawings %}
 				{% for image in site.static_files %}
-					{% if image.path contains 'images/drawings/history' %}
+					{% if image.path contains 'images/drawings/metalprint' %}
 						<a href="{{site.url}}/{{image.path}}" class="image">
 							<img src="{{site.url}}/{{image.path}}" alt = "{{drawing.alt}}">
 						</a>
