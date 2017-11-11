@@ -55,15 +55,14 @@ title: Triangulation
 					<p>A myriad of factors can make an image salt-and-peppered with noise, which comes through generally as a grainy quality. And although this vintage aesthetic may appeal to those who self-qualify as the Instagram elite, its origins are in fact rooted in a materiality linked to manufacturing. We won't call this an artifact here but, understanding that noise is an element of photography that dates back to earlier analog origins, we can conceptualize this simply: The input image is convoluted. So we are going to convolute it.   (Note: Computational geometry is basically Sylvia Plath with shapes; lots of moody introspective analysis of interior layers, slant rhyme, and self-destructive decomposition of those layers.)</p> 
 				</div>
 			</div>
-		
-			<div class = "parallax__layer parallax__layer--back">
+	</div>
+
+	<div id = "module2" class = "parallax__group">
+		<div class = "parallax__layer parallax__layer--back">
 				<div class="content_label">
 					<h2>2. Convolution</h2>
 				</div>
-			</div>
-	</div>
-
-	<div id = "module3" class = "parallax__group">
+		</div>
 		<div class="parallax__layer parallax__layer--base">
 			<div class = "content">
 				<p>Take a picture. Put another over it. This is like every problematic makeover scene in every teen movie that defined my early years before I found Hal Ashby and Agnès Varda: whatever veneer you choose to smear over the face of the original image will make it unequivocally better than its previous iteration. Did you know that self-hate is a native data type to the JPEG?   </p>
@@ -132,7 +131,7 @@ title: Triangulation
 			</ul>
 
 		</div>
-
+	<div id = "module3" class = "parallax__group">
 		<div class = "parallax__layer parallax__layer--back">
 				<div class="content_label">
 					<h2> 3. Face Detection </h2>
@@ -140,9 +139,7 @@ title: Triangulation
 			</div>
 		</div>
 
-	<div id = "module4" class = "parallax__group">
 		<div class = "parallax__layer parallax__layer--base">
-
 			<div class = "content"> 
 				<p>Face detection in an image essentially works in two parts here: (I) detection of the “blob,” or “contour” or “shape” of what is recognized as a face; (II) detection of the landmark points that make up a face — i.e. eyes, nose, mouth, jawline.</p> 
 			</div>
@@ -154,18 +151,15 @@ title: Triangulation
 			<a href="https://github.com/atduskgreg/opencv-processing-book/blob/master/book/tracking/face_detection.md"></a> 
 
 			<a href ="http://www.magicandlove.com/blog/2013/04/05/the-new-face-detection-and-processing/"></a> 
-
-
 		</div>
+	</div>
 
+	<div id="module4" class="parallax__group">
 		<div class = "parallax__layer parallax__layer--back">
 			<div class="content_label">
 				<h2>4. Point Location </h2>
 			</div>
 		</div>
-	</div>
-
-	<div id="module5" class="parallax__group">
 		<div class="parallax__layer parallax__layer--base">
 			<div class = "content"> 
 				<p>To be able to generate filters, image manipulations on our bounxing-box-designated face region, we will have to first locate the "landmark points" that make up a face. Landmark points can be understood as a very basic division of the face into eyes, ears, mouth and nose, but distilled to a few key coordinates for each. In a sense, a rather emoji-like rendering of your face is distilled from all of the information. Isn't it nice to know that you can be reduced to a post-human version of yourself faster than you can say ex-Machina?</p> 
@@ -250,7 +244,7 @@ title: Triangulation
 		</div>
 	</div>
 
-	<div id = "module 6" class="parallax__group">
+	<div id = "module5" class="parallax__group">
 		<div class = "parallax__layer parallax__layer--back">
 			<div class="content_label">
 				<h2>5. Skeletonization </h2>
@@ -267,9 +261,18 @@ title: Triangulation
 			<a href= "http://homepages.inf.ed.ac.uk/rbf/HIPR2/morops.htm">Morphological Operations</a>
 
 			<a href= "https://en.wikipedia.org/wiki/M%C3%B6bius_transformation">Mobius Transformation</a>
-
+		</div>
+	</div>
+	<div id = "module6" class="parallax__group">
+		<div class="parallax__layer parallax__layer--back">
 			<div class = "text">
-				<h2> 5. Convex Hull </h2>
+				<h2> 6. Convex Hull </h2>
+
+			</div>
+		</div>
+
+		<div class="parallax__layer parallax__layer--base">
+			<div class = "content">
 				<p> So we have points. That’s nice. Remember when your 2nd grade art teacher critiqued your family portrait because you drew the faces askew and the dots for the eyes melting into the bottom of the chin and you told her to go fuck herself because André Breton would really enjoy your embrace of a visual perspective that veered away from conventional aesthetics and more towards a way of seeing that embraced the ideal of rêver en éveillant? (I wouldn’t know, I skipped second grade but I felt that this would be a good time for you to unload some emotional baggage. That’s really the entire point of AI isn’t it? (See Her)).</p> 
 			</div>
 
@@ -285,7 +288,7 @@ title: Triangulation
 
 			<div class = "content">
 				<p>But WAIT. Aren’t those points already within a bounding box (you shout at the sky, tears streaming down your face)? Isn’t this a frame within a frame already? When does the frame end and the picture begin? What about a post-structural space of viewing that doesn’t align itself within conventionality in the restrictive setting of a gallery which itself plays a part in institutional systems of oppression?</p>
-
+			</div>
 
 			<div class = "content">
 				<p>Again, please see here and here:</p>
@@ -306,10 +309,10 @@ title: Triangulation
 		</div>
 	</div>
 
-	<div id = "module6" class="parallax__group">
+	<div id = "module7" class="parallax__group">
 		<div class = "parallax__layer parallax__layer--back">
 			<div class="content_label">
-				<h2>6. Triangulation</h2>
+				<h2>7. Triangulation</h2>
 			</div>
 		</div>
 
@@ -321,10 +324,10 @@ title: Triangulation
 		</div>
 	</div>
 
-	<div id= "module7" class="parallax__group">
+	<div id= "module8" class="parallax__group">
 		<div class = "parallax__layer parallax__layer--back">
 			<div class="content_label">
-				<h2>7. Delaunay Triangulation </h2>
+				<h2>8. Delaunay Triangulation </h2>
 			</div>
 		</div>
 
@@ -348,7 +351,13 @@ title: Triangulation
 		
 	</div>
 
-	<div id = "module8" class="parallax__group">
+	<div id = "module9" class="parallax__group">
+		<div class = "parallax__layer parallax__layer--back">
+			<div class="content_label">
+				<h2>9. Voronoi </h2>
+			</div>
+		</div>
+
 		<div class="parallax__layer parallax__layer--base">
 
 			<div class = "content">
@@ -372,16 +381,9 @@ title: Triangulation
 				<p>GG ( NNG ( DT </p>
 			</div>
 		</div>
-
-		<div class = "parallax__layer parallax__layer--back">
-			<div class="content_label">
-				<h2>8. Voronoi </h2>
-			</div>
-		</div>
-
 	</div>
 
-	<div id = "module9" class="parallax__group">
+	<div id = "module10" class="parallax__group">
 		<div class = "parallax__layer parallax__layer--back>
 			<div class="content">
 				<h2> References: </h2>
