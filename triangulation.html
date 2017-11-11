@@ -273,11 +273,11 @@ title: Triangulation
 
 		<div class="parallax__layer parallax__layer--base">
 			<div class = "content">
-				<p> So we have points. That’s nice. Remember when your 2nd grade art teacher critiqued your family portrait because you drew the faces askew and the dots for the eyes melting into the bottom of the chin and you told her to go fuck herself because André Breton would really enjoy your embrace of a visual perspective that veered away from conventional aesthetics and more towards a way of seeing that embraced the ideal of rêver en éveillant? (I wouldn’t know, I skipped second grade but I felt that this would be a good time for you to unload some emotional baggage. That’s really the entire point of AI isn’t it? (See Her)).</p> 
+				<p> So we have points. That’s nice. Remember when your 2nd grade art teacher critiqued your family portrait because you drew the faces askew and the dots for the eyes melting into the bottom of the chin and you told her that she a soul-eviscerating robot for disregarding the merit of your work because André Breton would really enjoy your embrace of a visual perspective that veered away from conventional aesthetics and more towards a way of seeing that embraced the ideal of rêver en éveillant? (I wouldn’t know, I skipped second grade but I felt that this would be a good time for you to unload some emotional baggage. That’s really the entire point of AI isn’t it? (See <a href="http://www.imdb.com/title/tt1798709/videoplayer/vi4112492569?ref_=tt_ov_vi">Her</a>)).</p> 
 			</div>
 
 			<div class = "content">
-				<p> Yeah, that’s not this moment. Hopefully, this didn’t detect the points for the eyes as being off the bounding box and the nose has a couple of points to be classified as a blob (not the horror flick. Also, a real term. I know, I was also surprised. Science is astounding, sometimes.) </p>
+				<p> Yeah, that’s not this moment. Hopefully, this program didn’t detect the points for the eyes as being off the bounding box and the nose has a couple of points to be classified as a blob (not the horror flick. Also, a real term. I know, I was also surprised. Science is astounding, sometimes.) </p>
 			</div>
 
 
@@ -290,9 +290,9 @@ title: Triangulation
 				<p>But WAIT. Aren’t those points already within a bounding box (you shout at the sky, tears streaming down your face)? Isn’t this a frame within a frame already? When does the frame end and the picture begin? What about a post-structural space of viewing that doesn’t align itself within conventionality in the restrictive setting of a gallery which itself plays a part in institutional systems of oppression?</p>
 			</div>
 
-			<div class = "content">
+			<!-- <div class = "content">
 				<p>Again, please see here and here:</p>
-			</div>
+			</div> -->
 
 			<div class = "content">
 				<p>Astoundingly, a convex hull, while a frame within a frame (meta, wow)), is also a beautiful way of demarcating space. We want the smallest boundary. Almost as though we want the boundary that can hug all of its points while still remaining aloof (do you get the portrait now, Ms. Richards?! Symbolism is not something I invented when I was seven, it’s a really poignant device for explaining relational aesthetics without implicating an explicit narrative in a work.)</p>
@@ -301,10 +301,8 @@ title: Triangulation
 			<div class="content">
 				<p>So here it is.</p>
 			</div>
-
-
 			<div class = "content">
-				<p>I’m using a linear time algorithm simply because I like Chazelle’s elegance the most. If you want to look at something else, I will refer you to Jarvis March or  </p>
+				<p> Algorithm used for convex hull calculation is Quick Hull, simply because I found it convenient to use the borders of the bounding box as the initial frame -- since bounding box was also used as a referential marker for finding landmark points, much of the computation for this had been done in preprocessing.</p>
 			</div>
 		</div>
 	</div>
@@ -324,6 +322,12 @@ title: Triangulation
 
 			<div>
 				<a href="http://www.cs.tufts.edu/comp/163/davidM/DM-monotone.pdf">David Mount: Lecture Notes on Triangulating Monotone Polygons</a>
+			</div>
+
+			<div class = "content">
+				<p>I’m using a linear time algorithm simply because I like Chazelle’s elegance the most. </p>
+
+				<p> For a deeper understanding of the foundations for the section, please see this paper by Chazelle on linear-time decompositions of simple polygons. <a href="https://www.cs.princeton.edu/~chazelle/pubs/polygon-triang.pdf"> Triangulating a Polygon in Linear Time </p>
 			</div>
 		</div>
 	</div>
@@ -349,10 +353,8 @@ title: Triangulation
 			<div class = "content">
 				<p>Here you go. </p>
 			</div>
-
+			
 		</div>	
-
-		
 	</div>
 
 	<div id = "module9" class="parallax__group">
