@@ -7,7 +7,7 @@ title: Triangulation
 		<div id = "module1" class ="parallax__group">
 			<div class="parallax__layer parallax__layer--base">
 				<h2> Applications of Delaunay Triangulation Algorithms and Edge Flipping in Facial Recognition</h2>
-				<h3> (subtitle: Make Yourself Cubist) </h3> 
+				<h3> (subtitle: Make Yourself Cubist&trade;) </h3> 
 
 				<div class = "content"> 
 					<p>There is a brief moment in the interim, between pressing the screen and when a cascade of filter options appear, when the Snapchat screen makes itself vulnerable — or seemingly so. Perhaps the algorithm (point location, triangulation, alpha mask generation, etc.) is simply not fast enough to go unnoticed. Or perhaps, in hinting a glimpse at your triangular decomposition, a user  feels that tantalizing endorphin-surging rush of peeking behind the curtain as the Wizard soliloquizes about the mysteries of the “cloud."</p>
@@ -43,7 +43,9 @@ title: Triangulation
 				</div>
 
 				<div class = "content">
-					<p>Image pixels are stored as one-dimensional arrays. While we view an image as having two dimensions (Euclidean x,y coordinates or “height” and “width”), the pixels are stored in one contiguous strip. A pixel at location (x,y) in a picture is indexed in the pixel array at [x+ y*width]. This is good for space and time efficiency — indexing a pixel is O(1), memory allocation is slightly cleaner — but annoying for figuring out where pixel(x,y) actually is in an array that is one-dimensional.   Essentially, this is just some annoying math. Numbers are hard.</p> 
+					<p>Image pixels are stored as one-dimensional arrays. While we view an image as having two dimensions (Euclidean x,y coordinates or “height” and “width”), the pixels are stored in one contiguous strip. A pixel at location (x,y) in a picture is indexed in the pixel array at [x+ y*width]. This is good for space and time efficiency — indexing a pixel is O(1), memory allocation is slightly cleaner — but annoying for figuring out where pixel(x,y) actually is in an array that is one-dimensional.   Essentially, this is just some annoying math. </p>
+
+					<p>It's a good thing that numbers are actually beautiful and mathematics is the universal language which we can celebrate; the erasure of individuality is not due to numbers, it's probably due to the belief that a manufactured filter on your body is better-looking than your unfiltered body. Original > reproduction (okay, that's poor math and we're assigning arbitrary value to abstract concepts, an activity which is at the crux of big problems in the art world, but hopefully the point is still made. I digress!) </p> 
 				</div>
 
 				<div class = "content">
@@ -65,7 +67,7 @@ title: Triangulation
 		</div>
 		<div class="parallax__layer parallax__layer--base">
 			<div class = "content">
-				<p>Take a picture. Put another over it. This is like every problematic makeover scene in every teen movie that defined my early years before I found Hal Ashby and Agnès Varda: whatever veneer you choose to smear over the face of the original image will make it unequivocally better than its previous iteration. Did you know that self-hate is a native data type to the JPEG?   </p>
+				<p>Take a picture. Put another over it. This is like every problematic makeover scene in every teen movie that defined my early years before I found Hal Ashby and Agnès Varda: whatever veneer you choose to smear over the face of the original image will make it unequivocally better than its previous iteration. Did you know that self-hate is a native data type in a JPEG?   </p>
 				<p> We’re really never going to get to making shapes.</p> 
 			</div>
 <!-- 
@@ -74,11 +76,11 @@ title: Triangulation
 			</div> -->
 
 			<div class = "content">
-				<p>Pretend that we are looking at a really cheesy window from a Sr.Kindergarten art class — refined enough to not just be a box, but not really elevated enough to understand that most windows aren’t just tacky divisions of four equal, Chicklet pieces of glass stuck together by an X, tilted 45 degrees. </p> 
+				<p>Pretend that we are looking at a really cheesy drawing of a window from a Sr.Kindergarten art class — refined enough to not just be a box, but not really elevated enough to understand that most windows aren’t just tacky divisions of four equal, Chicklet pieces of glass stuck together by an X, tilted 45 degrees. </p> 
 			</div>
 
 			<div class = "content">
-				<p>The window is a 2x2 matrix. The JPEG IMAGE WINDOW *WOW* is also a matrix for these purposes. A convolution is like putting a piece of stained glass over a window pane — it does not technically alter the original data of the image, but it does alter our view — we “convolve” an image with a convolution matrix, by passing a small amount of window paint / across the / window pane. </p>
+				<p>The window is a 2x2 matrix. The JPEG IMAGE WINDOW *WOW* is also a matrix for these purposes. A convolution is like putting a piece of stained glass over a window pane — it does not technically alter the original data of the image, but it does alter our view — we “convolve” an image with a convolution matrix, by passing a small amount of window paint / across the / window pane. (Sorry, Sylvia, not my best.)</p>
 			</div>
 <!-- 
 				across the //</p> 
@@ -105,20 +107,20 @@ title: Triangulation
 			</div>
 
 			<div class = "content">
-				<p>Gaussian filtering opens the doors for other operations — Canny Edge detection, corner detection, and greater accuracy for finding facial landmark points.</p> 
+				<p>Gaussian filtering opens the doors for other operations — Sobel Edge detection, corner detection, and greater accuracy for finding facial landmark points.</p> 
 			</div>
 
 			<h2>See Resources:</h2>
 			<ul class = "references">
-				<li><a href ="http://homepages.inf.ed.ac.uk/rbf/HIPR2/gsmooth.htm"></a></li>
+				<li><a href ="http://homepages.inf.ed.ac.uk/rbf/HIPR2/gsmooth.htm">Gaussian Smoothing</a></li>
 
 				<li><a href ="http://www.learnopencv.com/histogram-of-oriented-gradients/">Histogram of Oriented Gradients</a></li> 
 
 				<li><a href ="https://www.learnopencv.com/image-recognition-and-object-detection-part1/"></a>Image Recognition and Object Detection with OpenCV</li> 
 
-				<li><a href ="https://www.researchgate.net/publication/220646162_Face_recognition_using_Histograms_of_Oriented_Gradients"></a></li> 
+				<li><a href ="https://www.researchgate.net/publication/220646162_Face_recognition_using_Histograms_of_Oriented_Gradients">Face Recognition using Histograms of Oriented Gradients</a></li> 
 
-				<li><a href ="http://setosa.io/ev/image-kernels/"></a></li> 
+				<li><a href ="http://setosa.io/ev/image-kernels/">Image Kernels</a></li> 
 
 				<li><a href ="http://www.cse.cuhk.edu.hk/leojia/papers/portrait_eg16.pdf"></a></li> 
 
