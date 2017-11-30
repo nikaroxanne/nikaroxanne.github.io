@@ -124,48 +124,67 @@ section.module.parallax {
 ul.references {
 	list-style-type: none;
 }
-/*
-canvas {
+
+svg {
 	padding: 0;
-	position: fixed;
+	position: relative;
 	border: 2px solid black;
 	display: inline-block;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: auto;
+	top: 10%;
+	left: 10%;
+	margin: 0 -150;
+	background-size: cover;
 	background-color: #ddd;
 	overflow: scroll;
 }
-*/
 
-table {
-	width: 100%
-	height: auto;
-	padding: 10px;
-}
-
-table, th, td {
-	border: 1px solid black;
-	border-collapse: collapse;
-}
-
-th, td {
-	padding: 5px;
-	text-align: left;
-}
-
-table#archive_sources th{
+.archivebutton {
 	background-color: black;
-	color: white;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Cormorant Garamond', serif;
+	font-size: 1.2em;
+	font-weight: medium;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
-h2.livingarchive {
+h2#livingarchive {
 	text-align: center;
 	font-size: 36px;
 	font-weight: 200px;
 }
+
+.archive_sources p {
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 1.2em;
+	font-weight: medium;
+	line-height: 1.4em;
+	color: #333;
+}
+
+#articlesSection {
+	border: 5px solid black;
+	border-collapse: collapse;
+	text-align: center;
+	background-color: #ddd;
+	display: none;
+}
+
+
+#booksSection {
+	border: 5px solid black;
+	border-collapse: collapse;
+	text-align: center;
+	background-color: #ddd;
+	display: none;
+}
+
 
 .gallery {
 	width: 100%;
