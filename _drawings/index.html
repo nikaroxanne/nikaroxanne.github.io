@@ -3,61 +3,32 @@ layout: default
 title: Drawings
 permalink: /portfolio/drawings/
 
-drawings:
- - title: "mapping1" 
-   file: map1.jpg
- - title: "mapping2"
-   file: map2.jpg
-   alt: map2
- - title: "mapping3"
-   file: map3.jpg
-   alt: map3
- - title: "mapping4"
-   file: map4.jpg
-   alt: map4
- - title: "recognition"
-   file: recognition.jpg
-   alt: recognition
- - title: "median"
-   file: median.jpg
-   alt: median
- - title: "artificial"
-   file: artificial.JPG
-   alt: artificial
 ---
-<div class = "gallery">
-	<div class = "row">
-		<div class = "col-sm-12 col-m-4 col-4">
-			{% for drawing in site.drawings %}
-				{% for image in site.static_files %}
-					{% if image.path contains 'images/drawings/maps' %}
-						<a href="{{site.url}}/{{image.path}}" class="image">
-							<img src="{{site.url}}/{{image.path}}" alt = "{{drawing.alt}}">
-						</a>
-					{% endif %}
-				{% endfor %}
-			{% endfor %}
-		</div>
-		<div class = "col-sm-12 col-m-4 col-4">
-			{% for drawing in site.drawings %}
-				{% for image in site.static_files %}
-					{% if image.path contains 'images/drawings/algo' %}
-						<a href="{{site.url}}/{{image.path}}" class="image">
-							<img src="{{site.url}}/{{image.path}}" alt = "{{drawing.alt}}">
-						</a>
-					{% endif %}
-				{% endfor %}
-			{% endfor %}
-		</div>
-		<div class = "col-sm-12 col-m-4 col-4">
-			{% for drawing in site.drawings %}
-				{% for image in site.static_files %}
-					{% if image.path contains 'images/drawings/metalprint' %}
-						<a href="{{site.url}}/{{image.path}}" class="image">
-							<img src="{{site.url}}/{{image.path}}" alt = "{{drawing.alt}}">
-						</a>
-					{% endif %}
-				{% endfor %}
+<script src = "/assets/js/gallery.js"> </script>
+<div class = "slideshow-gallery">
+
+	<div class= "mySlides">
+		{% for image in site.drawings %}
+			<div class = "numbertext"> {{forloop.index}} / {{forloop.length}} </div>
+				<img src="{{site.url}}{{image.path}}" style ="width:100%">
+		{% endfor %}
+	</div>
+
+	<a class ="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class ="next" onclick="plusSlides(1)">&#10095;</a>
+
+	<div class ="caption-container">
+		<p id="caption"></p>
+	</div>
+
+	<div class = "scroller">
+		<div class = "row">
+			{% for image in site.static_files %}
+				{% if image.path contains 'images/drawings' %}
+					<div class = "col-sm-1 col-m-1 col-1">
+						<img src="{{site.url}}/{{image.path}}" onClick = "currentSlide({{forloop.index}})" class = "demo" alt = "{{image.basename}}">
+					</div>
+				{% endif %}
 			{% endfor %}
 		</div>
 	</div>
