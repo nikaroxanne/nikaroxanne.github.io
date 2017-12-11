@@ -55,15 +55,16 @@ body, html {
 .parallax__layer--back{
 	height: 100vh;
 	background-position: 50% 50%;
-	background-repeat: repeat;
+	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	background-image: url('/assets/images/triangulation/metal1.jpg');
+	background-image: url('/assets/images/163images/facePointApproximation.jpg');
 	color: white;
 	text-align: center;
 	font-size: 40px;
 	font-weight: 200;
 }
+
 
 .container {
 	max-width: 960px;
@@ -81,6 +82,21 @@ section.module.parallax {
 	z-index: 100;
 }
 */
+
+img#snapTri {
+	max-width: 33%;
+	height: auto;
+	float: left;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	color: white;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 200;
+}
+
 
 .parallax__layer p {
 	margin-bottom: : 40px;
