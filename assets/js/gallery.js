@@ -1,14 +1,14 @@
 /*gallery.js*/
 
 var slideIndex = 1;
-showSlides();
+showSlides(slideIndex);
 
 
 function plusSlides(n) {
 	showSlides(slideIndex += n);
 }
 
-function currentSlide() {
+function currentSlide(n) {
 	showSlides(slideIndex = n);
 }
 
@@ -18,7 +18,7 @@ function showSlides(n) {
 	var slides = document.getElementsByClassName("mySlides");
 	var arrows = document.getElementsByClassName("demo");
 	var captionText = document.getElementById("caption");
-	if (slideIndex > slides.length) {slideIndex = 1};
+	if (n > slides.length) {slideIndex = 1};
 	for(i=0; i < slides.length; i++) {
 		slides[i].style.display = "none";
 	}
@@ -29,6 +29,5 @@ function showSlides(n) {
 	slides[slideIndex-1].style.display = "block";
 	arrows[slideIndex-1].className += " active";
 	captionText.innerHTML = arrows[slideIndex-1].alt;
-	setTimeout (showSlides, 3000);
 
 }
