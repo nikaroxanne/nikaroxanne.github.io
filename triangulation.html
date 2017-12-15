@@ -5,7 +5,6 @@ layout: page
 <script src= "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"> </script>
 <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"> </script>
 <script src = "/assets/js/pixels.js"></script>
-<script src = "/assets/js/gaussian.js"></script>
 
 
 <div id = "graphic">
@@ -65,31 +64,31 @@ layout: page
 				<div class = "content"> 
 					<p>We delineate spaces without thinking. This is a way to think about how we create referential landmarks to ourselves and to other points. This is an exploration of space, divisions of space and the landmarks we forget to notice on the landscapes that we most frequently apotheosize and excoriate concurrently — our own faces.</p>
 				</div>
+				<div class = "content"> 
+					<p>To learn more about the algorithm that detects a face and plots landmark facial points, click here:</p>	
 
-				<p>To learn more about the algorithm that detects a face and plots landmark facial points, click here:</p>	
-
-				<p>Part a) Understanding pixel brightness values and their relationship to landmark points</p>
-				
-				<p> 1) Average brightness function</p>
-				
-				<p>2) Bounding Box</p>
+					<p>Part a) Understanding pixel brightness values and their relationship to landmark points</p>
 					
-				<p>Part b) </p>
+					<p> 1) Average brightness function</p>
 					
-				<p>1) Gaussian smoothing — alpha mask sketch </p>
+					<p>2) Bounding Box</p>
+						
+					<p>Part b) </p>
+						
+					<p>1) Gaussian smoothing — alpha mask sketch </p>
 
-				<p>2) Canny Edge Detection </p>
+					<p>2) Canny Edge Detection </p>
 
-				<p>3) corner detection </p>
+					<p>3) corner detection </p>
 
-				<p>4) pattern recognition — feature matching using Voronoi </p>
+					<p>4) pattern recognition — feature matching using Voronoi </p>
 
-				<p> To learn more about the different triangulations of a set of facial landmarks points: click here </p>
-				
-				<p>1) Delaunay triangulation and its properties </p>
-				
-				<p> 2) edge flipping - canonical triangulation </p>
-
+					<p> To learn more about the different triangulations of a set of facial landmarks points: click here </p>
+					
+					<p>1) Delaunay triangulation and its properties </p>
+					
+					<p> 2) edge flipping - canonical triangulation </p>
+				</div>
 			<div class = "parallax__layer parallax__layer--back-1">
 				<div class="content_label">
 					<h3> Pixels </h3>
@@ -130,7 +129,13 @@ layout: page
 			<div class = "content">
 				<p>Take a picture. Put another over it. This is like every problematic makeover scene in every teen movie that defined my early years before I found Hal Ashby and Agnès Varda: whatever veneer you choose to smear over the face of the original image will make it unequivocally better than its previous iteration. Did you know that self-hate is a native data type in a JPEG?   </p>
 
-				<div id = "sketch2"> </div>
+
+				<div id = "imageRow">
+					<img id = "histoGramCheck" src = "/assets/images/163images/gaussCheck-gray.jpg" alt = "snapChat Triangulation">
+					<img id = "histoGramCheck" src = "/assets/images/163images/histogramCheck-grayGaussian.jpg" alt = "snapChat Triangulation">
+				</div>
+
+				
 			</div>
 <!-- 
 			<div class = "content">
@@ -260,6 +265,13 @@ layout: page
 			<div class = "content">
 				<p> This base image -- selfie with self-approximated landmark points -- was then condensed further. 
 				</p>
+
+				<div id = "imageRow">
+					<img id = "gaussCheck" src = "/assets/images/163images/gaussCheck-1.jpg" alt = "snapChat Triangulation">
+					<img id = "gaussCheck" src = "/assets/images/163images/gaussCheck-5.jpg" alt = "snapChat Triangulation">
+				</div>
+
+
 			</div>
 
 			<div class = "content"> 
@@ -268,9 +280,13 @@ layout: page
 
 			<div class = "content">
 				<p> c) Use Sobel edge-detection algorithm on smoothed image. This will detect "edges" (places where there is a large brightness shift between adjacent pixels (pixels that are located either vertically or horizontally next to one another but NOT those pixels that are located next to each other on a diagonal).</p>
+			
+
+ 				<div id = "imageRow">
+					<img id = "edgeDetect" src = "/assets/images/163images/sobel.jpg" alt = "snapChat Triangulation">
+					<img id = "edgeDetect" src = "/assets/images/163images/robertsPlain1.jpg" alt = "snapChat Triangulation">
+				</div>
 			</div>
-
-
 			<div class = "content"> 
 				<p> d) Use Shi-Tomasi Corner Detection - using the stack of detected edge pixels, we can use this smaller data set to determine “corners” — which we will then then refine to interest points.</p> 
 				<a href="http://www.ai.mit.edu/courses/6.891/handouts/shi94good.pdf">Shi-Tomasi Corner Detection Algorithm</a>
@@ -327,7 +343,7 @@ layout: page
 
 
 	<div id = "module6" class="parallax__group">
-		<div class="parallax__layer parallax__layer--back">
+		<div class="parallax__layer parallax__layer--back-5">
 			<div class = "text">
 				<h2> 6. Convex Hull </h2>
 			</div>
@@ -370,7 +386,7 @@ layout: page
 	</div>
 
 	<div id = "module7" class="parallax__group">
-		<div class = "parallax__layer parallax__layer--back">
+		<div class = "parallax__layer parallax__layer--back-6">
 			<div class="content_label">
 				<h2>7. Triangulation</h2>
 			</div>
@@ -395,7 +411,7 @@ layout: page
 	</div>
 
 	<div id= "module8" class="parallax__group">
-		<div class = "parallax__layer parallax__layer--back">
+		<div class = "parallax__layer parallax__layer--back-7">
 			<div class="content_label">
 				<h2>8. Delaunay Triangulation </h2>
 			</div>
@@ -411,7 +427,7 @@ layout: page
 	</div>
 
 	<div id = "module9" class="parallax__group">
-		<div class = "parallax__layer parallax__layer--back">
+		<div class = "parallax__layer parallax__layer--back-8">
 			<div class="content_label">
 				<h2>9. Voronoi </h2>
 			</div>

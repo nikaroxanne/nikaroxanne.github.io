@@ -5,8 +5,10 @@ var img;
 var imgMask;
 
 function preload() {
-  img = loadImage("assets/163images/nikaInitialImage.jpg");
-  imgMask = loadImage("assets/163images/sobel.jpg");
+  img = loadImage("/assets/images/163images/nikaInitialImage.jpg");
+  img.resize(600,0);
+  imgMask = loadImage("/assets/images/163images/sobel.jpg");
+  imgMask.resize(600,0);
 }
 
 function setup() {

@@ -58,7 +58,7 @@ body, html {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-image: url('/assets/images/163images/triangulationRef.jpg');
-	background-size: cover;
+	background-size: contain;
 	color: white;
 	text-align: center;
 	font-size: 40px;
@@ -70,8 +70,8 @@ body, html {
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-image: url('/assets/images/163images/sobel.jpg');
-	background-size: cover;
+	background-image: url('/assets/images/163images/facePointsRef.jpg');
+	background-size: contain;
 	color: white;
 	text-align: center;
 	font-size: 40px;
@@ -83,8 +83,8 @@ body, html {
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-image: url('/assets/images/163images/facePoints.jpg');
-	background-size: cover;
+	background-image: url('/assets/images/163images/facePointApproximation.jpg');
+	background-size: contain;
 	color: white;
 	text-align: center;
 	font-size: 40px;
@@ -96,21 +96,8 @@ body, html {
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-image: url('/assets/images/163images/facePointApproximation.jpg');
-	background-size: cover;
-	color: white;
-	text-align: center;
-	font-size: 40px;
-	font-weight: 200;
-}
-
-.parallax__layer--back--4{
-	height: 100vh;
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-image: url('/assets/images/163images/facePointApproximation.jpg');
-	background-size: cover;
+	background-image: url('/assets/images/163images/histogramCheckgrayGaussian.jpg');
+	background-size: contain;
 	color: white;
 	text-align: center;
 	font-size: 40px;
@@ -122,8 +109,8 @@ body, html {
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-image: url('/assets/images/163images/facePointApproximation.jpg');
-	background-size: cover;
+	background-image: url('/assets/images/163images/x-monotone-chain.jpg');
+	background-size: contain;
 	color: white;
 	text-align: center;
 	font-size: 40px;
@@ -150,6 +137,19 @@ body, html {
 	background-attachment: fixed;
 	background-image: url('/assets/images/163images/facePointApproximation.jpg');
 	background-size: cover;
+	color: white;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 200;
+}
+
+.parallax__layer--back--8{
+	height: 100vh;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-image: url('/assets/images/163images/facePointApproximation.jpg');
+	background-size: contain;
 	color: white;
 	text-align: center;
 	font-size: 40px;
@@ -190,6 +190,21 @@ img#snapTri {
 	font-weight: 200;
 }
 
+img#gaussCheck, img#edgeDetect, img#histoGramCheck {
+	max-width: 50%;
+	height: auto;
+	float: left;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	color: white;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 200;
+	padding: 10px;
+	margin: auto;
+}
 
 .parallax__layer p {
 	margin-bottom: : 40px;
