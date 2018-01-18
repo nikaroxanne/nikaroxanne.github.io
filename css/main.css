@@ -176,17 +176,31 @@ section.module.parallax {
 }
 */
 
-img#snapTri {
-	max-width: 33%;
-	height: auto;
+div.imageRow {
+	width: 100%;
+	padding: 10px;
+	margin: auto;
+}
+
+div.imageBox {
 	float: left;
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
+	max-width: 33.3%;
+	height: auto;
+	background-color: white;
+	margin-bottom: 10px;
+}
+
+img#snapTri {
 	color: white;
+	margin: auto;
+	padding: 5px;
+}
+
+div.imageText {
+	float: left;
 	text-align: center;
-	font-size: 40px;
+	position: relative;
+	font-size: 15px;
 	font-weight: 200;
 }
 

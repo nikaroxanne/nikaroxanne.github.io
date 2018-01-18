@@ -1,10 +1,36 @@
 ---
 layout: page
 ---
+<style>
+
+.links {
+  stroke: #000;
+  stroke-opacity: 0.2;
+}
+
+.polygons {
+  fill: none;
+  stroke: #000;
+}
+
+.polygons :first-child {
+  fill: #f00;
+}
+
+.sites {
+  fill: #000;
+  stroke: #fff;
+}
+
+.sites :first-child {
+  fill: #fff;
+}
+
+</style>
 
 <script src= "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"> </script>
 <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"> </script>
-<script src = "/assets/js/pixels.js"></script>
+<script src = "/assets/js/homePage.js"></script>
 
 
 <div id = "graphic">
@@ -16,7 +42,9 @@ layout: page
 
 				<div class="content">
 
-					<div id = "sketch1"> </div>
+					<div id = "sketch1">
+						<svg width = "800" height = "800"></svg>
+					</div>
 					<p>
 						Open Snapchat to take a selfie. Fix your hair, tilt your chin just so, perhaps parlay a smize and — No no, pause. You realize now that this is the perfect moment. This is the moment where you take a selfie such that you become another iteration of that canonical dog-eared millennial archetype.
 					</p>
@@ -32,13 +60,23 @@ layout: page
 				<div class = "content"> 
 					<p>There is a brief moment in the interim, between pressing the screen and when a cascade of filter options appear, when the Snapchat screen makes itself vulnerable — or seemingly so. Perhaps the algorithm (point location, triangulation, alpha mask generation, etc.) is simply not fast enough to go unnoticed. Or perhaps, in hinting a glimpse at your triangular decomposition, a user  feels that tantalizing endorphin-surging rush of peeking behind the curtain as the Wizard soliloquizes about the mysteries of the “cloud."</p>
 
-					<div id = "imageRow">
+					<p>Or perhaps, like most users, you never noticed the triangular mesh on your hurried way to transfigure yourself into some canonical dog-eared millennial archetype. That’s about to change. </p>
+				</div>
+				<div class = "imageRow">
+					<div class = "imageBox">
 						<img id = "snapTri" src = "/assets/images/163images/snapTri1.jpg" alt = "snapChat Triangulation">
+						<!--
+							<div class = imgText> 
+								<p> Screenshot </p>
+							</div>
+						-->
+					</div>
+					<div class="imageBox">
 						<img id = "snapTri" src = "/assets/images/163images/snapTri3.jpg" alt = "snapChat Triangulation">
+					</div>
+					<div class="imageBox">
 						<img id = "snapTri" src = "/assets/images/163images/snapTri1.jpg" alt = "snapChat Triangulation">
 					</div>
-
-					<p>Or perhaps, like most users, you never noticed the triangular mesh on your hurried way to transfigure yourself into some canonical dog-eared millennial archetype. That’s about to change. </p>
 				</div>
 
 				<div class = "content"> 
@@ -103,11 +141,25 @@ layout: page
 
 					<p>A pixel - unit of measurement - a square on your screen - the number of which per inch (the correct usage of “ppi” not “dpi” will earn you bonus points with the 𝜋 people who care and put you ~3𝜎 away from the fickle favors of the general population, but now you know) can reveal more and more ugly details of any given image.</p>
 				
-
-					<div id = "imageRow">
-						<img id = "snapTri" src = "/assets/images/163images/snapTri1.jpg" alt = "snapChat Triangulation">
-						<img id = "snapTri" src = "/assets/images/163images/snapTri3.jpg" alt = "snapChat Triangulation">
-						<img id = "snapTri" src = "/assets/images/163images/snapTri1.jpg" alt = "snapChat Triangulation">
+					<div class = "imageRow">
+						<div class = "imageBox">
+							<img id = "snapTri" src = "/assets/images/163images/snapTri1.jpg" alt = "snapChat Triangulation">
+								<div class = imgText> 
+									<p> Screenshot </p>
+								</div>
+						</div>
+						<div class="imageBox">
+							<img id = "snapTri" src = "/assets/images/163images/snapTri3.jpg" alt = "snapChat Triangulation">
+								<div class = imgText> 
+									<p> Screenshot </p>
+								</div>
+						</div>
+						<div class="imageBox">
+							<img id = "snapTri" src = "/assets/images/163images/snapTri1.jpg" alt = "snapChat Triangulation">
+								<div class = imgText> 
+									<p> Screenshot </p>
+								</div>
+						</div>
 					</div>
 
 					<p>A single pixel contains a wealth of knowledge that is both bountiful and generally rather accessible; there are no offshore Cayman Islands accounts for pixel info — not yet, anyways.</p> 

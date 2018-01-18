@@ -7,30 +7,67 @@ permalink: /portfolio/drawings/
 drawings:
   - title: Mapping 1
     image_path: assets/images/drawings/maps/mappingnew1.jpg
+    index: 1
   - title: Mapping 2
     image_path: assets/images/drawings/maps/mappingnew2.jpg
+    index: 2
   - title: Mapping 3
     image_path: assets/images/drawings/maps/mappingnew3.jpg
+    index: 3
   - title: Median
     image_path: assets/images/drawings/algo/median.jpg
+    index: 4
 
 ---
 
 <script src = "/assets/js/gallery.js"> </script>
-<div class = "slideshow-gallery">
 
-	<div class= "mySlides">
-		{% for image in site.static_files %}
-			{% if image.path contains 'images/drawings/' %}
-				<div class = "numbertext"> 1 / 14 </div>
-						<img src="{{site.url}}/{{image.path}}" style ="width:100%">
-			{% endif %}
-		{% endfor %}
-	</div>
-
-
-
-
+<div class = "slideshow-gallery">	
+	{% for image in site.static_files %}
+		{% if image.path contains 'images/drawings/maps/mappingnew1' %}
+			<div class= "mySlides">
+				<div class = "numbertext"> 1 / 7 </div>
+					<img src="{{site.url}}/{{image.path}}" style ="width:100%">
+				</div>
+			</div>
+		{% elsif image.path contains 'images/drawings/maps/mappingnew2' %}
+			<div class= "mySlides">
+				<div class = "numbertext"> 2 / 7</div>
+					<img src="{{site.url}}/{{image.path}}" style ="width:100%">
+				</div>
+			</div>
+		{% elsif image.path contains 'images/drawings/maps/mappingnew3' %}
+			<div class= "mySlides">
+				<div class = "numbertext"> 3 / 7</div>
+					<img src="{{site.url}}/{{image.path}}" style ="width:100%">
+				</div>
+			</div>
+		{% elsif image.path contains 'images/drawings/algo/median' %}
+			<div class= "mySlides">
+				<div class = "numbertext"> 4 / 7 </div>
+					<img src="{{site.url}}/{{image.path}}" style ="width:100%">
+				</div>
+			</div>
+		{% elsif image.path contains 'images/drawings/metalprint/metalfinal' %}
+			<div class= "mySlides">
+				<div class = "numbertext"> 5 / 7</div>
+					<img src="{{site.url}}/{{image.path}}" style ="width:100%">
+				</div>
+			</div>
+		{% elsif image.path contains 'images/drawings/history/gentileschi1' %}
+			<div class= "mySlides">
+				<div class = "numbertext"> 6 / 7 </div>
+					<img src="{{site.url}}/{{image.path}}" style ="width:100%">
+				</div>
+			</div>
+		{% elsif image.path contains 'images/drawings/history/gentileschi2' %}
+			<div class= "mySlides">
+				<div class = "numbertext"> 7 / 7 </div>
+					<img src="{{site.url}}/{{image.path}}" style ="width:100%">
+				</div>
+			</div>
+		{% endif %}
+	{% endfor %}
 	
 
 	<a class ="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -42,34 +79,37 @@ drawings:
 
 	<div class = "scroller">
 		<div class = "row">
-			<div class = "col-sm-1 col-m-1 col-1">
-				{% for image in site.static_files %}
-					{% if image.path contains 'images/drawings/maps/mappingnew1' %}
+			{% for image in site.static_files %}
+				{% if image.path contains 'images/drawings/maps/mappingnew1' %}
+					<div class = "col-sm-1 col-m-1 col-1">
 						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(1)" class = "demo" alt = "Mapping1">
-					{% endif %}
-				{% endfor %}
-			</div>
-			<div class = "col-sm-1 col-m-1 col-1">
-				{% for image in site.static_files %}
-					{% if image.path contains 'images/drawings/maps/mappingnew2' %}
-						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(2)" class = "demo" alt = "Mapping 2">
-					{% endif %}
-				{% endfor %}
-			</div>
-			<div class = "col-sm-1 col-m-1 col-1">
-				{% for image in site.static_files %}
-					{% if image.path contains 'images/drawings/maps/mappingnew3' %}
-						<img src="{{site.url}}/{{image.path}}" onclick = "currentSlide(3)" class = "demo" alt = "Mapping 3">
-					{% endif %}
-				{% endfor %}
-			</div>
-			<div class = "col-sm-1 col-m-1 col-1">
-				{% for image in site.static_files %}
-					{% if image.path contains 'images/drawings/metalprint/metalfinal' %}		
-						<img src="{{site.url}}/{{image.path}}" onclick = "currentSlide(4)" class = "demo" alt = "Metal Print">
-					{% endif %}
-				{% endfor %}
-			</div>
+					</div>
+				{% elsif image.path contains 'images/drawings/maps/mappingnew2' %}
+					<div class = "col-sm-1 col-m-1 col-1">
+						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(2)" class = "demo" alt = "Mapping2">
+					</div>
+				{% elsif image.path contains 'images/drawings/maps/mappingnew3' %}
+					<div class = "col-sm-1 col-m-1 col-1">
+						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(3)" class = "demo" alt = "Mapping3">
+					</div>
+				{% elsif image.path contains 'images/drawings/algo/median' %}
+					<div class = "col-sm-1 col-m-1 col-1">
+						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(4)" class = "demo" alt = "Median">
+					</div>
+				{% elsif image.path contains 'images/drawings/metalprint/metalfinal' %}
+					<div class = "col-sm-1 col-m-1 col-1">
+						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(5)" class = "demo" alt = "Mapping1">
+					</div>
+				{% elsif image.path contains 'images/drawings/history/gentileschi1' %}
+					<div class = "col-sm-1 col-m-1 col-1">
+						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(6)" class = "demo" alt = "Gentileschi1">
+					</div>
+				{% elsif image.path contains 'images/drawings/history/gentileschi2' %}
+					<div class = "col-sm-1 col-m-1 col-1">
+						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(7)" class = "demo" alt = "Gentileschi2">
+					</div>
+				{% endif %}
+			{% endfor %}
 		</div>
 	</div>
 </div>
