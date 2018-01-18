@@ -334,7 +334,7 @@ h2#livingarchive {
 
 .slideshow-gallery {
 	position: relative;
-	width: 100%;
+	width: 90%;
 }
 
 .mySlides {
@@ -548,7 +548,7 @@ img {
 
 .hero-image {
 	padding: 10px;
-	background-image: url('/assets/images/163images/voronoi5'); 
+	background-image: url('/assets/images/163images/voronoi-6.jpg'); 
 	height: 100vh;
 	width: auto;
 	position: relative;
