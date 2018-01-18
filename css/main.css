@@ -335,9 +335,6 @@ h2#livingarchive {
 .slideshow-gallery {
 	position: relative;
 	width: 100%;
-	height: auto;
-	overflow: hidden;
-	margin: auto;
 }
 
 .mySlides {
@@ -452,7 +449,7 @@ h2#livingarchive {
 
 .caption-container {
 	text-align: center;
-	background-color: black;
+	background-color: #222;
 	padding: 2px 16px;
 	color: white;
 }
@@ -462,7 +459,7 @@ img {
 	height: auto;
 }
 
-img.demo {
+.demo {
 	opacity: 0.6;
 }
 
@@ -551,7 +548,7 @@ img.demo {
 
 .hero-image {
 	padding: 10px;
-	background-image: url('/assets/images/compArt/lowpoly.jpg'); 
+	background-image: url('/assets/images/163images/voronoi5'); 
 	height: 100vh;
 	width: auto;
 	position: relative;
