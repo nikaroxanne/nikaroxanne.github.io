@@ -1,0 +1,48 @@
+---
+layout: default
+title: Paintings
+permalink: /portfolio/paintings/
+---
+
+<h2 class = "gallery-title"> Paintings </h2>
+<script src = "/assets/js/gallery.js"> </script>
+
+<div class = "slideshow-gallery">	
+
+	{% for image in site.static_files %}
+		{% if image.path contains 'images/paintings/arith' %}
+			<div class= "mySlides">
+				<div class = "numbertext"> 1 / 2 </div>
+				<img src="{{site.url}}/{{image.path}}" style ="width:100%">
+			</div>
+		{% elsif image.path contains 'images/paintings/itfollows' %}
+			<div class= "mySlides">
+				<div class = "numbertext"> 2 / 2</div>
+				<img src="{{site.url}}/{{image.path}}" style ="width:100%">
+			</div>
+		{% endif %}
+	{% endfor %}
+	
+
+	<a class ="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class ="next" onclick="plusSlides(1)">&#10095;</a>
+
+	<div class ="caption-container">
+		<p id="caption"></p>
+	</div>
+
+	
+	<div class = "row">
+		{% for image in site.static_files %}
+			{% if image.path contains 'images/paintings/arith' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(1)" class = "demo" alt = "Arith">
+				</div>
+			{% elsif image.path contains 'images/paintings/itfollows' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(2)" class = "demo" alt = "IT Follows">
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+</div>

@@ -2,56 +2,49 @@
 layout: default
 title: Computer-Based Art
 permalink: /portfolio/compArt/
-
 ---
 
-<h2> Algorithmic Art </h2>
+<h2 class = "gallery-title"> Algorithmic Art </h2>
 
 <script src = "/assets/js/gallery.js"> </script>
 
 <div class = "slideshow-gallery">	
+
 	{% for image in site.static_files %}
 		{% if image.path contains 'images/163images/voronoi-1' %}
 			<div class= "mySlides">
 				<div class = "numbertext"> 1 / 7 </div>
-					<img src="{{site.url}}/{{image.path}}" style ="width:100%">
-				</div>
+				<img src="{{site.url}}/{{image.path}}" style ="width:100%">
 			</div>
 		{% elsif image.path contains 'images/163images/voronoi-2' %}
 			<div class= "mySlides">
 				<div class = "numbertext"> 2 / 7</div>
-					<img src="{{site.url}}/{{image.path}}" style ="width:100%">
-				</div>
+				<img src="{{site.url}}/{{image.path}}" style ="width:100%">
 			</div>
 		{% elsif image.path contains 'images/163images/voronoi-3' %}
 			<div class= "mySlides">
 				<div class = "numbertext"> 3 / 7</div>
-					<img src="{{site.url}}/{{image.path}}" style ="width:100%">
-				</div>
+				<img src="{{site.url}}/{{image.path}}" style ="width:100%">
 			</div>
 		{% elsif image.path contains 'images/163images/voronoi-4' %}
 			<div class= "mySlides">
 				<div class = "numbertext"> 4 / 7 </div>
-					<img src="{{site.url}}/{{image.path}}" style ="width:100%">
-				</div>
+				<img src="{{site.url}}/{{image.path}}" style ="width:100%">
 			</div>
 		{% elsif image.path contains 'images/163images/voronoi-5' %}
 			<div class= "mySlides">
 				<div class = "numbertext"> 5 / 7</div>
-					<img src="{{site.url}}/{{image.path}}" style ="width:100%">
-				</div>
+				<img src="{{site.url}}/{{image.path}}" style ="width:100%">
 			</div>
 		{% elsif image.path contains 'images/163images/voronoi-6' %}
 			<div class= "mySlides">
 				<div class = "numbertext"> 6 / 7 </div>
-					<img src="{{site.url}}/{{image.path}}" style ="width:100%">
-				</div>
+				<img src="{{site.url}}/{{image.path}}" style ="width:100%">
 			</div>
 		{% elsif image.path contains 'images/163images/voronoi-7' %}
 			<div class= "mySlides">
 				<div class = "numbertext"> 7 / 7 </div>
-					<img src="{{site.url}}/{{image.path}}" style ="width:100%">
-				</div>
+				<img src="{{site.url}}/{{image.path}}" style ="width:100%">
 			</div>
 		{% endif %}
 	{% endfor %}
@@ -64,39 +57,38 @@ permalink: /portfolio/compArt/
 		<p id="caption"></p>
 	</div>
 
-	<div class = "scroller">
-		<div class = "row">
-			{% for image in site.static_files %}
-				{% if image.path contains 'images/163images/voronoi-1' %}
-					<div class = "col-sm-2 col-m-2 col-2">
-						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(1)" class = "demo" alt = "Voronoi1">
-					</div>
-				{% elsif image.path contains 'images/163images/voronoi-2' %}
-					<div class = "col-sm-2 col-m-2 col-2">
-						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(2)" class = "demo" alt = "Voronoi2">
-					</div>
-				{% elsif image.path contains 'images/163images/voronoi-3' %}
-					<div class = "col-sm-2 col-m-2 col-2">
-						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(3)" class = "demo" alt = "voronoi3">
-					</div>
-				{% elsif image.path contains 'images/163images/voronoi-4' %}
-					<div class = "col-sm-2 col-m-2 col-2">
-						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(4)" class = "demo" alt = "voronoi4">
-					</div>
-				{% elsif image.path contains 'images/163images/voronoi-5' %}
-					<div class = "col-sm-2 col-m-2 col-2">
-						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(5)" class = "demo" alt = "voronoi5">
-					</div>
-				{% elsif image.path contains 'images/163images/voronoi-6' %}
-					<div class = "col-sm-2 col-m-2 col-2">
-						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(6)" class = "demo" alt = "voronoi6">
-					</div>
-				{% elsif image.path contains 'images/163images/voronoi-7' %}
-					<div class = "col-sm-2 col-m-2 col-2">
-						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(7)" class = "demo" alt = "voronoi7">
-					</div>
-				{% endif %}
-			{% endfor %}
-		</div>
+	
+	<div class = "row">
+		{% for image in site.static_files %}
+			{% if image.path contains 'images/163images/voronoi-1' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(1)" class = "demo" alt = "Voronoi1">
+				</div>
+			{% elsif image.path contains 'images/163images/voronoi-2' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(2)" class = "demo" alt = "Voronoi2">
+				</div>
+			{% elsif image.path contains 'images/163images/voronoi-3' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(3)" class = "demo" alt = "voronoi3">
+				</div>
+			{% elsif image.path contains 'images/163images/voronoi-4' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(4)" class = "demo" alt = "voronoi4">
+				</div>
+			{% elsif image.path contains 'images/163images/voronoi-5' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(5)" class = "demo" alt = "voronoi5">
+				</div>
+			{% elsif image.path contains 'images/163images/voronoi-6' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(6)" class = "demo" alt = "voronoi6">
+				</div>
+			{% elsif image.path contains 'images/163images/voronoi-7' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(7)" class = "demo" alt = "voronoi7">
+				</div>
+			{% endif %}
+		{% endfor %}
 	</div>
 </div>

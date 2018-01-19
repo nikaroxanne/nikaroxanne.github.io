@@ -459,6 +459,11 @@ img {
 	height: auto;
 }
 
+img.gallery {
+	margin: 25px;
+	padding: 25px;
+}
+
 .demo {
 	opacity: 0.6;
 }
@@ -555,6 +560,8 @@ img {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	padding: 30px;
+	margin: 30px;
 }
 
 .hero-text {
@@ -574,6 +581,8 @@ img {
 .content-container{
 	padding: 0px 50px 10px 50px;
 }
+
+.gallery-title {text-align: center;}
 
 footer ul {
 	font-family: 'Cormorant Garamond', serif;
