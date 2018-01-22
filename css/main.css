@@ -464,6 +464,11 @@ img.gallery {
 	padding: 25px;
 }
 
+.imageLink {
+	maxWidth: 25%;
+	height: auto;
+}
+
 .demo {
 	opacity: 0.6;
 }
