@@ -559,7 +559,7 @@ img.gallery {
 	position: relative;
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 	padding: 30px;
 	margin: 30px;
 }
@@ -582,7 +582,17 @@ img.gallery {
 	padding: 0px 50px 10px 50px;
 }
 
+.page-title {text-align: center;}
+
 .gallery-title {text-align: center;}
+
+.writingSection {
+	text-align: left;
+	padding: 20px;
+	margin: 15px;
+	border: 1px solid black;
+}
+
 
 footer ul {
 	font-family: 'Cormorant Garamond', serif;

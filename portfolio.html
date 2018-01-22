@@ -1,12 +1,26 @@
 ---
 layout: page
 title: Portfolio
+permalink: /portfolio
+
 ---
 	<div class = "background">
 		{% for image in site.static_files %}
 			{% if image.path contains 'images/drawings/metalprint/metalfinal' %}
-				<a href="{{site.url}}/{{image.path}}" class="image">
-					<img src="{{site.url}}/{{image.path}}" alt = "Triangulation commencement">
+				<a href="{{site.url}}/portfolio/drawings" class="image">
+					<img src="{{site.url}}/{{image.path}}" alt = "Drawing Portfolio Sample">
+				</a>
+			{% endif %}
+
+			{% if image.path contains 'images/drawings/metalprint/metalfinal' %}
+				<a href="{{site.url}}/portfolio/paintings" class="image">
+					<img src="{{site.url}}/{{image.path}}" alt = "Painting Portfolio Sample">
+				</a>
+			{% endif %}
+			
+			{% if image.path contains 'images/drawings/metalprint/metalfinal' %}
+				<a href="{{site.url}}/portfolio/compArt" class="image">
+					<img src="{{site.url}}/{{image.path}}" alt = "CompArt Portfolio Sample">
 				</a>
 			{% endif %}
 		{% endfor %}

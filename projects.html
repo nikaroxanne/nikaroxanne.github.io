@@ -1,0 +1,18 @@
+---
+layout: page
+title: Projects
+---
+	<div class = "background">
+		{% for image in site.static_files %}
+			{% if image.path contains 'images/163images/voronoi-fun1' %}
+				<a href="{{site.url}}/projects/triangulation" class="image">
+					<img src="{{site.url}}/{{image.path}}" alt = "Snapchat Triangulations">
+				</a>
+			{% endif %}
+			{% if image.path contains 'images/livingArchive/ophelia1' %}
+				<a href="{{site.url}}/projects/livingArchive" class="image">
+					<img src="{{site.url}}/{{image.path}}" alt = "Living Archive Project">
+				</a>
+			{% endif %}
+		{% endfor %}
+	</div>

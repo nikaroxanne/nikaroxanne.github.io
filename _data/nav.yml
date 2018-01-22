@@ -1,17 +1,8 @@
 - title: "HOME"
   url: "/"
 
-- title: "BIOGRAPHY"
-  url: "/bio"
-
-- title: "ARTIST STATEMENT"
-  url: "/artistStatement"
-
 - title: "WRITING"
   url: "/blog"
-
-- title: "TRIANGULATION"
-  url: "/triangulation"
 
 - title: "PORTFOLIO"
   url: "/portfolio"
@@ -22,5 +13,18 @@
       url: "/drawings"
     - subtitle: "COMPUTER ART"
       url: "/compArt"
-- title: "LIVING ARCHIVE"
-  url: "/livingArchive"
+
+- title: "PROJECTS"
+  url: "/projects"
+  subfolderitems:
+    - subtitle: "TRIANGULATION"
+      url: "/triangulation"
+    - subtitle: "LIVING ARCHIVE"
+      url: "/livingArchive"
+
+- title: "ABOUT ME"
+  url: "/aboutMe"
+  subfolderitems:
+    - subtitle: "BIOGRAPHY"
+      url: "/bio"
+    - subtitle: "ARTIST STATEMENT"
