@@ -647,11 +647,6 @@ a.header:hover, a.header:active {
 }
 
 
-.projectSections, .portfolio, .aboutMe {
-	position: relative;
-	margin: auto;
-}
-
 
 .project, .portfolioSection, .aboutMeSection {
 	padding: 20px;
@@ -662,7 +657,7 @@ a.header:hover, a.header:active {
 	border: 1px solid black;
 	border-radius: 2px;
 	float: left;
-	display: inline-block;
+	position: relative;
 }
 
 footer ul {
