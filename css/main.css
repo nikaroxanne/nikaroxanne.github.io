@@ -496,7 +496,7 @@ img.gallery {
 
 
 .imageLink {
-	max-width: 100%
+	max-width: 50%
 	height: auto;
 	border: 1px solid black;
 	border-radius: 2px;
@@ -662,6 +662,7 @@ a.header:hover, a.header:active {
 	border: 1px solid black;
 	border-radius: 2px;
 	float: left;
+	position: absolute;
 }
 
 footer ul {
