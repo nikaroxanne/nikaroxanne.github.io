@@ -654,13 +654,14 @@ a.header:hover, a.header:active {
 
 
 .project, .portfolioSection, .aboutMeSection {
-	width: 40%;
+	width: 30%;
 	height: auto;
 	padding: 20px;
 	margin: 20px;
 	text-align: center;
 	font-family: 'Cormorant Garamond', serif;
 	font-size: 1.2em;
+	display: inline-block;
 }
 
 footer ul {

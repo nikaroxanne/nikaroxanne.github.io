@@ -13,14 +13,16 @@ permalink: /aboutMe
 					<a href="{{site.url}}/aboutMe/bio" class="image">
 						<img class = "imageLink" src="{{site.url}}/{{image.path}}" alt = "Snapchat Triangulations">
 					</a>
+					<p> Biography </p>
 				</div>
 			{% endif %}
 
-			{% if image.path contains 'images/livingArchive/ophelia1' %}
+			{% if image.path contains 'images/livingArchive/voronoi-teal' %}
 				<div class = "aboutMeSection">
 					<a href="{{site.url}}/aboutMe/artistStatement" class="image">
 						<img class = "imageLink" src="{{site.url}}/{{image.path}}" alt = "Living Archive Project">
 					</a>
+					<p> Artist Statement </p>
 				</div>
 			{% endif %}
 		{% endfor %}
