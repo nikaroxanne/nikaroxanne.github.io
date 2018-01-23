@@ -494,6 +494,12 @@ img.gallery {
 	text-align: center;
 	padding: 20px 50px;
 	color: black;
+	text-decoration: none;
+}
+
+a.header:link a.header:visited {
+	text-decoration: none;
+	padding: 5px;
 }
 
 .header-name {

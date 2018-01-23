@@ -6,21 +6,21 @@ permalink: /portfolio
 ---
 	<div class = "background">
 		{% for image in site.static_files %}
-			{% if image.path contains 'images/drawings/metalprint/metalfinal' %}
+			{% if image.path contains 'images/drawings/maps/mappingnew2' %}
 				<a href="{{site.url}}/portfolio/drawings" class="image">
-					<img src="{{site.url}}/{{image.path}}" alt = "Drawing Portfolio Sample">
+					<img class = "imageLink" src="{{site.url}}/{{image.path}}" alt = "Drawing Portfolio Sample">
 				</a>
 			{% endif %}
 
-			{% if image.path contains 'images/drawings/metalprint/metalfinal' %}
+			{% if image.path contains 'images/paintings/arith' %}
 				<a href="{{site.url}}/portfolio/paintings" class="image">
-					<img src="{{site.url}}/{{image.path}}" alt = "Painting Portfolio Sample">
+					<img src= "imageLink" "{{site.url}}/{{image.path}}" alt = "Painting Portfolio Sample">
 				</a>
 			{% endif %}
 			
-			{% if image.path contains 'images/drawings/metalprint/metalfinal' %}
+			{% if image.path contains 'images/163images/voronoi-6' %}
 				<a href="{{site.url}}/portfolio/compArt" class="image">
-					<img src="{{site.url}}/{{image.path}}" alt = "CompArt Portfolio Sample">
+					<img src= "imageLink" "{{site.url}}/{{image.path}}" alt = "CompArt Portfolio Sample">
 				</a>
 			{% endif %}
 		{% endfor %}
