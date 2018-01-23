@@ -648,6 +648,21 @@ a.header:hover, a.header:active {
 }
 
 
+.projectSections {
+	position: relative;
+	max-width: 90%;
+	margin: auto;
+}
+
+
+.project {
+	width: 40%;
+	height: auto;
+	padding: 20px;
+	margin: 20px;
+
+}
+
 footer ul {
 	font-family: 'Cormorant Garamond', serif;
 	padding: 0px;
