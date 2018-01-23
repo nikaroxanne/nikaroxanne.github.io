@@ -389,9 +389,20 @@ h2#livingarchive {
 	.col-12 {width: 100%;}
 }
 
+.gallery-title {
+	text-align: center;
+	padding: 5px;
+	position: relative;
+	color: black;
+	font-size: 1.8em;
+	font-family: 'Cormorant Garamond', serif;
+}
+
 .slideshow-gallery {
 	position: relative;
 	width: 100%;
+	margin: auto;
+	background-color: black;
 }
 
 .mySlides {
@@ -402,13 +413,6 @@ h2#livingarchive {
 .cursor {
 	cursor: pointer;
 }
-
-.scroller {
-	width: 100%;
-	border: 5px black;
-}
-
-
 
 .prev
 .next {
@@ -480,9 +484,11 @@ img.gallery {
 .galleryImage {
 	margin-right: auto;
 	margin-left: auto;
-	width: 50%;
+	width: 40%;
 	height: auto;
+	padding: 30px;
 }
+
 
 .imageLink {
 	width: 250px;
@@ -628,11 +634,7 @@ a.header:hover, a.header:active {
 
 .page-title {text-align: center;}
 
-.gallery-title {
-	text-align: center;
-	padding: 15px;
-	position: relative;
-}
+
 
 .writingSection {
 	text-align: left;

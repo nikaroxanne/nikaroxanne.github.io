@@ -4,20 +4,20 @@ title: Paintings
 permalink: /portfolio/paintings/
 ---
 
+<h2 class = "gallery-title"> Paintings </h2>
 
 <div class = "slideshow-gallery">	
-	<h2 class = "gallery-title"> Paintings </h2>
-
+	
 	{% for image in site.static_files %}
 		{% if image.path contains 'images/paintings/arith' %}
 			<div class= "mySlides">
 				<div class = "numbertext"> 1 / 2 </div>
-				<img src="{{site.url}}/{{image.path}}" style ="width:100%">
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
 			</div>
 		{% elsif image.path contains 'images/paintings/itfollows' %}
 			<div class= "mySlides">
 				<div class = "numbertext"> 2 / 2</div>
-				<img src="{{site.url}}/{{image.path}}" style ="width:100%">
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
 			</div>
 		{% endif %}
 	{% endfor %}
@@ -35,11 +35,11 @@ permalink: /portfolio/paintings/
 		{% for image in site.static_files %}
 			{% if image.path contains 'images/paintings/arith' %}
 				<div class = "col-sm-2 col-m-2 col-2">
-					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(1)" class = "demo" alt = "Arith">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(1)" class = "demo cursor" alt = "Arith">
 				</div>
 			{% elsif image.path contains 'images/paintings/itfollows' %}
 				<div class = "col-sm-2 col-m-2 col-2">
-					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(2)" class = "demo" alt = "IT Follows">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(2)" class = "demo cursor" alt = "It Follows">
 				</div>
 			{% endif %}
 		{% endfor %}
