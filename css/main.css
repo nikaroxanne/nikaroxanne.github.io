@@ -637,7 +637,6 @@ a.header:hover, a.header:active {
 .page-title {text-align: center;}
 
 
-
 .writingSection {
 	text-align: left;
 	padding: 20px;
@@ -645,9 +644,14 @@ a.header:hover, a.header:active {
 	border: 1px solid black;
 }
 
+.backgroundSection {
+	width: 100%;
+	background-color: black;
+}
+
 .projectSections, .portfolio, .aboutMe {
+	width: 50%;
 	text-align: center;
-	position: relative;
 }
 
 
