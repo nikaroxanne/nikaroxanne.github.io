@@ -649,6 +649,7 @@ a.header:hover, a.header:active {
 	background-color: black;
 	position: relative;
 	margin: auto;
+	width: 100%;
 }
 
 .aboutMeBio, .aboutMeArtistStatement, .portfolioDrawings, .portfolioPaintings, .portfolioCompArt {
