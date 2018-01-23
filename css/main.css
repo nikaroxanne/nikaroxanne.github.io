@@ -496,11 +496,10 @@ img.gallery {
 
 
 .imageLink {
-	width: 300px;
+	max-width: 100%
 	height: auto;
 	border: 1px solid black;
 	border-radius: 2px;
-	padding: 25px;
 }
 
 .demo {
@@ -648,14 +647,13 @@ a.header:hover, a.header:active {
 }
 
 
-.projectSections {
+.projectSections, .portfolio, .aboutMe {
 	position: relative;
-	max-width: 90%;
 	margin: auto;
 }
 
 
-.project {
+.project, .portfolioSection, .aboutMeSection {
 	width: 40%;
 	height: auto;
 	padding: 20px;

@@ -7,23 +7,35 @@ permalink: /portfolio
 <h2 class = "gallery-title"> Portfolio </h2>
 
 <div class = "background">
-	{% for image in site.static_files %}
-		{% if image.path contains 'images/drawings/maps/mappingnew2' %}
-			<a href="{{site.url}}/portfolio/drawings" class="image">
-				<img class = "imageLink" src="{{site.url}}/{{image.path}}" alt = "Drawing Portfolio Sample">
-			</a>
-		{% endif %}
 
-		{% if image.path contains 'images/paintings/arith' %}
-			<a href="{{site.url}}/portfolio/paintings" class="image">
-				<img class = "imageLink" src= "imageLink" "{{site.url}}/{{image.path}}" alt = "Painting Portfolio Sample">
-			</a>
-		{% endif %}
-		
-		{% if image.path contains 'images/163images/voronoi-teal' %}
-			<a href="{{site.url}}/portfolio/compArt" class="image">
-				<img class = "imageLink" src= "imageLink" "{{site.url}}/{{image.path}}" alt = "CompArt Portfolio Sample">
-			</a>
-		{% endif %}
-	{% endfor %}
+	<div class = "portfolio">
+		{% for image in site.static_files %}
+				{% if image.path contains 'images/drawings/maps/mappingnew2' %}
+					<div class = "portfolioSection">
+						<a href="{{site.url}}/portfolio/drawings" class="image">
+							<img class = "imageLink" src="{{site.url}}/{{image.path}}" alt = "Drawing Portfolio Sample">
+						</a>
+						<p> Drawings </p>
+					</div>
+			{% endif %}
+
+			{% if image.path contains 'images/paintings/arith' %}
+				<div class = "portfolioSection">
+					<a href="{{site.url}}/portfolio/paintings" class="image">
+						<img class = "imageLink" src= "{{site.url}}/{{image.path}}" alt = "Painting Portfolio Sample">
+					</a>
+					<p> Paintings </p>
+				</div>
+			{% endif %}
+			
+			{% if image.path contains 'images/163images/voronoi-teal' %}
+				<div class = "portfolioSection">
+					<a href="{{site.url}}/portfolio/compArt" class="image">
+						<img class = "imageLink" src="{{site.url}}/{{image.path}}" alt = "CompArt Portfolio Sample">
+					</a>
+					<p> Computer-Based Art </p>
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
 </div>
