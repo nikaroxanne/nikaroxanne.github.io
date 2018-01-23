@@ -497,9 +497,18 @@ img.gallery {
 	text-decoration: none;
 }
 
-a.header:link a.header:visited {
+a.header:link, a.header:visited {
+	color: black;
+	padding: 10px;
+	text-align: center;
 	text-decoration: none;
-	padding: 5px;
+	display: inline-block;
+	font-size: 2.0em;
+	font-family: 'Cormorant Garamond', serif;
+}
+
+a.header:hover, a.header:active {
+	background-color: white
 }
 
 .header-name {
