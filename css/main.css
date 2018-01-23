@@ -332,29 +332,7 @@ h2#livingarchive {
 }
 */
 
-.slideshow-gallery {
-	position: relative;
-	width: 90%;
-}
 
-.mySlides {
-	display: none;
-}
-
-.cursor {
-	cursor: pointer;
-}
-
-.scroller {
-	width: 100%;
-	border: 5px black;
-}
-
-.row:after {
-	content: "";
-	display: table;
-	clear: both;
-}
 
 
 [class*="col-"] {
@@ -411,6 +389,27 @@ h2#livingarchive {
 	.col-12 {width: 100%;}
 }
 
+.slideshow-gallery {
+	position: relative;
+	width: 100%;
+}
+
+.mySlides {
+	text-align: center;
+	display: none;
+}
+
+.cursor {
+	cursor: pointer;
+}
+
+.scroller {
+	width: 100%;
+	border: 5px black;
+}
+
+
+
 .prev
 .next {
 	cursor: pointer;
@@ -439,8 +438,10 @@ h2#livingarchive {
 }
 
 .numbertext {
-	color: #f2f2f2;
-	font-size: 12px;
+	color: black;
+	font-size: 0.9em;
+	font-family: 'Cormorant Garamond', serif;
+	font-weight: medium;
 	padding: 8px 12px;
 	position: absolute;
 	top: 0;
@@ -454,6 +455,18 @@ h2#livingarchive {
 	color: white;
 }
 
+p#caption {
+	color: white;
+	font-size: 1.2em;
+	font-family: 'Cormorant Garamond', serif;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
 img {
 	max-width: 100%;
 	height: auto;
@@ -464,12 +477,19 @@ img.gallery {
 	padding: 25px;
 }
 
+.galleryImage {
+	margin-right: auto;
+	margin-left: auto;
+	width: 50%;
+	height: auto;
+}
+
 .imageLink {
-	width: 200px;
+	width: 250px;
 	height: auto;
 	border: 1px solid black;
-	border radius: 2px;
-	padding: 5px;
+	border-radius: 2px;
+	padding: 50px;
 }
 
 .demo {
@@ -608,7 +628,11 @@ a.header:hover, a.header:active {
 
 .page-title {text-align: center;}
 
-.gallery-title {text-align: center;}
+.gallery-title {
+	text-align: center;
+	padding: 15px;
+	position: relative;
+}
 
 .writingSection {
 	text-align: left;

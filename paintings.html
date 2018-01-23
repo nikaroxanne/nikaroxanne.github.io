@@ -4,10 +4,9 @@ title: Paintings
 permalink: /portfolio/paintings/
 ---
 
-<h2 class = "gallery-title"> Paintings </h2>
-<script src = "/assets/js/gallery.js"> </script>
 
 <div class = "slideshow-gallery">	
+	<h2 class = "gallery-title"> Paintings </h2>
 
 	{% for image in site.static_files %}
 		{% if image.path contains 'images/paintings/arith' %}
@@ -46,3 +45,5 @@ permalink: /portfolio/paintings/
 		{% endfor %}
 	</div>
 </div>
+
+<script src = "/assets/js/gallery.js"> </script>

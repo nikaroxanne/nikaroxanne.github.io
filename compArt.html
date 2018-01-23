@@ -4,47 +4,45 @@ title: Computer-Based Art
 permalink: /portfolio/compArt/
 ---
 
-<h2 class = "gallery-title"> Algorithmic Art </h2>
-
-<script src = "/assets/js/gallery.js"> </script>
-
 <div class = "slideshow-gallery">	
+	
+	<h2 class = "gallery-title"> Algorithmic Art </h2>
 
 	{% for image in site.static_files %}
 		{% if image.path contains 'images/163images/voronoi-1' %}
 			<div class= "mySlides">
 				<div class = "numbertext"> 1 / 7 </div>
-				<img src="{{site.url}}/{{image.path}}" style ="width:100%">
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
 			</div>
 		{% elsif image.path contains 'images/163images/voronoi-2' %}
 			<div class= "mySlides">
 				<div class = "numbertext"> 2 / 7</div>
-				<img src="{{site.url}}/{{image.path}}" style ="width:100%">
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
 			</div>
 		{% elsif image.path contains 'images/163images/voronoi-3' %}
 			<div class= "mySlides">
 				<div class = "numbertext"> 3 / 7</div>
-				<img src="{{site.url}}/{{image.path}}" style ="width:100%">
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
 			</div>
 		{% elsif image.path contains 'images/163images/voronoi-4' %}
 			<div class= "mySlides">
 				<div class = "numbertext"> 4 / 7 </div>
-				<img src="{{site.url}}/{{image.path}}" style ="width:100%">
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
 			</div>
 		{% elsif image.path contains 'images/163images/voronoi-5' %}
 			<div class= "mySlides">
 				<div class = "numbertext"> 5 / 7</div>
-				<img src="{{site.url}}/{{image.path}}" style ="width:100%">
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
 			</div>
 		{% elsif image.path contains 'images/163images/voronoi-6' %}
 			<div class= "mySlides">
 				<div class = "numbertext"> 6 / 7 </div>
-				<img src="{{site.url}}/{{image.path}}" style ="width:100%">
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
 			</div>
 		{% elsif image.path contains 'images/163images/voronoi-7' %}
 			<div class= "mySlides">
 				<div class = "numbertext"> 7 / 7 </div>
-				<img src="{{site.url}}/{{image.path}}" style ="width:100%">
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
 			</div>
 		{% endif %}
 	{% endfor %}
@@ -92,3 +90,6 @@ permalink: /portfolio/compArt/
 		{% endfor %}
 	</div>
 </div>
+
+<script src = "/assets/js/gallery.js"> </script>
+

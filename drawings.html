@@ -20,46 +20,43 @@ drawings:
 
 ---
 
-<h2 class = "gallery-title"> Drawings </h2>
-
-<script src = "/assets/js/gallery.js"> </script>
-
 <div class = "slideshow-gallery">	
+	<h2 class = "gallery-title"> Drawings </h2>
 	{% for image in site.static_files %}
 		{% if image.path contains 'images/drawings/maps/mappingnew1' %}
 			<div class= "mySlides">
 				<div class = "numbertext"> 1 / 7 </div>
-				<img src="{{site.url}}/{{image.path}}" style ="width:100%">
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
 			</div>
 		{% elsif image.path contains 'images/drawings/maps/mappingnew2' %}
 			<div class= "mySlides">
 				<div class = "numbertext"> 2 / 7</div>
-				<img src="{{site.url}}/{{image.path}}" style ="width:100%">
+				<img class="galleryImage" src="{{site.url}}/{{image.path}}">
 			</div>
 		{% elsif image.path contains 'images/drawings/maps/mappingnew3' %}
 			<div class= "mySlides">
 				<div class = "numbertext"> 3 / 7</div>
-				<img src="{{site.url}}/{{image.path}}" style ="width:100%">
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
 			</div>
 		{% elsif image.path contains 'images/drawings/algo/median' %}
 			<div class= "mySlides">
 				<div class = "numbertext"> 4 / 7 </div>
-				<img src="{{site.url}}/{{image.path}}" style ="width:100%">
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
 			</div>
 		{% elsif image.path contains 'images/drawings/metalprint/metalfinal' %}
 			<div class= "mySlides">
 				<div class = "numbertext"> 5 / 7</div>
-				<img src="{{site.url}}/{{image.path}}" style ="width:100%">
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
 			</div>
 		{% elsif image.path contains 'images/drawings/history/gentileschi1' %}
 			<div class= "mySlides">
 				<div class = "numbertext"> 6 / 7 </div>
-				<img src="{{site.url}}/{{image.path}}" style ="width:100%">
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
 			</div>
 		{% elsif image.path contains 'images/drawings/history/gentileschi2' %}
 			<div class= "mySlides">
 				<div class = "numbertext"> 7 / 7 </div>
-				<img src="{{site.url}}/{{image.path}}" style ="width:100%">
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
 			</div>
 		{% endif %}
 	{% endfor %}
@@ -105,4 +102,8 @@ drawings:
 			{% endif %}
 		{% endfor %}
 	</div>
+
 </div>
+
+<script src = "/assets/js/gallery.js"> </script>
+
