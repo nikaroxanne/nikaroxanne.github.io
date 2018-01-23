@@ -646,18 +646,22 @@ a.header:hover, a.header:active {
 	border: 1px solid black;
 }
 
+.projectSections, .portfolio, .aboutMe {
+	position: relative;
+	width: 100%;
+	margin: auto;
+}
 
 
 .project, .portfolioSection, .aboutMeSection {
-	padding: 20px;
-	margin: 20px;
+	padding: 10px;
+	margin: 10px;
 	text-align: center;
 	font-family: 'Cormorant Garamond', serif;
-	font-size: 1.2em;
+	font-size: 0.8em;
 	border: 1px solid black;
 	border-radius: 2px;
 	float: left;
-	position: relative;
 }
 
 footer ul {
