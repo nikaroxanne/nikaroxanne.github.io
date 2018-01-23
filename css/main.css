@@ -496,7 +496,7 @@ img.gallery {
 
 
 .imageLink {
-	max-width: 50%
+	max-width: 30%
 	height: auto;
 	border: 1px solid black;
 	border-radius: 2px;
@@ -654,20 +654,16 @@ a.header:hover, a.header:active {
 
 
 .projectSections, .portfolio, .aboutMe {
-	position: relative;
-	margin: auto;
+	text-align: center;
 }
 
 
 .project, .portfolioSection, .aboutMeSection {
 	padding: 10px;
 	margin: 10px;
-	text-align: center;
-	font-family: 'Cormorant Garamond', serif;
-	font-size: 0.8em;
+	position: relative;	
 	border: 1px solid black;
 	border-radius: 2px;
-	float: left;
 }
 
 
