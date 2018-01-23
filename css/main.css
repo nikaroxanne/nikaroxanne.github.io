@@ -646,44 +646,29 @@ a.header:hover, a.header:active {
 }
 
 .backgroundSection {
+	width: 100%;
 	background-color: black;
+	margin: 20px;
+	position: absolute;
+}
+
+
+.projectSections, .portfolio, .aboutMe {
 	position: relative;
 	margin: auto;
-	width: 100%;
 }
 
-.aboutMeBio, .aboutMeArtistStatement, .portfolioDrawings, .portfolioPaintings, .portfolioCompArt {
+
+.project, .portfolioSection, .aboutMeSection {
 	padding: 10px;
-	height: 100vh;
-	width: auto;
-	position: relative;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: contain;
-	margin: 30px;
+	margin: 10px;
+	text-align: center;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 0.8em;
+	border: 1px solid black;
+	border-radius: 2px;
 	float: left;
 }
-
-.aboutMeBio {
-	background-image: url('/assets/images/163images/voronoi-6.jpg'); 
-}
-
-.aboutMeArtistStatement {
-	background-image: url('/assets/images/163images/voronoi-6.jpg'); 
-}
-
-.portfolioDrawings {
-	background-image: url('/assets/images/drawings/maps/mappingnew2'); 
-}
-
-.portfolioPaintings {
-	background-image: url('assets/images/paintings/arith'); 
-}
-
-.portfolioPaintings {
-	background-image: url('assets/images/163images/voroonoi-fun1s'); 
-}
-
 
 
 footer ul {
