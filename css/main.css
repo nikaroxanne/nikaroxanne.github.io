@@ -654,8 +654,6 @@ a.header:hover, a.header:active {
 
 
 .project, .portfolioSection, .aboutMeSection {
-	width: 40%;
-	height: auto;
 	padding: 20px;
 	margin: 20px;
 	text-align: center;
