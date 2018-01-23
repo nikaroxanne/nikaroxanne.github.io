@@ -6,12 +6,12 @@ permalink: /aboutMe
 	<div class = "backgroundSection">
 		{% for image in site.static_files %}
 			{% if image.path contains 'images/163images/voronoi-fun1' %}
-				<a href="{{site.url}}/about/bio" class="image">
+				<a href="{{site.url}}/aboutMe/bio" class="image">
 					<img class = "imageLink" src="{{site.url}}/{{image.path}}" alt = "Snapchat Triangulations">
 				</a>
 			{% endif %}
 			{% if image.path contains 'images/livingArchive/ophelia1' %}
-				<a href="{{site.url}}/about/artistStatement" class="image">
+				<a href="{{site.url}}/aboutMe/artistStatement" class="image">
 					<img class = "imageLink" src="{{site.url}}/{{image.path}}" alt = "Living Archive Project">
 				</a>
 			{% endif %}
