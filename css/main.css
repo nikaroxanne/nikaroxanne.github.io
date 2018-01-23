@@ -660,7 +660,9 @@ a.header:hover, a.header:active {
 	height: auto;
 	padding: 20px;
 	margin: 20px;
-
+	text-align: center;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 1.2em;
 }
 
 footer ul {
