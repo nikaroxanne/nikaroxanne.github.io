@@ -646,10 +646,7 @@ a.header:hover, a.header:active {
 }
 
 .backgroundSection {
-	max-width: 90%;
 	background-color: black;
-	margin: 20px;
-	position: absolute;
 }
 
 .aboutMeBio, .aboutMeArtistStatement, .portfolioDrawings, .portfolioPaintings, .portfolioCompArt {
@@ -678,6 +675,10 @@ a.header:hover, a.header:active {
 
 .portfolioPaintings {
 	background-image: url('assets/images/paintings/arith'); 
+}
+
+.portfolioPaintings {
+	background-image: url('assets/images/163images/voroonoi-fun1s'); 
 }
 
 
