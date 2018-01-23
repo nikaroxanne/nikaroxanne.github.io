@@ -8,34 +8,17 @@ permalink: /portfolio
 
 <div class = "backgroundSection">
 
-	<div class = "portfolio">
-		{% for image in site.static_files %}
-				{% if image.path contains 'images/drawings/maps/mappingnew2' %}
-					<div class = "portfolioSection">
-						<a href="{{site.url}}/portfolio/drawings" class="image">
-							<img class = "imageLink" src="{{site.url}}/{{image.path}}" alt = "Drawing Portfolio Sample">
-						</a>
-						<p> Drawings </p>
-					</div>
-			{% endif %}
+	<div class = "portfolioDrawings">
+		<div class = "hero-text">
+			<a href="{{site.url}}/aboutMe/bio"> Drawings </a>
+	</div>
+	<div class = "portfolioPaintings">
+		<div class = "hero-text">
+			<a href="{{site.url}}/portfolio/drawings"> Paintings </a>
+	</div>
 
-			{% if image.path contains 'images/paintings/arith' %}
-				<div class = "portfolioSection">
-					<a href="{{site.url}}/portfolio/paintings" class="image">
-						<img class = "imageLink" src= "{{site.url}}/{{image.path}}" alt = "Painting Portfolio Sample">
-					</a>
-					<p> Paintings </p>
-				</div>
-			{% endif %}
-			
-			{% if image.path contains 'images/163images/voronoi-teal' %}
-				<div class = "portfolioSection">
-					<a href="{{site.url}}/portfolio/compArt" class="image">
-						<img class = "imageLink" src="{{site.url}}/{{image.path}}" alt = "CompArt Portfolio Sample">
-					</a>
-					<p> Computer-Based Art </p>
-				</div>
-			{% endif %}
-		{% endfor %}
+	<div class = "portfolioCompArt">
+		<div class = "hero-text">
+			<a href="{{site.url}}/portfolio/drawings"> Computer-Based Art </a>
 	</div>
 </div>
