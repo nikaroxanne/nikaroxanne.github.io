@@ -649,12 +649,6 @@ a.header:hover, a.header:active {
 	background-color: black;
 }
 
-.projectSections, .portfolio, .aboutMe {
-	width: 50%;
-	text-align: center;
-}
-
-
 .project, .portfolioSection, .aboutMeSection {
 	padding: 10px;
 	margin: 10px;
