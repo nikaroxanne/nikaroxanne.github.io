@@ -11,29 +11,29 @@ permalink: /portfolio
 	<div class = "row">
 		{% for image in site.static_files %}
 				{% if image.path contains 'images/drawings/maps/mappingnew2' %}
-					<div class = "portfolioSection col-sm-3 col-m-3 col-3">
-						<a href="{{site.url}}/portfolio/drawings" class="image">
-							<img class = "imageLink" src="{{site.url}}/{{image.path}}" alt = "Drawing Portfolio Sample">
-						</a>
-						<p> Drawings </p>
+					<div class = "portfolioSection col-sm-4 col-m-4 col-4">
+						<img class = "imageLink" src="{{site.url}}/{{image.path}}" alt = "Drawing Portfolio Sample">
+						<div class = "hero-text">
+							<a href="{{site.url}}/portfolio/drawings" class="image"> <p> Drawings </p> </a>
+						</div>
 					</div>
 			{% endif %}
 
 			{% if image.path contains 'images/paintings/arith' %}
-				<div class = "portfolioSection col-sm-3 col-m-3 col-3">
-					<a href="{{site.url}}/portfolio/paintings" class="image">
-						<img class = "imageLink" src= "{{site.url}}/{{image.path}}" alt = "Painting Portfolio Sample">
-					</a>
-					<p> Paintings </p>
+				<div class = "portfolioSection col-sm-4 col-m-4 col-4">
+					<img class = "imageLink" src= "{{site.url}}/{{image.path}}" alt = "Painting Portfolio Sample">
+					<div class = "hero-text">
+						<a href="{{site.url}}/portfolio/paintings" class="image"><p> Paintings </p></a>
+					</div>
 				</div>
 			{% endif %}
 			
 			{% if image.path contains 'images/163images/voronoi-teal' %}
-				<div class = "portfolioSection col-sm-3 col-m-3 col-3">
-					<a href="{{site.url}}/portfolio/compArt" class="image">
-						<img class = "imageLink" src="{{site.url}}/{{image.path}}" alt = "CompArt Portfolio Sample">
-					</a>
-					<p> Computer-Based Art </p>
+				<div class = "portfolioSection col-sm-4 col-m-4 col-4">
+					<img class = "imageLink" src="{{site.url}}/{{image.path}}" alt = "CompArt Portfolio Sample">
+					<div class = "hero-text">
+						<a href="{{site.url}}/portfolio/compArt" class="image">	<p> Computer-Based Art </p> </a>
+					</div>
 				</div>
 			{% endif %}
 		{% endfor %}
