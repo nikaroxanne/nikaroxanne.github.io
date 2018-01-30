@@ -147,6 +147,97 @@ permalink: /projects/triangulation/
 			</div>
 		</div>
 	</div>
+
+<h2 class = "gallery-title"> Algorithmic Art </h2>
+
+<div class = "slideshow-gallery">	
+	
+	{% for image in site.static_files %}
+		{% if image.path contains 'images/163images/triangulationImages/steiner1' %}
+			<div class= "mySlides">
+				<div class = "numbertext"> 1 / 7 </div>
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
+			</div>
+		{% elsif image.path contains 'images/163images/triangulationImages/steiner2' %}
+			<div class= "mySlides">
+				<div class = "numbertext"> 2 / 7</div>
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
+			</div>
+		{% elsif image.path contains 'images/163images/triangulationImages/steiner3' %}
+			<div class= "mySlides">
+				<div class = "numbertext"> 3 / 7</div>
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
+			</div>
+		{% elsif image.path contains 'images/163images/triangulationImages/steiner4' %}
+			<div class= "mySlides">
+				<div class = "numbertext"> 4 / 7 </div>
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
+			</div>
+		{% elsif image.path contains 'images/163images/triangulationImages/steiner5' %}
+			<div class= "mySlides">
+				<div class = "numbertext"> 5 / 7</div>
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
+			</div>
+		{% elsif image.path contains 'images/163images/triangulationImages/steiner6' %}
+			<div class= "mySlides">
+				<div class = "numbertext"> 6 / 7 </div>
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
+			</div>
+		{% elsif image.path contains 'images/163images/triangulationImages/steiner8' %}
+			<div class= "mySlides">
+				<div class = "numbertext"> 7 / 7 </div>
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
+			</div>
+		{% endif %}
+	{% endfor %}
+	
+
+	<a class ="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class ="next" onclick="plusSlides(1)">&#10095;</a>
+
+	<div class ="caption-container">
+		<p id="caption"></p>
+	</div>
+
+	
+	<div class = "row">
+		{% for image in site.static_files %}
+			{% if image.path contains 'images/163images/triangulationImages/steiner1' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(1)" class = "demo" alt = "Voronoi1">
+				</div>
+			{% elsif image.path contains 'images/163images/triangulationImages/steiner2' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(2)" class = "demo" alt = "Voronoi2">
+				</div>
+			{% elsif image.path contains 'images/163images/triangulationImages/steiner3' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(3)" class = "demo" alt = "voronoi3">
+				</div>
+			{% elsif image.path contains 'images/163images/triangulationImages/steiner4' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(4)" class = "demo" alt = "voronoi4">
+				</div>
+			{% elsif image.path contains 'images/163images/triangulationImages/steiner5' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(5)" class = "demo" alt = "voronoi5">
+				</div>
+			{% elsif image.path contains 'images/163images/triangulationImages/steiner6' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(6)" class = "demo" alt = "voronoi6">
+				</div>
+			{% elsif image.path contains 'images/163images/triangulationImages/steiner8' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(7)" class = "demo" alt = "voronoi7">
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+</div>
+
+<script src = "/assets/js/gallery.js"> </script>
+
+	<!--
 		<div id="module-2" class= "parallax__group">
 			<div class = "parallax__layer parallax__layer--base">
 				<div class = "content"> 
@@ -383,6 +474,8 @@ permalink: /projects/triangulation/
 			 
 		</div>
 	</div>
+
+-->
 <!--
 	<div id = "module5" class="parallax__group">
 		<div class = "parallax__layer parallax__layer--back">
@@ -406,6 +499,7 @@ permalink: /projects/triangulation/
 
 -->
 
+<!--
 
 	<div id = "module6" class="parallax__group">
 		<div class="parallax__layer parallax__layer--back-5">
@@ -524,6 +618,8 @@ permalink: /projects/triangulation/
 
 		</div>
 	</div>
+
+-->
 
 	<div id = "module10" class="parallax__group">
 		<div class = "parallax__layer parallax__layer--back>
