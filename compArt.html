@@ -11,37 +11,82 @@ permalink: /portfolio/compArt/
 	{% for image in site.static_files %}
 		{% if image.path contains 'images/163images/triangulationImages/voronoi-1' %}
 			<div class= "mySlides">
-				<div class = "numbertext"> 1 / 7 </div>
+				<div class = "numbertext"> 1 / 16 </div>
 				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
 			</div>
 		{% elsif image.path contains 'images/163images/triangulationImages/voronoi-2' %}
 			<div class= "mySlides">
-				<div class = "numbertext"> 2 / 7</div>
+				<div class = "numbertext"> 2 / 16 </div>
 				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
 			</div>
 		{% elsif image.path contains 'images/163images/triangulationImages/voronoi-3' %}
 			<div class= "mySlides">
-				<div class = "numbertext"> 3 / 7</div>
+				<div class = "numbertext"> 3 / 16 </div>
 				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
 			</div>
 		{% elsif image.path contains 'images/163images/triangulationImages/voronoi-4' %}
 			<div class= "mySlides">
-				<div class = "numbertext"> 4 / 7 </div>
+				<div class = "numbertext"> 4 / 16 </div>
 				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
 			</div>
 		{% elsif image.path contains 'images/163images/triangulationImages/voronoi-5' %}
 			<div class= "mySlides">
-				<div class = "numbertext"> 5 / 7</div>
+				<div class = "numbertext"> 5 / 16</div>
 				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
 			</div>
 		{% elsif image.path contains 'images/163images/triangulationImages/voronoi-6' %}
 			<div class= "mySlides">
-				<div class = "numbertext"> 6 / 7 </div>
+				<div class = "numbertext"> 6 / 16 </div>
 				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
 			</div>
 		{% elsif image.path contains 'images/163images/triangulationImages/voronoi-7' %}
 			<div class= "mySlides">
-				<div class = "numbertext"> 7 / 7 </div>
+				<div class = "numbertext"> 7 / 16 </div>
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
+			</div>
+		{% elsif image.path contains 'images/163images/compArt/lowpoly' %}
+			<div class= "mySlides">
+				<div class = "numbertext"> 8 / 16</div>
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
+			</div>
+		{% elsif image.path contains 'images/163images/pinkIncremental1' %}
+			<div class= "mySlides">
+				<div class = "numbertext"> 9 / 16</div>
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
+			</div>
+		{% elsif image.path contains 'images/163images/pinkIncremental2' %}
+			<div class= "mySlides">
+				<div class = "numbertext"> 10 / 16</div>
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
+			</div>
+		{% elsif image.path contains 'images/163images/triangulationImages/DelaunayAndVoronoiGrayScaleSteiner' %}
+			<div class= "mySlides">
+				<div class = "numbertext"> 11 / 16</div>
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
+			</div>
+		{% elsif image.path contains 'images/163images/triangulationImages/fillTest1' %}
+			<div class= "mySlides">
+				<div class = "numbertext"> 12 / 16</div>
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
+			</div>
+		{% elsif image.path contains 'images/163images/triangulationImages/fillTest2' %}
+			<div class= "mySlides">
+				<div class = "numbertext"> 13 / 16</div>
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
+			</div>
+		{% elsif image.path contains 'images/163images/triangulationImages/justDelaunay1' %}
+			<div class= "mySlides">
+				<div class = "numbertext"> 14 / 16</div>
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
+			</div>
+		{% elsif image.path contains 'images/163images/triangulationImages/justDelaunayGrayscale1' %}
+			<div class= "mySlides">
+				<div class = "numbertext"> 15 / 16</div>
+				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
+			</div>
+		{% elsif image.path contains 'images/163images/triangulationImages/justDelaunayWithSteinerGrayscale1' %}
+			<div class= "mySlides">
+				<div class = "numbertext"> 16 / 16</div>
 				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
 			</div>
 		{% endif %}
@@ -85,6 +130,42 @@ permalink: /portfolio/compArt/
 			{% elsif image.path contains 'images/163images/triangulationImages/voronoi-7' %}
 				<div class = "col-sm-2 col-m-2 col-2">
 					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(7)" class = "demo" alt = "voronoi7">
+				</div>
+			{% elsif image.path contains 'images/163images/compArt/lowpoly' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(8)" class = "demo" alt = "lowpoly">
+				</div>
+			{% elsif image.path contains 'images/163images/pinkIncremental1' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(9)" class = "demo" alt = "pinkIncremental1">
+				</div>
+			{% elsif image.path contains 'images/163images/pinkIncremental2' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(10)" class = "demo" alt = "pinkIncremental2">
+				</div>
+			{% elsif image.path contains 'images/163images/triangulationImages/DelaunayAndVoronoiGrayScaleSteiner' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(11)" class = "demo" alt = "DelaunayAndVoronoiGrayScaleSteiner">
+				</div>
+			{% elsif image.path contains 'images/163images/triangulationImages/fillTest1' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(12)" class = "demo" alt = "fillTest1">
+				</div>
+			{% elsif image.path contains 'images/163images/triangulationImages/fillTest2' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(13)" class = "demo" alt = "fillTest2">
+				</div>
+			{% elsif image.path contains 'images/163images/triangulationImages/justDelaunay1' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(14)" class = "demo" alt = "justDelaunay1">
+				</div>
+			{% elsif image.path contains 'images/163images/triangulationImages/justDelaunayGrayscale1' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(15)" class = "demo" alt = "justDelaunayGrayscale1">
+				</div>
+			{% elsif image.path contains 'images/163images/triangulationImages/justDelaunayWithSteinerGrayscale1' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(16)" class = "demo" alt = "justDelaunayWithSteinerGrayscale1">
 				</div>
 			{% endif %}
 		{% endfor %}
