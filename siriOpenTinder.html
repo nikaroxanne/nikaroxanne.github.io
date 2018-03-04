@@ -1,0 +1,243 @@
+---
+layout: default
+permalink: /projects/siriOpenTinder/
+---
+
+<style>
+
+.line {
+	stroke: #000;
+	stroke-width: 1.5px;
+	stroke-linecap: round;
+}
+
+.line--inactive {
+	stroke: #ddd;
+	stroke-width: 1px;
+}
+
+#cardCanvas {
+	width: 100px;
+	height: 100px;
+}
+
+#cardContainer {
+	width: 500px;
+	height: 100px;
+	position: relative;
+	background-color: black;
+}
+
+#card1 {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 0px;
+	background-color: red;
+}
+
+#card2 {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 100px;
+	background-color: orange;
+}
+
+#card3 {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 200px;
+	background-color: yellow;
+}
+
+#card4 {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 300px;
+	background-color: green;
+}
+
+#card5 {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 400px;
+	background-color: blue;
+}
+
+</style>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--<script src="assets/js/fisherYatesShuffle.js"></script> -->
+
+<h2 id = "siriTitle"> siri, open Tinder </h2>
+<div class="archive__sources">
+	<button class="playbutton" id = "play" onclick = "start()"> shuffle me </button>
+</div>
+
+<canvas id = "cardCanvas"> </canvas>
+
+
+
+<div id="cardContainer">
+	<div class = "card" id = "card1"> <p> 1 </p> </div>
+	<div class = "card" id = "card2"> <p> 2 </p> </div>
+	<div class = "card" id = "card3"> <p> 3 </p> </div>
+	<div class = "card" id = "card4"> <p> 4 </p> </div>
+	<div class = "card" id = "card5"> <p> 5 </p> </div>
+</div>
+
+<div id = "shuffleResult">
+	<p> The shuffled array is <span id= "demo"> </span></p>
+</div>
+
+
+<script>
+$(document).ready(function(){
+	$("#books").click(function(){
+		$("#booksSection").slideToggle("slow");
+	});
+	$("#articles").click(function(){
+		$("#articlesSection").slideToggle("slow");
+	});
+});
+</script>
+
+
+<script>
+	var canvas = document.querySelector('canvas');
+	var ctx = canvas.getContext('2d');
+
+	//var width = canvas.width;
+	//var height = canvas.height;
+
+	function Card(x, y, width, height, color) {
+		this.x = x;
+		this.y = y;
+		this.width = width;
+		this.height = height;
+		this.color = color;
+	}
+
+	Card.prototype.draw = function(){
+		ctx.beginPath();
+		ctx.rect(this.x, this.y, this.width, this.height);
+		ctx.fillStyle = this.color;
+		ctx.fill();
+	};
+
+	Card.prototype.update = function(){
+	};
+
+	var testCards = [];
+
+	/*
+	function startCards() {
+		
+	*/
+
+/*
+	var testCard1 = new Card(0, 0, 50, 50, 'red');
+	var testCard2 = new Card(50, 50, 50, 50, 'orange');
+	var testCard3 = new Card(100, 100, 50, 50, 'yellow');
+	var testCard4 = new Card(150, 150, 50, 50, 'green');
+	var testCard5 = new Card(200, 200, 50, 50, 'blue');
+
+
+	
+	testCard.x;
+	testCard.y;
+	testCard.width;
+	testCard.height;
+	testCard.color;
+
+
+
+	testCard1.draw();
+	testCard2.draw();
+	testCard3.draw();
+	testCard4.draw();
+	testCard5.draw();
+*/
+
+	var cards = [1, 2, 3, 4, 5]; 
+
+	//create an array of card objects, then pass it to shuffle function to shuffle cards
+	//there won't be transitions but you can see squares of color move around
+
+	/*cards[0] = document.getElementById("card1");
+	cards[1] = document.getElementById("card2");
+	cards[2] = document.getElementById("card3");
+	cards[3] = document.getElementById("card4");
+	cards[4] = document.getElementById("card5");
+	*/
+
+
+	document.getElementById("demo").innerHTML = cards;
+	
+	function start (){
+
+		function shuffle(array){
+			var m = array.length, t, i;
+
+			while (m) {
+				i = Math.floor(Math.random()  * m--);
+
+				t = array[m];
+				array[m] = array[i];
+				array[i] = t;
+			}
+
+			return array;
+		}
+		cards = shuffle(cards);
+		document.getElementById("demo").innerHTML = cards;
+	}
+
+/*
+	function startCanvas() {
+		//ctx.fillStyle = 'rgba(0,0,0, 0.25)';
+		ctx.fillRect(0,0,width,height);
+
+		
+		for(int j =0; j < 5; j++) {
+			var testCard = new Card(
+				(100 * j),
+				(100 * j),
+				50,
+				50,
+				'red'
+			);
+			testCards.push(testCard);
+		}
+		
+
+/*
+		var testCard1 = new Card(0, 0, 50, 50, 'red');
+		testCards.push(testCard1);
+		var testCard2 = new Card(50, 50, 50, 50, 'orange');
+		testCards.push(testCard2);
+		var testCard3 = new Card(100, 100, 50, 50, 'yellow');
+		testCards.push(testCard3);
+		var testCard4 = new Card(150, 150, 50, 50, 'green');
+		testCards.push(testCard4);
+		var testCard5 = new Card(200, 200, 50, 50, 'blue');
+		testCards.push(testCard5);
+*/
+/*
+		for(int i =0; i < testCards.length; i++) {
+			testCards[i].draw();
+		}
+
+		requestAnimationFrame(startCanvas);
+	}
+*/
+
+</script>
+
+
+
