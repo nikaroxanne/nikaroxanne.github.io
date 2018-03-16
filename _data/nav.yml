@@ -21,6 +21,8 @@
       url: "/triangulation"
     - subtitle: "LIVING ARCHIVE"
       url: "/livingArchive"
+    - subtitle: "SIRI, OPEN TINDER"
+      url: "/siriOpenTinder"
 
 - title: "ABOUT ME"
   url: "/aboutMe"

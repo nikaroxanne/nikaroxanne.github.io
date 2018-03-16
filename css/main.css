@@ -297,7 +297,32 @@ svg {
     cursor: pointer;
 }
 
+.playbutton {
+	background-color: black;
+	position: relative;
+	left: 45%;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Cormorant Garamond', serif;
+	font-size: 1.2em;
+	font-weight: bold;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
 h2#livingarchive {
+	text-align: center;
+	font-size: 36px;
+	font-weight: 200;
+}
+
+h2#siriTitle {
 	text-align: center;
 	font-size: 36px;
 	font-weight: 200;

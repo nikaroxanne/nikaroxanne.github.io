@@ -17,11 +17,19 @@ permalink: /projects
 				</div>
 			{% endif %}
 
-			{% if image.path contains 'images/163images/voronoi-pink' %}
+			{% if image.path contains 'images/scans/nikadoublealuminum2005' %}
 				<div class = "project col-sm-5 col-m-5 col-5">
 					<img class = "imageLink" src="{{site.url}}/{{image.path}}" alt = "Living Archive Project">
 					<div class = "hero-text">
 						<a href="{{site.url}}/projects/livingArchive" class="image"> <p> Living Archive Project </p> </a>
+					</div>
+				</div>
+			{% endif %}
+			{% if image.path contains 'images/163images/voronoi-pink' %}
+				<div class = "project col-sm-5 col-m-5 col-5">
+					<img class = "imageLink" src="{{site.url}}/{{image.path}}" alt = "Siri, Open Tinder">
+					<div class = "hero-text">
+						<a href="{{site.url}}/projects/siriOpenTinder" class="image"> <p> Siri, Open Tinder </p> </a>
 					</div>
 				</div>
 			{% endif %}
