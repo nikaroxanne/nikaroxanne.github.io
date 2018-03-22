@@ -11,7 +11,7 @@ permalink: /aboutMe
 
 	<div class = "row">
 		{% for image in site.static_files %}
-			{% if image.path contains 'images/163images/voronoi-fun1' %}
+			{% if image.path contains 'images/163images/triangulationImages/voronoi-fun1' %}
 				<div class = "aboutMeSection col-sm-5 col-m-5 col-5">
 					<img class = "imageLink" src="{{site.url}}/{{image.path}}" alt = "Snapchat Triangulations">
 					<div class = "hero-text">
@@ -20,7 +20,7 @@ permalink: /aboutMe
 				</div>
 			{% endif %}
 
-			{% if image.path contains 'images/163images/voronoi-teal' %}
+			{% if image.path contains 'images/163images/triangulationImages/voronoi-teal' %}
 				<div class = "aboutMeSection col-sm-5 col-m-5 col-5">
 					<img class = "imageLink" src="{{site.url}}/{{image.path}}" alt = "Living Archive Project">
 					<div class = "hero-text">
