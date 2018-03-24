@@ -1,5 +1,6 @@
+<button class = "navButton" onclick="navControl()"> <i class = "fa fa-barcode"> </i> </button>
 <nav>
-	<ul class="nav-container">
+	<ul class="nav-container" id="myNav">
 		{% for item in site.data.nav %}	
 			{% if item.subfolderitems != null %}
 				<li class="dropdown">
@@ -17,3 +18,11 @@
 	</ul>
 </nav>
 
+
+<script>
+function navControl() {
+	document.getElementById("myNav").style.height = "50px";
+	document.getElementById("myNav").style.marginTop = "50px";
+}
+
+</script>

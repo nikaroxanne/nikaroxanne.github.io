@@ -328,6 +328,18 @@ svg {
     cursor: pointer;
 }
 
+.navButton {
+	text-align: center;
+    text-decoration: none;
+    display: block;
+	float: right;
+    top: 25px;
+    right: 0;
+    font-size: 36px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
 
 h2#livingarchive {
 	text-align: center;
@@ -635,11 +647,25 @@ a.header:hover, a.header:active {
 }
 
 .active {
-	background-color: lavender;	
+	background-color: red;	
+}
+
+.nav-container .icon {
+	display: none;
 }
 
 @media screen and (max-width: 600px) {
-	.nav-container li, .dropdown-content a {float: none;}
+	.nav-container {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 600px) {
+
+	.nav-container.responsive li, .dropdown-content a {
+		float: none;
+	}
+	
 }
 
 .hero-image {
@@ -651,7 +677,6 @@ a.header:hover, a.header:active {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: contain;
-	margin: 30px;
 }
 
 .hero-text {
@@ -669,7 +694,7 @@ a.header:hover, a.header:active {
 }
 
 .content-container{
-	padding: 0px 50px 10px 50px;
+	padding: 0px 20px 10px 20px;
 }
 
 .page-title {text-align: center;}
