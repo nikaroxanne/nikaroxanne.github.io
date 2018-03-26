@@ -92,7 +92,7 @@ permalink: /projects/siriOpenTinder/
 </div>
 
 <div id = "shuffleResult">
-	<p> The shuffled array is <span id= "demo"> </span></p>
+	<p> The initial array is <span id= "demo"> </span> </p>
 </div>
 
 
@@ -177,11 +177,34 @@ $(document).ready(function(){
 	*/
 
 
-	document.getElementById("demo").innerHTML = cards;
+	document.getElementById("demo").innerHTML = cards + "</br>";
 	
 	function start (){
+		var cardsText = "";
 
 		function shuffle(array){
+			var m = array.length, t, i;
+
+			while (m) {
+				i = Math.floor(Math.random()  * m--);
+
+				t = array[m];
+				array[m] = array[i];
+				array[i] = t;
+			}
+			//cardsText+= array + "</br>";
+			return array;
+		}
+		cards = shuffle(cards);
+		cardsText = "The shuffled array is " + cards + "</br>"
+		document.getElementById("demo").innerHTML += cardsText ;
+
+		/*
+
+		var cardSquares = document.getElementsByClassName("card");
+		var j;
+
+		function shuffleCards(array){
 			var m = array.length, t, i;
 
 			while (m) {
@@ -194,8 +217,8 @@ $(document).ready(function(){
 
 			return array;
 		}
-		cards = shuffle(cards);
-		document.getElementById("demo").innerHTML = cards;
+		cards = shuffle(cardSquares);
+		*/
 	}
 
 /*
