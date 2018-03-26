@@ -329,14 +329,16 @@ svg {
 }
 
 .navButton {
+	background-color: black;
+	border: none;
+    color: white;
 	text-align: center;
     text-decoration: none;
+    position: relative;
     display: block;
-	float: right;
-    top: 25px;
-    right: 0;
+    left: 45%;
     font-size: 36px;
-    margin: 4px 2px;
+    margin: 0;
     cursor: pointer;
 }
 
@@ -594,7 +596,15 @@ a.header:hover, a.header:active {
 	font-size: 1.8em;
 }
 
-.nav-container {
+#navCollapseSection {
+	border: 5px solid black;
+	border-collapse: collapse;
+	text-align: center;
+	background-color: #ddd;
+	display: none;
+}
+
+.nav-container, .nav-container2 {
 	list-style-type: none;
 	overflow: hidden;
 	font-family: 'Cormorant Garamond', serif;
@@ -603,29 +613,29 @@ a.header:hover, a.header:active {
 	padding: 0;
 }
 
-.nav-container li {
+.nav-container li, .nav-container2 li {
 	float: left;
 }
 
-.nav-container li a, .dropdown a {
+.nav-container li a, .dropdown a, .nav-container2 li a, .dropdown2 a {
 	font-size: 0.9em;
 	color: white;
 	text-align: center;
-	padding: 15px 20px;
+	padding: 15px 15px;
 	text-decoration: none;
 	display: inline-block;
 }
 
-.nav-container li a:hover, .dropdown:hover{
+.nav-container li a:hover, .dropdown:hover, .nav-container2 li a:hover, .dropdown2:hover{
 	background-color: red;
 }
 
-.dropdown {
+.dropdown, .dropdown2 {
 	float: left;
 	overflow: hidden;
 }
 
-.dropdown-content {
+.dropdown-content, .dropdown-content2 {
 	display: none;
 	position: absolute;
 	background-color: #696969;
@@ -634,35 +644,40 @@ a.header:hover, a.header:active {
 	z-index: 1;
 }
 
-.dropdown-content a {
+.dropdown-content a, .dropdown-content2 a{
 	display: block;
 	color: white;
-	padding: 15px 20px;
+	padding: 15px 15px;
 	text-align: left;
 	text-decoration: none;
 }
 
-.dropdown:hover .dropdown-content{ 
+.dropdown:hover .dropdown-content, .dropdown2:hover, .dropdown-content2{ 
 	display: block;
 }
+
 
 .active {
 	background-color: red;	
 }
 
-.nav-container .icon {
+.navButton {
 	display: none;
 }
 
-@media screen and (max-width: 600px) {
+
+
+@media screen and (max-width: 500px) {
+	.navButton {
+		display: block;
+	}
 	.nav-container {
 		display: none;
 	}
 }
 
-@media screen and (max-width: 600px) {
-
-	.nav-container.responsive li, .dropdown-content a {
+@media screen and (max-width: 500px) {
+	.nav-container2 li, .dropdown-content2 a {
 		float: none;
 	}
 	
