@@ -318,19 +318,27 @@ permalink: /projects/siriOpenTinder/
 */
 
 function addCard() {
-	var nextIndex = testCards.length;
+
+	var nextIndex = cards.length;
 	var nextHeight = nextIndex % 5;
 	var newCard = new Card(
 		(50 * nextHeight),
 		(50 * nextHeight),
 		50,
 		50,
-		'rgb(' + (255 - (50*nextIndex)) + ',' + (0+ 50*nextIndex) + ',' + (0+ 50*nextIndex) + ')',
+		'rgb(' + random(0,255) + ',' + random(0,255) + ',' + random(0,255) + ')',
 		nextIndex
 	)
-	console.log(newCard.id);
+	//console.log(newCard.id);
 	testCards.push(newCard);
 	testCards[nextIndex].draw();
+
+	var nextNumCard = nextIndex + 1;
+	cards.push(nextNumCard);
+	cardsUpdateText = "The shuffled array is " + cards + "</br>"
+	document.getElementById("demo").innerHTML += cardsUpdateText ;
+
+
 	//loop();
 }
 
