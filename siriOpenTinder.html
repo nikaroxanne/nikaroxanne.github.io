@@ -61,7 +61,7 @@ permalink: /projects/siriOpenTinder/
 
 #cardCanvas {
 	width: 250px;
-	height: 250px;
+	height: 100vh;
 	/*border: 1px solid black;*/
 }
 
@@ -100,6 +100,8 @@ permalink: /projects/siriOpenTinder/
 	<div class = "col-4 col-m-4 col-sm-4">
 		<canvas id = "cardCanvas"> </canvas>
 	</div>
+
+	<button class="playbutton" id = "play" onclick = "addCard()"> add card </button>
 </div>
 
 
@@ -131,6 +133,13 @@ permalink: /projects/siriOpenTinder/
 		ctx.fillStyle = this.color;
 		ctx.fill();
 	};
+
+
+	Card.prototype.update = function(){
+		this.y = this.y + 50;
+	};
+
+
 	/*
 	Card.prototype.update = function(){
 	};
@@ -233,12 +242,15 @@ permalink: /projects/siriOpenTinder/
 				array[m] = array[i];
 				array[i] = t;
 			}
-			//cardsText+= array + "</br>";
 			return array;
 		}
 		cards = shuffle(cards);
+		testCards = shuffle(testCards);
 		cardsText = "The shuffled array is " + cards + "</br>"
 		document.getElementById("demo").innerHTML += cardsText ;
+		loop();
+		//canvas.width = canvas.width + 50;
+		//canvas.height = canvas.height + 50;
 	}
 	//testCardsInit();
 	//testCardsDraw();
@@ -305,6 +317,23 @@ permalink: /projects/siriOpenTinder/
 	}
 */
 
+function addCard() {
+	var nextIndex = testCards.length;
+	var nextHeight = nextIndex % 5;
+	var newCard = new Card(
+		(50 * nextHeight),
+		(50 * nextHeight),
+		50,
+		50,
+		'rgb(' + (255 - (50*nextIndex)) + ',' + (0+ 50*nextIndex) + ',' + (0+ 50*nextIndex) + ')',
+		nextIndex
+	)
+	console.log(newCard.id);
+	testCards.push(newCard);
+	testCards[nextIndex].draw();
+	//loop();
+}
+
 // random function ported from: 
 // https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_building_practice
 	
@@ -335,7 +364,8 @@ permalink: /projects/siriOpenTinder/
 
 		for(var i=0; i < 5; i++){
 			testCards[i].draw();
-			console.log(testCards[i].id);
+			testCards[i].update();
+			//console.log(testCards[i].id);
 		}
 
 		//requestAnimationFrame(loop);
