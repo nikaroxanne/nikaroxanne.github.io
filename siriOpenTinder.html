@@ -107,25 +107,29 @@ permalink: /projects/siriOpenTinder/
 <script>
 	var canvas = document.querySelector('canvas');
 	var ctx = canvas.getContext('2d');
+
 	var cards = [1, 2, 3, 4, 5]; 
+	var testCards = [];
+
 
 	//var width = canvas.width;
 	//var height = canvas.height;
 
-	function Card(x, y, width, height, color) {
+	function Card(x, y, width, height, color, id) {
 		this.x = x;
 		this.y = y;
 		this.width = width;
 		this.height = height;
 		this.color = color;
+		this.id = id;
 	}
 
 	Card.prototype.draw = function(){
 		ctx.beginPath();
 		ctx.rect(this.x, this.y, this.width, this.height);
+		ctx.closePath();
 		ctx.fillStyle = this.color;
 		ctx.fill();
-		ctx.closePath();
 	};
 	/*
 	Card.prototype.update = function(){
@@ -134,18 +138,16 @@ permalink: /projects/siriOpenTinder/
 
 	//var testCards = [];
 
-	/*
-	function startCards() {
-		
-	*/
 
-	
+
+
+	/*
 	var testCard1 = new Card(0, 0, 50, 50, 'red');
 	var testCard2 = new Card(50, 0, 50, 50, 'orange');
 	var testCard3 = new Card(100, 0, 50, 50, 'yellow');
 	var testCard4 = new Card(150, 0, 50, 50, 'green');
 	var testCard5 = new Card(200, 0, 50, 50, 'blue');
-	
+	*/
 
 	/*
 	testCard.x;
@@ -155,13 +157,15 @@ permalink: /projects/siriOpenTinder/
 	testCard.color;
 	*/
 
-	
+	/*
 	testCard1.draw();
 	testCard2.draw();
 	testCard3.draw();
 	testCard4.draw();
 	testCard5.draw();
-	
+	*/
+
+
 	/*
 	console.log(testCards.length);
 	for (i=0; i < testCards.length; i++){
@@ -171,7 +175,7 @@ permalink: /projects/siriOpenTinder/
 	*/
 
 
-	var testCards = [];
+	//var testCards = [];
 
 	/*
 	function startCards() {
@@ -300,6 +304,43 @@ permalink: /projects/siriOpenTinder/
 		requestAnimationFrame(startCanvas);
 	}
 */
+
+// random function ported from: 
+// https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_building_practice
+	
+	function random(min, max){
+		var num = Math.floor(Math.random() * (max - min + 1)) + min;
+		return num;
+	}
+
+	function loop() {
+		ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
+		ctx.fillRect(0, 0, 250, 250);
+	
+		for (var j=0; j < 5; j++){
+		//while(testCards.length < 5){
+			var testCard = new Card(
+				(50*j), 
+				0, 
+				50, 
+				50, 
+				//'rgb(' + random(0,255) + ',' random(0,255) + ',' random(0, 255) + ')',
+				'rgb(' + (255 - (50*j)) + ',' + (0+ 50*j) + ',' + (0+ 50*j) + ')',
+				j
+			);
+			testCards.push(testCard);
+		}
+
+		//console.log(testCards.length);
+
+		for(var i=0; i < 5; i++){
+			testCards[i].draw();
+			console.log(testCards[i].id);
+		}
+
+		//requestAnimationFrame(loop);
+	}
+	loop();
 
 </script>
 
