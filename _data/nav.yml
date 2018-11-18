@@ -28,3 +28,7 @@
       url: "/bio"
     - subtitle: "ARTIST STATEMENT"
       url: "/artistStatement"
+
+
+- title: "CUBES"
+  url: "/cubes"
