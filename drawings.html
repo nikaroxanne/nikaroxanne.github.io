@@ -22,56 +22,92 @@ drawings:
 
 <h2 class = "gallery-title"> Drawings </h2>
 
-<div class = "slideshow-gallery">	
-	
-	{% for image in site.static_files %}
-		{% if image.path contains 'images/drawings/maps/mappingnew1' %}
-			<div class= "mySlides">
-				<div class = "numbertext"> 1 / 7 </div>
-				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
-			</div>
-		{% elsif image.path contains 'images/drawings/maps/mappingnew2' %}
-			<div class= "mySlides">
-				<div class = "numbertext"> 2 / 7</div>
-				<img class="galleryImage" src="{{site.url}}/{{image.path}}">
-			</div>
-		{% elsif image.path contains 'images/drawings/maps/mappingnew3' %}
-			<div class= "mySlides">
-				<div class = "numbertext"> 3 / 7</div>
-				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
-			</div>
-		{% elsif image.path contains 'images/drawings/algo/median' %}
-			<div class= "mySlides">
-				<div class = "numbertext"> 4 / 7 </div>
-				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
-			</div>
-		{% elsif image.path contains 'images/drawings/metalprint/metalfinal' %}
-			<div class= "mySlides">
-				<div class = "numbertext"> 5 / 7</div>
-				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
-			</div>
-		{% elsif image.path contains 'images/drawings/history/gentileschi1' %}
-			<div class= "mySlides">
-				<div class = "numbertext"> 6 / 7 </div>
-				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
-			</div>
-		{% elsif image.path contains 'images/drawings/history/gentileschi2' %}
-			<div class= "mySlides">
-				<div class = "numbertext"> 7 / 7 </div>
-				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
-			</div>
-		{% endif %}
-	{% endfor %}
-	
-
-	<a class ="prev" onclick="plusSlides(-1)">&#10094;</a>
-	<a class ="next" onclick="plusSlides(1)">&#10095;</a>
-
-	<div class ="caption-container">
-		<p id="caption"></p>
+	<div class = "row">
+		{% for image in site.static_files %}
+			{% if image.path contains 'images/drawings/maps/mappingnew1' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "openModal();currentSlide(1)" class = "hover-shadow cursor" alt = "Mapping1">
+				</div>
+			{% elsif image.path contains 'images/drawings/maps/mappingnew2' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "openModal();currentSlide(2)" class = "hover-shadow cursor" alt = "Mapping2">
+				</div>
+			{% elsif image.path contains 'images/drawings/maps/mappingnew3' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "openModal();currentSlide(3)" class = "hover-shadow cursor" alt = "Mapping3">
+				</div>
+			{% elsif image.path contains 'images/drawings/algo/median' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "openModal();currentSlide(4)" class = "hover-shadow cursor" alt = "Median">
+				</div>
+			{% elsif image.path contains 'images/drawings/metalprint/metalfinal' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "openModal();currentSlide(5)" class = "hover-shadow cursor" alt = "Mapping1">
+				</div>
+			{% elsif image.path contains 'images/drawings/history/gentileschi1' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "openModal();currentSlide(6)" class = "hover-shadow cursor" alt = "Gentileschi1">
+				</div>
+			{% elsif image.path contains 'images/drawings/history/gentileschi2' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "openModal();currentSlide(7)" class = "hover-shadow cursor" alt = "Gentileschi2">
+				</div>
+			{% endif %}
+		{% endfor %}
 	</div>
 
-	<div class = "row">
+
+<div id= "myModal" class = "modal">	
+	<span class = "close cursor" onclick="closeModal()">&times;</span>
+	<div class = "modal-content">
+
+		{% for image in site.static_files %}
+			{% if image.path contains 'images/drawings/maps/mappingnew1' %}
+				<div class= "mySlides">
+					<div class = "numbertext"> 1 / 7 </div>
+					<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
+				</div>
+			{% elsif image.path contains 'images/drawings/maps/mappingnew2' %}
+				<div class= "mySlides">
+					<div class = "numbertext"> 2 / 7</div>
+					<img class="galleryImage" src="{{site.url}}/{{image.path}}">
+				</div>
+			{% elsif image.path contains 'images/drawings/maps/mappingnew3' %}
+				<div class= "mySlides">
+					<div class = "numbertext"> 3 / 7</div>
+					<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
+				</div>
+			{% elsif image.path contains 'images/drawings/algo/median' %}
+				<div class= "mySlides">
+					<div class = "numbertext"> 4 / 7 </div>
+					<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
+				</div>
+			{% elsif image.path contains 'images/drawings/metalprint/metalfinal' %}
+				<div class= "mySlides">
+					<div class = "numbertext"> 5 / 7</div>
+					<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
+				</div>
+			{% elsif image.path contains 'images/drawings/history/gentileschi1' %}
+				<div class= "mySlides">
+					<div class = "numbertext"> 6 / 7 </div>
+					<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
+				</div>
+			{% elsif image.path contains 'images/drawings/history/gentileschi2' %}
+				<div class= "mySlides">
+					<div class = "numbertext"> 7 / 7 </div>
+					<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
+				</div>
+			{% endif %}
+		{% endfor %}
+	
+
+		<a class ="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class ="next" onclick="plusSlides(1)">&#10095;</a>
+
+		<div class ="caption-container">
+			<p id="caption"></p>
+		</div>
+
 		{% for image in site.static_files %}
 			{% if image.path contains 'images/drawings/maps/mappingnew1' %}
 				<div class = "col-sm-2 col-m-2 col-2">
@@ -104,7 +140,6 @@ drawings:
 			{% endif %}
 		{% endfor %}
 	</div>
-
 </div>
 
 <script src = "/assets/js/gallery.js"> </script>
