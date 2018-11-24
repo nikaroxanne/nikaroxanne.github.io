@@ -32,7 +32,7 @@ function showSlides(n) {
 	for(i=0; i < slides.length; i++) {
 		slides[i].style.display = "none";
 	}
-	for(i=0; i < arrows.length; i++) {
+	for(i = 0; i < arrows.length; i++) {
 		arrows[i].className = arrows[i].className.replace(" active", "");
 	}
 

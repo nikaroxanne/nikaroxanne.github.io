@@ -487,9 +487,9 @@ h2#siriTitle {
 .close {
 	color: white;
 	position: absolute;
-	top: 10px;
-	right: 25px;
-	font-size: 35px;
+	top: 15px;
+	right: 30px;
+	font-size: 50px;
 	font-weight: bold;
 }
 
@@ -511,13 +511,13 @@ h2#siriTitle {
 .next {
 	cursor: pointer;
 	position: absolute;
-	top: 40%;
+	top: 50%;
 	width: auto;
 	padding: 16px;
 	margin-top: -50px;
 	color: white;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 50px;
 	transition: 0.6s ease;
 	border-radius: 0 3px 3px 0;
 	user-select: none;
@@ -549,8 +549,6 @@ h2#siriTitle {
 	background-color: #222;
 	padding: 2px 16px;
 	color: white;
-	max-width: 90%;
-	height: auto;
 }
 
 p#caption {
