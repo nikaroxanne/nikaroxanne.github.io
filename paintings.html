@@ -6,61 +6,59 @@ permalink: /portfolio/paintings/
 
 <h2 class = "gallery-title"> Paintings </h2>
 
-<div class = "slideshow-gallery">	
-	<div class = "row">
+<div class = "row">
+	{% for image in site.static_files %}
+		{% if image.path contains 'images/paintings/arith' %}
+			<div class = "col-sm-4 col-m-4 col-4">
+				<img src="{{site.url}}/{{image.path}}" onclick="openModal();currentSlide(1)" class = "hover-shadow cursor">
+			</div>
+		{% elsif image.path contains 'images/paintings/itfollows' %}
+			<div class = "col-sm-4 col-m-4 col-4">
+				<img src="{{site.url}}/{{image.path}}"  onclick="openModal();currentSlide(2)" class = "hover-shadow cursor">
+			</div>
+		{% endif %}
+	{% endfor %}
+</div>
+
+
+<div id ="myModal" class = "modal">
+	<span class= "close cursor" onclick="closeModal()">&times;</span>
+	<div class = "modal-content">
+	
 		{% for image in site.static_files %}
 			{% if image.path contains 'images/paintings/arith' %}
-				<div class = "col-sm-2 col-m-2 col-2">
-					<img src="{{site.url}}/{{image.path}}" onclick="openModal();currentSlide(1)" class = "hover-shadow cursor">
+				<div class= "mySlides">
+					<div class = "numbertext"> 1 / 2 </div>
+					<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
 				</div>
 			{% elsif image.path contains 'images/paintings/itfollows' %}
-				<div class = "col-sm-2 col-m-2 col-2">
-					<img src="{{site.url}}/{{image.path}}"  onclick="openModal();currentSlide(2)" class = "hover-shadow cursor">
+				<div class= "mySlides">
+					<div class = "numbertext"> 2 / 2</div>
+					<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
 				</div>
 			{% endif %}
 		{% endfor %}
-	</div>
-
-
-	<div id ="myModal" class = "modal">
-		<span class= "close cursor" onclick="closeModal()">&times;</span>
-		<div class = "modal-content">
-	
-			{% for image in site.static_files %}
-				{% if image.path contains 'images/paintings/arith' %}
-					<div class= "mySlides">
-						<div class = "numbertext"> 1 / 2 </div>
-						<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
-					</div>
-				{% elsif image.path contains 'images/paintings/itfollows' %}
-					<div class= "mySlides">
-						<div class = "numbertext"> 2 / 2</div>
-					<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
-					</div>
-				{% endif %}
-			{% endfor %}
 	
 
-			<a class ="prev" onclick="plusSlides(-1)">&#10094;</a>
-			<a class ="next" onclick="plusSlides(1)">&#10095;</a>
+		<a class ="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class ="next" onclick="plusSlides(1)">&#10095;</a>
 
-			<div class ="caption-container">
-				<p id="caption"></p>
-			</div>
-
-	
-			{% for image in site.static_files %}
-				{% if image.path contains 'images/paintings/arith' %}
-					<div class = "col-sm-2 col-m-2 col-2">
-						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(1)" class = "demo cursor" alt = "Arith">
-					</div>
-				{% elsif image.path contains 'images/paintings/itfollows' %}
-					<div class = "col-sm-2 col-m-2 col-2">
-						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(2)" class = "demo cursor" alt = "It Follows">
-					</div>
-				{% endif %}
-			{% endfor %}
+		<div class ="caption-container">
+			<p id="caption"></p>
 		</div>
+
+	
+		{% for image in site.static_files %}
+			{% if image.path contains 'images/paintings/arith' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(1)" class = "demo cursor" alt = "Arith">
+				</div>
+			{% elsif image.path contains 'images/paintings/itfollows' %}
+				<div class = "col-sm-2 col-m-2 col-2">
+					<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(2)" class = "demo cursor" alt = "It Follows">
+				</div>
+			{% endif %}
+		{% endfor %}
 	</div>
 </div>
 

@@ -346,8 +346,8 @@ svg {
 
 
 h2#livingarchive {
-	text-align: center;
-	font-size: 36px;
+	text-align: left;
+	font-size: 24px;
 	font-weight: 200;
 }
 
@@ -449,17 +449,19 @@ h2#siriTitle {
 }
 
 .gallery-title {
-	text-align: center;
-	padding: 5px;
+	text-align: left;
+	padding: 10px;
 	position: relative;
 	color: black;
-	font-size: 1.5em;
+	font-size: 1.8em;
 	font-family: 'Cormorant Garamond', serif;
 }
 
+/*
 .slideshow-gallery {
-	position: relative;
+	border: 1px solid black;
 }
+*/
 
 .modal {
 	display: none;
@@ -511,7 +513,7 @@ h2#siriTitle {
 .next {
 	cursor: pointer;
 	position: absolute;
-	top: 50%;
+	top: 30%;
 	width: auto;
 	padding: 16px;
 	margin-top: -50px;
@@ -520,6 +522,7 @@ h2#siriTitle {
 	font-size: 50px;
 	transition: 0.6s ease;
 	border-radius: 0 3px 3px 0;
+	z-index: 1;
 	user-select: none;
 	-webkit-user-select: none;
 }
@@ -569,8 +572,8 @@ img {
 }
 
 img.gallery {
-	margin: 15px;
-	padding: 15px;
+	margin: 5px;
+	padding: 5px;
 }
 
 .galleryImage {
