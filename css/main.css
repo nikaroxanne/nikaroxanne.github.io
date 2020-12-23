@@ -4,6 +4,35 @@
 
 body, html {
 	height: 100%;
+	background-color: black;
+	color: lime;
+}
+
+.header {
+	background-color: lime;
+	color: black;
+}
+
+.description {
+	color: black;
+	opacity: 75%;
+	border: solid 3px lime;	
+	margin: 5px;
+	padding: 5px;
+	text-align: center;
+}
+
+p.bio, p.compArt {
+	color: white;
+	font-size: 24px;
+}
+
+
+p.triangulation {
+	margin-left: 20px;
+	margin-right: 20px;
+	padding: 10px;
+	font-size: 22px;
 }
 
 #graphic {
@@ -33,9 +62,9 @@ body, html {
 .parallax__layer.content {
 	padding: 20px;
 	text-align: center;
-	font-size: 10px;
+	font-size: 20px;
 	font-weight: 200;
-	margin: 10px;
+	margin: 20px;
 }
 
 /*
@@ -195,7 +224,7 @@ section.module.parallax {
 
 div.imageRow {
 	width: 100%;
-	padding: 10px;
+	padding: 20px;
 	margin: auto;
 }
 
@@ -243,11 +272,12 @@ img#gaussCheck, img#edgeDetect, img#histoGramCheck {
 	margin: auto;
 }
 
+/*
 .parallax__layer p {
 	margin-bottom: 40px;
-	font-size: 16px;
 	font-weight: 300;
 }
+*/
 
 .parallax__layer h1 {
 	color: rgba(255, 255, 255, 0.8);
@@ -300,7 +330,7 @@ svg {
 }
 
 .archivebutton {
-	background-color: black;
+    background-color: black;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -308,17 +338,17 @@ svg {
     text-decoration: none;
     display: inline-block;
     font-family: 'Cormorant Garamond', serif;
-	font-size: 1.2em;
-	font-weight: bold;
+    font-size: 1.2em;
+    font-weight: bold;
     font-size: 24px;
     margin: 4px 2px;
     cursor: pointer;
 }
 
 .playbutton {
-	background-color: black;
-	position: relative;
-	left: 0%;
+    background-color: black;
+    position: relative;
+    left: 0%;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -334,14 +364,14 @@ svg {
 .navButton {
 	background-color: black;
 	border: none;
-    color: white;
+	color: white;
 	text-align: center;
-    text-decoration: none;
-    display: block;
-    left: 45%;
-    font-size: 36px;
-    margin: 0;
-    cursor: pointer;
+	text-decoration: none;
+	display: block;
+	left: 45%;
+	font-size: 36px;
+	margin: 0;
+	cursor: pointer;
 }
 
 
@@ -382,14 +412,14 @@ h2#siriTitle {
 	display: none;
 }
 
-/*
+
 .gallery {
 	width: 100%;
 	height: auto;
 	padding: 20px;
 	display: block;
 }
-*/
+
 
 
 
@@ -577,8 +607,6 @@ img.gallery {
 }
 
 .galleryImage {
-/*	margin-right: auto;
-	margin-left: auto;*/
 	max-width: 100%;
 	height: auto;
 }
@@ -787,8 +815,8 @@ footer ul {
 }
 
 footer ul li {
-    display: inline;
-    margin-right: 20px;
+	display: inline;
+	margin-right: 20px;
 }
 
 a {
