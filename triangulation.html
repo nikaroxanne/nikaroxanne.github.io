@@ -3,33 +3,6 @@ layout: default
 permalink: /projects/triangulation/
 
 ---
-<style>
-
-.links {
-  stroke: #000;
-  stroke-opacity: 0.2;
-}
-
-.polygons {
-  fill: none;
-  stroke: #000;
-}
-
-.polygons :first-child {
-  fill: #f00;
-}
-
-.sites {
-  fill: #000;
-  stroke: #fff;
-}
-
-.sites :first-child {
-  fill: #fff;
-}
-
-</style>
-
 <script src = "/assets/js/homePage.js"></script>
 
 
@@ -40,10 +13,8 @@ permalink: /projects/triangulation/
 				<h2> Applications of Delaunay Triangulation and Edge Flipping in Facial Recognition and Detection</h2>
 				<h3> (subtitle: Make Yourself Cubist&trade;) </h3> 
 
-				<h3> (more formally:  
-					<div class = "content"> 
-						<p class="triangulation">  <a href= "{{site.url}}/assets/pdf/comp163reportNikaKorchok.pdf"> here</a>.)</p>
-					</div>
+				<h3> More formally:  
+					<a href= "{{site.url}}/assets/pdf/comp163reportNikaKorchok.pdf"> here</a>.
 				</h3>
 
 				<div class="content">
@@ -134,7 +105,6 @@ permalink: /projects/triangulation/
 					<p class="triangulation">Understanding the process of triangulating a selected face region (i.e. what we need so we can put a cutesy infantilizing dog filter on it!) requires understanding how a computer understands a photograph. </p>
 
 					<p class="triangulation">A pixel - unit of measurement - a square on your screen - the number of which per inch (the correct usage of “ppi” not “dpi” will earn you bonus points with the 𝜋 people who care and put you ~3𝜎 away from the fickle favors of the general population, but now you know) can reveal more and more ugly details of any given image.</p>
-					<!--
 					<div class = "imageRow">
 						<div class = "imageBox">
 							<img id = "snapTri" src = "/assets/images/163images/triangulationImages/filltest1.jpg" alt = "snapChat Triangulation">
@@ -152,7 +122,6 @@ permalink: /projects/triangulation/
 								</div>
 						</div>
 					</div>
-					-->
 
 					<p class="triangulation">A single pixel contains a wealth of knowledge that is both bountiful and generally rather accessible; there are no offshore Cayman Islands accounts for pixel info — not yet, anyways.</p> 
 				
@@ -175,21 +144,12 @@ permalink: /projects/triangulation/
 
 
 				<div id = "imageRow">
-					<img id = "histoGramCheck" src = "/assets/images/163images/edgeDetect/gaussCheck-gray.jpg" alt = "snapChat Triangulation">
-					<img id = "histoGramCheck" src = "/assets/images/163images/histogramCheck-grayGaussian.jpg" alt = "snapChat Triangulation">
+					<img class= "histoGramCheck" src = "/assets/images/163images/edgeDetect/gaussCheck-gray.jpg" alt = "snapChat Triangulation">
+					<img class = "histoGramCheck" src = "/assets/images/163images/histogramCheck-grayGaussian.jpg" alt = "snapChat Triangulation">
 				</div>
 
 				
 			</div>
-<!-- 
-			<div class = "content">
-				<p class="triangulation">Remember how I said that the image is made of pixels that are not really divided in Euclidean terms but in those of a one-dimensional array?   We’re going to throw that out the window for a Euclidean moment (it’s a vector joke. What’s the magnitude/direction of that fuck we’re throwing out the window? -infinity.)</p> 
-			</div> 
-
-			<div class = "content">
-				<p class="triangulation">Pretend that we are looking at a really cheesy drawing of a window from a Sr.Kindergarten art class — refined enough to not just be a box, but not really elevated enough to understand that most windows aren’t just tacky divisions of four equal, Chicklet pieces of glass stuck together by an X, tilted 45 degrees. </p> 
-			</div>
--->
 			<div class = "content">
 				<p class="triangulation">A convolution is like putting a piece of stained glass over a window pane — it does not technically alter the original data of the image, but it does alter our view — we “convolve” an image with a convolution matrix, by passing a small amount of window paint / across the / window pane. (Sorry, Sylvia, not my best.)</p>
 			</div>
@@ -305,8 +265,8 @@ permalink: /projects/triangulation/
 				</p>
 
 				<div id = "imageRow">
-					<img id = "gaussCheck" src = "/assets/images/163images/edgeDetect/gaussCheck-1.jpg" alt = "snapChat Triangulation">
-					<img id = "gaussCheck" src = "/assets/images/163images/edgeDetect/gaussCheck-5.jpg" alt = "snapChat Triangulation">
+					<img class = "gaussCheck" src = "/assets/images/163images/edgeDetect/gaussCheck-1.jpg" alt = "snapChat Triangulation">
+					<img class = "gaussCheck" src = "/assets/images/163images/edgeDetect/gaussCheck-5.jpg" alt = "snapChat Triangulation">
 				</div>
 
 
@@ -321,21 +281,17 @@ permalink: /projects/triangulation/
 			
 
  				<div id = "imageRow">
-					<img id = "edgeDetect" src = "/assets/images/163images/edgeDetect/sobelPlainWithGaussianFive.jpg" alt = "snapChat Triangulation">
-					<img id = "edgeDetect" src = "/assets/images/163images/robertsPlain1.jpg" alt = "snapChat Triangulation">
+					<img class = "edgeDetect" src = "/assets/images/163images/edgeDetect/sobelPlainWithGaussianFive.jpg" alt = "snapChat Triangulation">
+					<img class = "edgeDetect" src = "/assets/images/163images/robertsPlain1.jpg" alt = "snapChat Triangulation">
 				</div>
 			</div>
 			<div class = "content"> 
 				<p class="triangulation"> d) Use Shi-Tomasi Corner Detection - using the stack of detected edge pixels, we can use this smaller data set to determine “corners” — which we will then then refine to interest points.</p> 
 				<a href="http://www.ai.mit.edu/courses/6.891/handouts/shi94good.pdf">Shi-Tomasi Corner Detection Algorithm</a>
-				<a href="http://www.cse.psu.edu/~rtc12/CSE486/lecture06.pdf"></a>
-				<a href="https://classes.soe.ucsc.edu/cmpe264/Fall06/Lec5.pdf"></a>
-				<a href="http://web.stanford.edu/class/ee368/Handouts/Lectures/2014_Spring/Combined_Slides/11-Edge-Detection-Combined.pdf"></a>
-				<a href= "http://www.owlnet.rice.edu/~elec539/Projects97/morphjrks/morph.html"></a>
 			</div>
 
 			<div class = "content">
-				<p class="triangulation"> Using a 3x3 matrix of input pixels (reasoning for which comes from this article: ), we calculate the average difference in pixel brightness to find areas — to be further refined to points — of high contrast.  Why?</p>
+				<p class="triangulation"> Using a 3x3 matrix of input pixels, we calculate the average difference in pixel brightness to find areas — to be further refined to points — of high contrast.  Why?</p>
 			</div>
 
 			<div class = "content">
@@ -353,7 +309,7 @@ permalink: /projects/triangulation/
 	</div>
 
 
-	<div id = "module6" class="parallax__group">
+	<div id = "module5" class="parallax__group">
 		<div class="parallax__layer parallax__layer--back-5">
 			<div class = "text">
 				<h2> 6. Convex Hull </h2>
@@ -395,7 +351,7 @@ permalink: /projects/triangulation/
 		</div>
 	</div>
 
-	<div id = "module7" class="parallax__group">
+	<div id = "module6" class="parallax__group">
 		<div class = "parallax__layer parallax__layer--back-6">
 			<div class="content_label">
 				<h2>7. Triangulation</h2>
@@ -418,7 +374,7 @@ permalink: /projects/triangulation/
 		</div>
 	</div>
 
-	<div id= "module8" class="parallax__group">
+	<div id= "module7" class="parallax__group">
 		<div class = "parallax__layer parallax__layer--back-7">
 			<div class="content_label">
 				<h2>8. Delaunay Triangulation </h2>
@@ -434,7 +390,7 @@ permalink: /projects/triangulation/
 		</div>	
 	</div>
 
-	<div id = "module9" class="parallax__group">
+	<div id = "module8" class="parallax__group">
 		<div class = "parallax__layer parallax__layer--back-8">
 			<div class="content_label">
 				<h2>9. Voronoi </h2>
@@ -470,7 +426,6 @@ permalink: /projects/triangulation/
 
 
 	<h2 class = "gallery-title"> Voronoi Mapping on an Input Image </h2>
-
 	<div class = "slideshow-gallery">	
 	
 		{% for image in site.static_files %}
@@ -480,10 +435,10 @@ permalink: /projects/triangulation/
 					<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
 				</div>
 			{% elsif image.path contains 'images/163images/triangulationImages/steiner3' %}
-			<div class= "mySlides">
-				<div class = "numbertext"> 2 / 6 </div>
-				<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
-			</div>
+				<div class= "mySlides">
+					<div class = "numbertext"> 2 / 6 </div>
+					<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
+				</div>
 			{% elsif image.path contains 'images/163images/triangulationImages/steiner4' %}
 				<div class= "mySlides">
 					<div class = "numbertext"> 3 / 6 </div>
@@ -497,6 +452,11 @@ permalink: /projects/triangulation/
 			{% elsif image.path contains 'images/163images/triangulationImages/steiner6' %}
 				<div class= "mySlides">
 					<div class = "numbertext"> 5 / 6 </div>
+				</div>
+			{% elsif image.path contains 'images/163images/triangulationImages/steiner8' %}
+				<div class= "mySlides">
+					<div class = "numbertext"> 6 / 6 </div>
+				</div>
 			{% endif %}
 		{% endfor %}
 
@@ -515,33 +475,30 @@ permalink: /projects/triangulation/
 					</div>
 				{% elsif image.path contains 'images/163images/triangulationImages/steiner3' %}
 					<div class = "col-sm-2 col-m-2 col-2">
-						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(3)" class = "demo" alt = "voronoi3">
+						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(2)" class = "demo" alt = "voronoi3">
 					</div>
 				{% elsif image.path contains 'images/163images/triangulationImages/steiner4' %}
 					<div class = "col-sm-2 col-m-2 col-2">
-						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(4)" class = "demo" alt = "voronoi4">
+						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(3)" class = "demo" alt = "voronoi4">
 					</div>
 				{% elsif image.path contains 'images/163images/triangulationImages/steiner5' %}
 					<div class = "col-sm-2 col-m-2 col-2">
-						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(5)" class = "demo" alt = "voronoi5">
+						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(4)" class = "demo" alt = "voronoi5">
 					</div>
 				{% elsif image.path contains 'images/163images/triangulationImages/steiner6' %}
 					<div class = "col-sm-2 col-m-2 col-2">
-						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(6)" class = "demo" alt = "voronoi6">
+						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(5)" class = "demo" alt = "voronoi6">
 					</div>
 				{% elsif image.path contains 'images/163images/triangulationImages/steiner8' %}
 					<div class = "col-sm-2 col-m-2 col-2">
-						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(7)" class = "demo" alt = "voronoi7">
+						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(6)" class = "demo" alt = "voronoi7">
 					</div>
 				{% endif %}
 			{% endfor %}
 		</div>
+		<script src= "/assets/js/gallery.js"></script>
+		
 	</div>
-	<script src = "/assets/js/gallery.js"> </script>
-
-</div>
-
-<div class="References">		
 
 
 	<div id = "module10" class="parallax__group">
@@ -625,3 +582,12 @@ permalink: /projects/triangulation/
 	</div>
 </div>
 
+<!--
+	<div>
+
+			<a href="http://www.cse.psu.edu/~rtc12/CSE486/lecture06.pdf"></a>
+			<a href="https://classes.soe.ucsc.edu/cmpe264/Fall06/Lec5.pdf"></a>
+			<a href="http://web.stanford.edu/class/ee368/Handouts/Lectures/2014_Spring/Combined_Slides/11-Edge-Detection-Combined.pdf"></a>
+			<a href= "http://www.owlnet.rice.edu/~elec539/Projects97/morphjrks/morph.html"></a>
+	</div>
+-->

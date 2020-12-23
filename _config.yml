@@ -15,12 +15,10 @@
 # in the templates via {{ site.myvariable }}.
 title: o-nika
 email: nikakw@gmail.com
-##description: broken french and triangles
 description: fragments of a discourse
 # this means to ignore newlines until "baseurl:"
 baseurl: # the subpath of your site, e.g. /blog
 url: "https://nikaroxanne.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-##twitter_username: g0thprincess666
 twitter_username: nikaroxanne
 github_username:  nikaroxanne
 imageloc: "assets/images"
