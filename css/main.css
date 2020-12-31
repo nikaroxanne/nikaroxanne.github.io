@@ -509,7 +509,7 @@ h2#siriTitle {
 
 .modal-content {
 	position: relative;
-	background-color: #fefefe;
+	background-color: black;
 	margin: auto;
 	padding: 0;
 	width: 90%;
@@ -782,7 +782,7 @@ a.header:hover, a.header:active {
 	margin: 10px;
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 }
 
 .hero-image#home {
