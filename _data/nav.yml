@@ -8,7 +8,7 @@
       url: "/paintings"
     - subtitle: "DRAWINGS"
       url: "/drawings"
-    - subtitle: "COMPUTER ART"
+    - subtitle: "ALGORITHM ART"
       url: "/compArt"
 
 - title: "PROJECTS"
@@ -18,8 +18,6 @@
       url: "/triangulation"
     - subtitle: "LIVING ARCHIVE"
       url: "/livingArchive"
-    - subtitle: "SIRI, OPEN TINDER"
-      url: "/siriOpenTinder"
 
 - title: "ABOUT ME"
   url: "/aboutMe"
