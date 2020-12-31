@@ -6,33 +6,29 @@ permalink: /projects
 <h2 class = "gallery-title"> Projects </h2>
 
 <div class = "backgroundSection">
-	<div class = "row">
-		{% for image in site.static_files %}
-			{% if image.path contains 'images/163images/triangulationImages/steiner8' %}
-				<div class = "project col-sm-5 col-m-5 col-5">
-					<img class = "imageLink" src="{{site.url}}/{{image.path}}" alt = "Snapchat Triangulations">
-					<div class = "hero-text">
-						<a href="{{site.url}}/projects/triangulation" class="image"> <p> Triangulation Algorithms and Facial Mapping </p> </a>
-					</div>
+	<div class = "image-row">
+		<div class = "project col-sm-4 col-m-4 col-4">
+			<div class="hero-image" id="triangulation">
+				<div class = "hero-text">
+					<a href="{{site.url}}/projects/triangulation" class="image"> <p> Triangulation Algorithms and Facial Mapping </p> </a>
 				</div>
-			{% endif %}
+			</div>
+		</div>
 
-			{% if image.path contains 'images/scans/nikadoublealuminum2005' %}
-				<div class = "project col-sm-5 col-m-5 col-5">
-					<img class = "imageLink" src="{{site.url}}/{{image.path}}" alt = "Living Archive Project">
-					<div class = "hero-text">
-						<a href="{{site.url}}/projects/livingArchive" class="image"> <p> Living Archive Project </p> </a>
-					</div>
+		<div class = "project col-sm-4 col-m-4 col-4">
+			<div class="hero-image" id="archive">
+				<div class = "hero-text">
+					<a href="{{site.url}}/projects/livingArchive" class="image"> <p> Living Archive Project </p> </a>
 				</div>
-			{% endif %}
-			{% if image.path contains 'images/siriOpenTinderHeroImage.jpg' %}
-				<div class = "project col-sm-5 col-m-5 col-5">
-					<img class = "imageLink" src="{{site.url}}/{{image.path}}" alt = "Siri, Open Tinder">
-					<div class = "hero-text">
-						<a href="{{site.url}}/projects/siriOpenTinder" class="image"> <p> Siri, Open Tinder </p> </a>
-					</div>
+			</div>
+		</div>
+			
+		<div class = "project col-sm-4 col-m-4 col-4">
+			<div class="hero-image" id=siri-open-tinder">
+				<div class = "hero-text">
+					<a href="{{site.url}}/projects/siriOpenTinder" class="image"> <p> Siri, Open Tinder </p> </a>
 				</div>
-			{% endif %}
-		{% endfor %}
+			</div>
+		</div>
 	</div>
 </div>

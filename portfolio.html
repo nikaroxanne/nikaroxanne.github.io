@@ -7,35 +7,28 @@ permalink: /portfolio
 <h2 class = "gallery-title"> Portfolio </h2>
 
 <div class = "backgroundSection">
-
-	<div class = "row">
-		{% for image in site.static_files %}
-				{% if image.path contains 'images/drawings/maps/mappingnew2' %}
-					<div class = "portfolioSection col-sm-3 col-m-3 col-3">
-						<img class = "imageLink" src="{{site.url}}/{{image.path}}" alt = "Drawing Portfolio Sample">
-						<div class = "hero-text">
-							<a href="{{site.url}}/portfolio/drawings" class="image"> <p> Drawings </p> </a>
-						</div>
-					</div>
-			{% endif %}
-
-			{% if image.path contains 'images/paintings/arith' %}
-				<div class = "portfolioSection col-sm-3 col-m-3 col-3">
-					<img class = "imageLink" src= "{{site.url}}/{{image.path}}" alt = "Painting Portfolio Sample">
-					<div class = "hero-text">
-						<a href="{{site.url}}/portfolio/paintings" class="image"><p> Paintings </p></a>
-					</div>
+	<div class = "image-row">
+		<div class = "portfolioSection image-col col-sm-3 col-m-3 col-3">
+			<div class = "hero-image" id="drawings">
+				<div class = "hero-text">
+					<a href="{{site.url}}/portfolio/drawings" class="image"> <p> Drawings </p> </a>
 				</div>
-			{% endif %}
-			
-			{% if image.path contains 'images/163images/triangulationImages/steiner8' %}
-				<div class = "portfolioSection col-sm-3 col-m-3 col-3">
-					<img class = "imageLink" src="{{site.url}}/{{image.path}}" alt = "CompArt Portfolio Sample">
-					<div class = "hero-text">
-						<a href="{{site.url}}/portfolio/compArt" class="image">	<p> Computer-Based Art </p> </a>
-					</div>
+			</div>
+		</div>
+
+		<div class = "portfolioSection image-col col-sm-3 col-m-3 col-3">
+			<div class = "hero-image" id="paintings">
+				<div class = "hero-text">
+					<a href="{{site.url}}/portfolio/paintings" class="image"><p> Paintings </p></a>
 				</div>
-			{% endif %}
-		{% endfor %}
+			</div>
+		</div>	
+		<div class = "portfolioSection image-col col-sm-3 col-m-3 col-3">
+			<div class = "hero-image" id="algorithmart">
+				<div class = "hero-text">
+					<a href="{{site.url}}/portfolio/compArt" class="image">	<p> Computer-Based Art </p> </a>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>

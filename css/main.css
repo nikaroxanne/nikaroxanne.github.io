@@ -613,7 +613,7 @@ img.gallery {
 
 
 .imageLink {
-	max-width: 30%
+	max-width: 30%;
 	height: auto;
 	border: 1px solid black;
 	border-radius: 2px;
@@ -730,9 +730,26 @@ a.header:hover, a.header:active {
 	display: none;
 }
 
+.image-row {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+}
+
+.image-col {
+	flex: 33%;
+	max-width: 33%;
+	padding: 0 4px;
+}
+
+.image-col img {
+	margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+}
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
 	/*.navButton {
 		display: block;
 	}
@@ -750,19 +767,50 @@ a.header:hover, a.header:active {
 	.nav-container li, .dropdown-content a {
 		float: none;
 	}
+	.image-col {
+		flex: 100%;
+		max-width: 100%;
+	}
 }
 
 
-
 .hero-image {
-	padding: 10px;
-	background-image: url('/assets/images/163images/faceBlanktriangulation.jpg'); 
 	height: 100vh;
 	width: auto;
 	position: relative;
+	padding: 10px;
+	margin: 10px;
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
+}
+
+.hero-image#home {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/assets/images/paintings/arith.jpg'); 
+}
+
+.hero-image#drawings {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/assets/images/metal1_fragments/fragment_0_metal1_watermark.jpg'); 
+}
+
+.hero-image#paintings {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/assets/images/metal1_fragments/fragment_1_metal1_watermark.jpg'); 
+}
+
+.hero-image#algorithmart {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/assets/images/metal1_fragments/fragment_2_metal1_watermark.jpg'); 
+}
+
+.hero-image#triangulation {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/assets/images/metal1_fragments/fragment_3_metal1_watermark.jpg'); 
+}
+
+.hero-image#archive {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/assets/images/metal1_fragments/fragment_4_metal1_watermark.jpg'); 
+}
+
+.hero-image#siri-open-tinder {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/assets/images/siriOpenTinderHeroImage.jpg'); 
 }
 
 .hero-text {
@@ -777,6 +825,7 @@ a.header:hover, a.header:active {
 	opacity: 0.8;
 	background-color: #696969;
 	color: white;
+	font-size: 1.5em;
 }
 
 .content-container{
@@ -798,7 +847,8 @@ a.header:hover, a.header:active {
 	background-color: black;
 }
 
-.project, .portfolioSection, .aboutMeSection {
+/*.project, .portfolioSection, .aboutMeSection {*/
+.aboutMeSection {
 	padding: 10px;
 	margin: 10px;
 	position: relative;	
@@ -896,8 +946,8 @@ ul.posts li {
 
 .list-item .description{
 	color: #888;
-	font-family: sans-serif:
-	font-size: alrge;
-	width: 200px:
+	font-family: sans-serif;
+	font-size: large;
+	width: 200px;
 	margin-top: 0.5em;
 }
