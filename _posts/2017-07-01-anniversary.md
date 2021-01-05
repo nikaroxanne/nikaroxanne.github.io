@@ -1,8 +1,0 @@
----
-layout: post
-title: anniversary
----
-
-Anniversary
-
-A hundred and fifty years and we still haven't learned still never learn to keep you legs shy to keep your mouth zipped to keep it all internal internal internal bleeding is brutal but invisible and no one wants your scars no one wants your outward pain tell me you it's been a long time coming tell me you've wanted it forever because I have but I won't wake you from dreaming to ask if you're mad at me I won't wake you from dreaming to say I'm sorry and my forgiveness was half conscious but enough for you was it enough for you four days of me muffling sighs as the television played in the background I know I'm the distraction from your adult reality I know I'm the distraction from the girls you will ask to settle down with you could I settle down with you with anyone I want to ask but I have forgotten how to vocalize that I am mad that I am hurt that I am broken please rub my back while I cry about my past please rub my back while I cry about the ways you leave and leave and leave me and now I will leave you without saying goodbye I don't want to say goodbye never good at saying goodbye but fuck who is who is who I could even say goodbye to even mumble something as I go out the door I need to leave need to go need to disappear wanted you forever and I get you for three days and I panic I don't know how to hold my desires like a bouquet of flowers gifted at the gallery I hate roses love lillies love orchids love anything not here not here not here like me never here never here for long and you will forget and I will drift away like storm clouds that still cling to June like it's April that cruel month never ceases in cruelty never ceases 
