@@ -598,8 +598,9 @@ h2#siriTitle {
 	color: white;
 }
 
-p#caption {
-	color: white;
+p#caption, p#caption_aluminum_0,  p#caption_aluminum_1, p#caption_aluminum_2, p#caption_aluminum_3, p#caption_aluminum_4  {
+	/*color: white;*/
+	color: lime;
 	font-size: 1.2em;
 	font-family: 'Cormorant Garamond', serif;
 }
