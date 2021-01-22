@@ -9,7 +9,7 @@ permalink: /projects/livingArchive/
 
 <div class="living_archive_intro">
 
-	<p class="living_archive"> Welcome to the Living Archive. This is a list of lists of everything that I am currently reading, watching, listening to, looking at, reflecting upon, repetitively. </p>
+	<p class="living_archive"> Welcome to the Living Archive. This is a list of lists of works that I am currently reading, watching, listening to, looking at, reflecting upon, repetitively. </p>
 
 	<p class="living_archive">This list changes frequently, so I will maintain an archive of archives. If you ever wish to view previous collections, they will be in the <a href="/projects/livingArchive/crypt"> ~*crypt*~ </a></p>
 
@@ -28,7 +28,7 @@ Classics are marked with a *, new releases are marked with a +. </p>
 	<button class="archivebutton" id = "films">Films</button>
 </div>
 <div class="archive__sources row">
-	<div class= "col-sm-2 col-m-3 col-4" id = "articles_section">
+	<div class= "col-sm-12 col-m-3 col-3" id = "articles_section">
 		<h2> Articles </h2>
 		<ul class="living_archive_resource_list">
 			{% for resource in site.data.curr_archive.resources %}
@@ -43,13 +43,13 @@ Classics are marked with a *, new releases are marked with a +. </p>
 			{% endfor %}
 		</ul>
 	</div>
-	<div class= "col-sm-2 col-m-3 col-4" id ="books_section">
+	<div class= "col-sm-12 col-m-3 col-3" id ="books_section">
 		<h2> Books </h2>
 		<ul class="living_archive_resource_list">
 			{% for resource in site.data.curr_archive.resources %}
 				{% if resource.format contains 'book' %}
 					<li class="living_archive_resource">
-						<p class="living_archive" id="resource_elem"> {{ resource.title }} </p>
+						<p class="living_archive" id="resource_elem"> {{ resource.title }} {{ resource.new_classic }}</p>
 						<p class="living_archive" id="resource_elem"> {{ resource.author }} - {{ resource.publication_date }} </p>
 						<p class="living_archive" id="resource_elem"> {{ resource.publisher }} </p>
 						<a href= "{{ resource.url }}">{{ resource.url }}</a>
@@ -58,13 +58,13 @@ Classics are marked with a *, new releases are marked with a +. </p>
 			{% endfor %}
 		</ul>
 	</div>
-	<div class= "col-sm-2 col-m-3 col-4" id = "films_section">
+	<div class= "col-sm-12 col-m-3 col-3" id = "films_section">
 		<h2> Films </h2>
 		<ul class="living_archive_resource_list">
 			{% for resource in site.data.curr_archive.resources %}
 				{% if resource.format contains 'film' %}
 					<li class="living_archive_resource">
-						<p class="living_archive" id="resource_elem"> {{ resource.title }} </p>
+						<p class="living_archive" id="resource_elem"> {{ resource.title }} {{ resource.new_classic }}</p>
 						<p class="living_archive" id="resource_elem"> {{ resource.author }} - {{ resource.publication_date }} </p>
 						<p class="living_archive" id="resource_elem"> {{ resource.publisher }} </p>
 						<a href= "{{ resource.url }}">{{ resource.url }}</a>

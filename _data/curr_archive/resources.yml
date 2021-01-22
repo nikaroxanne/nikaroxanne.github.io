@@ -3,7 +3,7 @@
   publisher: "Two Bit History"
   publication_date: "14 October, 2018"
   format: "article"
-  new_classic: "+"
+  new_classic: "*"
   url: "https://twobithistory.org/2018/10/14/lisp.html"
 
 
@@ -56,7 +56,7 @@
   publisher: "Éditions du Seuil"
   publication_date: "January 1, 1977"
   format: "book"
-  new_classic: "+"
+  new_classic: "*"
   url: ""
 
 - title: "Mythologies"
@@ -64,16 +64,16 @@
   publisher: "Éditions du Seuil"
   publication_date: "1957"
   format: "book"
-  new_classic: "+"
+  new_classic: "*"
   url: ""
 
 
 - title: "Solaris"
-  author: "Andrey Tarkovsky"
+  author: "Andrei Tarkovsky"
   publisher: ""
-  publication_date: "1957"
+  publication_date: "1972"
   format: "film"
-  new_classic: "+"
+  new_classic: "*"
   url: ""
 
 
