@@ -29,3 +29,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 ##Adding kramdown-parser-gfm to fix dependency errors
 gem "kramdown-parser-gfm"
+
+
+###Adding jekyll-archives for creating archival archive pages in living archive project
+gem "jekyll-archives"

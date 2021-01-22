@@ -345,7 +345,7 @@ svg {
 
 .archivebutton {
     background-color: black;
-    border: none;
+    border: 1px solid lime;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -357,6 +357,10 @@ svg {
     font-size: 24px;
     margin: 4px 2px;
     cursor: pointer;
+}
+
+.living_archive_resource_list{
+	list-style-type: none;
 }
 
 .playbutton {
@@ -389,8 +393,8 @@ svg {
 }
 
 
-h2#livingarchive {
-	text-align: left;
+h2.living_archive {
+	text-align: center;
 	font-size: 24px;
 	font-weight: 200;
 }
@@ -409,8 +413,11 @@ h2#siriTitle {
 	color: #333;
 }
 
-#articlesSection {
+#articles_section {
 	border: 5px solid black;
+	margin: 5px;
+	padding: 10px;
+	word-wrap: break-word;
 	border-collapse: collapse;
 	text-align: center;
 	background-color: #ddd;
@@ -418,8 +425,22 @@ h2#siriTitle {
 }
 
 
-#booksSection {
+#books_section {
 	border: 5px solid black;
+	margin: 5px;
+	padding: 10px;
+	word-wrap: break-word;
+	border-collapse: collapse;
+	text-align: center;
+	background-color: #ddd;
+	display: none;
+}
+
+#films_section {
+	border: 5px solid black;
+	margin: 5px;
+	padding: 10px;
+	word-wrap: break-word;
 	border-collapse: collapse;
 	text-align: center;
 	background-color: #ddd;
@@ -434,7 +455,11 @@ h2#siriTitle {
 	display: block;
 }
 
-
+li.living_archive_resource{
+	padding: 20px;
+	margin: 15px;
+	border: 1px solid black;
+}
 
 
 
@@ -601,6 +626,19 @@ h2#siriTitle {
 p#caption, p#caption_aluminum_0,  p#caption_aluminum_1, p#caption_aluminum_2, p#caption_aluminum_3, p#caption_aluminum_4  {
 	/*color: white;*/
 	color: lime;
+	font-size: 1.2em;
+	font-family: 'Cormorant Garamond', serif;
+}
+
+
+.living_archive_intro {
+	background-color: grey;
+	padding: 10px;
+	margin: 40px;
+}
+
+p#living_archive {
+	color: white;
 	font-size: 1.2em;
 	font-family: 'Cormorant Garamond', serif;
 }
@@ -817,14 +855,22 @@ a.header:hover, a.header:active {
 }
 
 .hero-image#triangulation {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/assets/images/metal1_fragments/fragment_3_metal1_watermark.jpg'); 
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/assets/images/aluminum_scans_fragments/aluminum_3/aluminum_3_full.jpg'); 
 }
 
 .hero-image#archive {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/assets/images/metal1_fragments/fragment_4_metal1_watermark.jpg'); 
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/assets/images/aluminum_scans_fragments/aluminum_2/aluminum_2_full.jpg'); 
 }
 
-.hero-image#siri-open-tinder {
+.hero-image#aboutMe {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/assets/images/aluminum_scans_fragments/aluminum_1/aluminum_1_full.jpg'); 
+}
+
+.hero-image#artistStatement {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/assets/images/aluminum_scans_fragments/aluminum_0/aluminum_0_full.jpg'); 
+}
+
+.hero-image#aboutMe {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/assets/images/siriOpenTinderHeroImage.jpg'); 
 }
 

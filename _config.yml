@@ -29,6 +29,12 @@ defaults:
       path: "/assets/images"
     values:
       image: true
+  - scope:
+      path: "/projects/livingArchive/crypt"
+      type: "crypt-archives"
+    values:
+      layout: "crypt"
+
 
 
 collections:
@@ -46,6 +52,7 @@ minima:
   skin: solarized-dark
 plugins:
   - jekyll-feed
+  - jekyll-archives
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -53,3 +60,15 @@ permalink: /blog/:year/:month/:day/:title
 # Google services
 google_analytics: UA-97632940-1
 
+jekyll-archives:
+  enabled:
+    - year
+    - tags
+    - categories
+  layout: crypt
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/:tag/:name/'
+    category: '/:category/:name/'	
