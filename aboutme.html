@@ -9,26 +9,21 @@ permalink: /aboutMe
 
 <div class = "backgroundSection">
 
-	<div class = "row">
-		{% for image in site.static_files %}
-			{% if image.path contains 'images/163images/triangulationImages/voronoi-fun1' %}
-				<div class = "aboutMeSection col-sm-5 col-m-5 col-5">
-					<img class = "imageLink" src="{{site.url}}/{{image.path}}" alt = "Snapchat Triangulations">
-					<div class = "hero-text">
-						<a href="{{site.url}}/aboutMe/bio" class="image"> Biography </a>
-					</div>
+	<div class = "image-row">
+		<div class = "aboutMeSection col-sm-5 col-m-5 col-5">
+			<div class = "hero-image" "aboutme">
+				<div class = "hero-text">
+					<a href="{{site.url}}/aboutMe/bio" class="image"> Biography </a>
 				</div>
-			{% endif %}
+			</div>
+		</div>
 
-			{% if image.path contains 'images/163images/triangulationImages/voronoi-teal' %}
-				<div class = "aboutMeSection col-sm-5 col-m-5 col-5">
-					<img class = "imageLink" src="{{site.url}}/{{image.path}}" alt = "Living Archive Project">
-					<div class = "hero-text">
-						<a href="{{site.url}}/aboutMe/artistStatement" class="image"> Artist Statement </a>
-					</div>
+		<div class = "aboutMeSection col-sm-5 col-m-5 col-5">
+			<div class = "hero-image" "artiststatement">
+				<div class = "hero-text">
+					<a href="{{site.url}}/aboutMe/artistStatement" class="image"> Artist Statement </a>
 				</div>
-			{% endif %}
-		{% endfor %}
+			</div>
+		</div>
 	</div>
-	
 </div>
