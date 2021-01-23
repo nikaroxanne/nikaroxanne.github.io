@@ -14,10 +14,14 @@
 - title: "PROJECTS"
   url: "/projects"
   subfolderitems:
-    - subtitle: "TRIANGULATION"
-      url: "/triangulation"
+    - subtitle: "RUNNING A BACKTRACE ON THE LAMBDA CALCULUS"
+      url: "/backtraceLambdaCalculus"
+    - subtitle: "REVERSE ENGINEERING EMBEDDED DEVICE FIRMWARE"
+      url: "/reverseEngineeringFirmware"
     - subtitle: "LIVING ARCHIVE"
       url: "/livingArchive"
+    - subtitle: "TRIANGULATION"
+      url: "/triangulation"
 
 - title: "ABOUT ME"
   url: "/aboutMe"

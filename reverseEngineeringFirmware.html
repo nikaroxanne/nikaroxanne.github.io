@@ -1,0 +1,58 @@
+---
+layout: archive
+permalink: /projects/reverseEngineeringFirmware
+---
+
+<h2 class="reverse_engineering_embedded_firmware"> Security Research for Reverse Engineering Embedded Device Firmware</h2>
+
+<div class="reverse_engineering_embedded_firmware_intro">
+
+	<p class="reverse_engineering_embedded_firmware"> This project serves as an overview of reverse engineering methodologies related to the remediation of security vulnerabilities in the firmware of embedded devices. As an overview, it seeks to define the terms of the problem and to use an axiomatized approach to make inferences about more complex systems— specifically how to identify and patch rootkits in embedded device firmware. This overview will not detail remediation techniques for specific rootkits. Rather it will serve as a collection of all research undertaken, and provide a conceptual framework for anyone interested in exploring related projects. </p>
+	<p class="reverse_engineering_embedded_firmware"> This project was originally started as an investigation to solve a specific problem for a job interview. In respecting the wishes of the company, I will not detail specifics about the embedded device that was given to me, nor or the firmware rootkit present therein. Rather, this project seeks to establish a compendium of the foundational knowledge necessary to approach similar problems. Consider this project as an instance of using the scientific method to solve groups of related problems related to reverse engineering the firmware of embedded devices. It is an example of using the logic of deductive reasoning to expound upon and make inductive inferences about other devices. </p>
+ 
+	<p class="reverse_engineering_embedded_firmware"> As someone who had no prior experience with hardware reverse engineering before beginning this project, much of the work on this project was completed in an effort to better understand the embedded device that was presented to me. This project includes a plethora of information, and the reader is invited to peruse sections as they see fit. I have detailed my methodology for approaching each step of the reverse engineering process and have presented the information in each section in a way that aims to appeal to both the novice and the seasoned reverse engineer. </p>
+
+	<p class="reverse_engineering_embedded_firmware"> </p>
+	
+
+	<p class="reverse_engineering_embedded_firmware"> This project does not provide an exhaustive overview of any one particular subject area, and elucidates only the concepts that were critically important for understanding reverse engineering methodology. As a result, an extensive references section is provided at the end of each section, as well as at the conclusion, for any reader looking to explore any one subject area more deeply. </p>
+	<p class="reverse_engineering_embedded_firmware"> All images, including both screenshots and drawings, are my own. </p>
+	<p class="reverse_engineering_embedded_firmware"> Part of the reason for writing this document was that a vast majority of the resources that I consulted during my work on the project assumed prior knowledge, on the part of the reader/viewer, of certain terms. For a novice hardware reverse engineer, the absence of this prerequisite information proved to be a hurdle. My hope is that this project can explain that fundamental prerequisite knowledge and help you clear those hurdles with a minimum number of bruises to your shins. If nothing else, I’ll be waiting at the finish line with a Powerade Zero and an ice pack.  </p>
+
+	<p class="reverse_engineering_embedded_firmware"> All parts of this project will be posted in the coming weeks. </p>
+	<p class="reverse_engineering_embedded_firmware"> The project assumes prior knowledge of programming fundamentals. </p>
+	<p class="reverse_engineering_embedded_firmware"> A table of contents is listed below. </p>
+	<div class="toc_reverse_engineering_embedded_firmware">
+		<h2 class="reverse_engineering_embedded_firmware"> Table of Contents </h2>
+		<ul class="toc_reverse_engineering_embedded_firmware_list">
+			<li class="toc_elem_reverse_engineering_embedded_firmware_list"> 1. An introduction, including definitions of important terms </li>
+			<li class="toc_elem_reverse_engineering_embedded_firmware_list"> 2. Methodology and motivations for reverse engineering embedded devices </li>
+			<li class="toc_elem_reverse_engineering_embedded_firmware_list">  3. An overview of electrical engineering fundamentals necessary to understand serial communication on an embedded device. </li>
+			<li class="toc_elem_reverse_engineering_embedded_firmware_list"> 4. An overview of serial communication protocols </li>
+			<li class="toc_elem_reverse_engineering_embedded_firmware_list"> 5. An overview of operating system fundamentals related to the firmware reverse engineering process. </li>
+			<li class="toc_elem_reverse_engineering_embedded_firmware_list"> 6. An overview of the Linux boot process </li>
+			<li class="toc_elem_reverse_engineering_embedded_firmware_list"> 7. An overview of memory management in the Linux kernel </li>
+			<li class="toc_elem_reverse_engineering_embedded_firmware_list"> 8. An overview of BSD and System-5 Linux rootkits </li>
+			<li class="toc_elem_reverse_engineering_embedded_firmware_list"> 9. An overview of rootkit identification methods </li>
+			<li class="toc_elem_reverse_engineering_embedded_firmware_list"> 10. An overview of rootkits remediation techniques </li>
+			<li class="toc_elem_reverse_engineering_embedded_firmware_list"> 11. An overview of ARM architecture </li>
+			<ul class="toc_section_list_reverse_engineering_embedded_firmware_list">
+				<li class="toc_elem_reverse_engineering_embedded_firmware_list"> a. ARM assembly </li>
+				<li class="toc_elem_reverse_engineering_embedded_firmware_list"> b. ARM assembly vs x86 assembly </li>
+				<li class="toc_elem_reverse_engineering_embedded_firmware_list"> c. Identifying code sections, programming language constructs in ARM assembly </li>
+			</ul>
+			<li class="toc_elem_reverse_engineering_embedded_firmware_list"> 12. An overview of hardware hacking techniques </li>
+			<ul class="toc_section_list_reverse_engineering_embedded_firmware_list">
+				<li class="toc_elem_reverse_engineering_embedded_firmware_list"> a. Definitions and illustrations of hardware </li>
+				<li class="toc_elem_reverse_engineering_embedded_firmware_list"> b. Soldering </li>
+				<li class="toc_elem_reverse_engineering_embedded_firmware_list"> c. Identifying test points </li>
+				<li class="toc_elem_reverse_engineering_embedded_firmware_list"> d. Dumping contents of serial flash chips </li>
+				<li class="toc_elem_reverse_engineering_embedded_firmware_list"> e. Patching contents of serial flash chips </li>
+			</ul>
+			<li class="toc_elem_reverse_engineering_embedded_firmware_list"> 13. Conclusion </li>
+			<li class="toc_elem_reverse_engineering_embedded_firmware_list"> 14. References </li>
+		</ul>
+	</div>
+</div>
+
+

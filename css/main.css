@@ -405,13 +405,45 @@ h2#siriTitle {
 	font-weight: 200;
 }
 
-.archive_sources p {
+.archive_sources p, {
 	font-family: 'Cormorant Garamond', serif;
 	font-size: 1.2em;
 	font-weight: 200;
 	line-height: 1.4em;
 	color: #333;
 }
+
+h2.running_backtrace_lambda_calculus, h2.reverse_engineering_embedded_firmware {
+	color: lime;
+	text-align: center;
+	font-size: 28px;
+	font-weight: 200;
+}
+
+
+div.running_backtrace_lambda_calculus_intro, div.reverse_engineering_embedded_firmware_intro {
+	background-color: #F5F5F5;
+	background-size: contain;
+	padding: 10px;
+	margin: 40px;
+}
+
+p.running_backtrace_lambda_calculus, p.reverse_engineering_embedded_firmware {
+	padding: 10px;
+	margin: 40px;
+	color: black;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 22px;
+}
+
+.toc_running_backtrace_lambda_calculus, .toc_reverse_engineering_embedded_firmware_list {
+	padding: 30px;
+	margin: 40px;
+	list-style-type: none;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 22px;
+}
+
 
 #articles_section {
 	border: 5px solid black;
@@ -862,6 +894,14 @@ a.header:hover, a.header:active {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/assets/images/aluminum_scans_fragments/aluminum_2/aluminum_2_full.jpg'); 
 }
 
+.hero-image#reverse_engineering_embedded_firmware {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/assets/images/aluminum_scans_fragments/aluminum_0/aluminum_0_full.jpg'); 
+}
+
+.hero-image#lambda_calculus {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/assets/images/aluminum_scans_fragments/aluminum_4/aluminum_4_full.jpg'); 
+}
+
 .hero-image#aboutMe {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/assets/images/aluminum_scans_fragments/aluminum_1/aluminum_1_full.jpg'); 
 }
@@ -870,9 +910,6 @@ a.header:hover, a.header:active {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/assets/images/aluminum_scans_fragments/aluminum_0/aluminum_0_full.jpg'); 
 }
 
-.hero-image#aboutMe {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/assets/images/siriOpenTinderHeroImage.jpg'); 
-}
 
 .hero-text {
 	text-align: center;
