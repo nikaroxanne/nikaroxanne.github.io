@@ -13,9 +13,7 @@ permalink: /projects/triangulation/
 				<h2> Applications of Delaunay Triangulation and Edge Flipping in Facial Recognition and Detection</h2>
 				<h3> (subtitle: Make Yourself Cubist&trade;) </h3> 
 
-				<h3> More formally:  
-					<a href= "{{site.url}}/assets/pdf/comp163reportNikaKorchok.pdf"> here</a>.
-				</h3>
+				<h2> More formally: <a href= "{{site.url}}/assets/pdf/comp163reportNikaKorchok.pdf" target="_blank" rel="noopener noreferrer"><h2>here.</h2></a> </h2>
 
 				<div class="content">
 
@@ -35,6 +33,7 @@ permalink: /projects/triangulation/
 
 					</div>
 
+					<p class="triangulation"> Note: This page exists as an archived version. The finalized project is available at the link at the top of the page and <a href= "{{site.url}}/assets/pdf/comp163reportNikaKorchok.pdf">here.</a></p>
 					<p class="triangulation">
 						Open Snapchat to take a selfie. Fix your hair, tilt your chin just so, perhaps parlay a smize and — No no, pause. You realize now that this is the perfect moment. This is the moment where you take a selfie such that you become another iteration of that canonical dog-eared millennial archetype.
 					</p>
@@ -52,18 +51,6 @@ permalink: /projects/triangulation/
 
 					<p class="triangulation">Or perhaps, like most users, you never noticed the triangular mesh on your hurried way to transfigure yourself into some canonical dog-eared millennial archetype. That’s about to change. </p>
 				</div>
-				<div class = "imageRow">
-					<div class = "imageBox">
-						<img id = "snapTri" src = "/assets/images/163images/triangulationImages/filltest1.jpg" alt = "snapChat Triangulation">
-					</div>
-					<div class="imageBox">
-						<img id = "snapTri" src = "/assets/images/163images/triangulationImages/filltest1.jpg" alt = "snapChat Triangulation">
-					</div>
-					<div class="imageBox">
-						<img id = "snapTri" src = "/assets/images/163images/triangulationImages/filltest1.jpg" alt = "snapChat Triangulation">
-					</div>
-				</div>
-
 				<div class = "content"> 
 
 					<p class="triangulation">A triangulation is a maximum planar subdivision - a breaking of a polygon or a point set into triangles. Segmentation of a larger space into manageable pieces allows for a myriad of complex operations — point location (i.e. google maps), an optimized distribution of vantage points (i.e. art gallery guarding), or, in this case, the creation of a mesh of a face for computer graphics rendering.
@@ -105,24 +92,6 @@ permalink: /projects/triangulation/
 					<p class="triangulation">Understanding the process of triangulating a selected face region (i.e. what we need so we can put a cutesy infantilizing dog filter on it!) requires understanding how a computer understands a photograph. </p>
 
 					<p class="triangulation">A pixel - unit of measurement - a square on your screen - the number of which per inch (the correct usage of “ppi” not “dpi” will earn you bonus points with the 𝜋 people who care and put you ~3𝜎 away from the fickle favors of the general population, but now you know) can reveal more and more ugly details of any given image.</p>
-					<div class = "imageRow">
-						<div class = "imageBox">
-							<img id = "snapTri" src = "/assets/images/163images/triangulationImages/filltest1.jpg" alt = "snapChat Triangulation">
-								<div class = imgText> 
-								</div>
-						</div>
-						<div class="imageBox">
-							<img id = "snapTri" src = "/assets/images/163images/triangulationImages/filltest1.jpg" alt = "snapChat Triangulation">
-								<div class = imgText> 
-								</div>
-						</div>
-						<div class="imageBox">
-							<img id = "snapTri" src = "/assets/images/163images/triangulationImages/filltest1.jpg" alt = "snapChat Triangulation">
-								<div class = imgText> 
-								</div>
-						</div>
-					</div>
-
 					<p class="triangulation">A single pixel contains a wealth of knowledge that is both bountiful and generally rather accessible; there are no offshore Cayman Islands accounts for pixel info — not yet, anyways.</p> 
 				
 					<p class="triangulation">Image pixels are stored as one-dimensional arrays. While we view an image as having two dimensions (Euclidean x,y coordinates or “height” and “width”), the pixels are stored in one contiguous strip. A pixel at location (x,y) in a picture is indexed in the pixel array at [x+ y*width].
@@ -144,7 +113,6 @@ permalink: /projects/triangulation/
 
 
 				<div id = "imageRow">
-					<img class= "histoGramCheck" src = "/assets/images/163images/edgeDetect/gaussCheck-gray.jpg" alt = "snapChat Triangulation">
 					<img class = "histoGramCheck" src = "/assets/images/163images/histogramCheck-grayGaussian.jpg" alt = "snapChat Triangulation">
 				</div>
 
@@ -265,7 +233,6 @@ permalink: /projects/triangulation/
 				</p>
 
 				<div id = "imageRow">
-					<img class = "gaussCheck" src = "/assets/images/163images/edgeDetect/gaussCheck-1.jpg" alt = "snapChat Triangulation">
 					<img class = "gaussCheck" src = "/assets/images/163images/edgeDetect/gaussCheck-5.jpg" alt = "snapChat Triangulation">
 				</div>
 
@@ -339,15 +306,6 @@ permalink: /projects/triangulation/
 			<div class = "content">
 				<p class="triangulation">Astoundingly, a convex hull, while a frame within a frame (meta, wow)), is also a beautiful way of demarcating space. We want the smallest boundary. Almost as though we want the boundary that can hug all of its points while still remaining aloof (do you get the portrait now, Ms. Richards?! Symbolism is not something I invented when I was seven, it’s a really poignant device for explaining relational aesthetics without implicating an explicit narrative in a work.)</p>
 			</div>
-
-			<!--
-
-			<div class = "content">
-				<p class="triangulation"> Algorithm used for convex hull calculation is Quick Hull, simply because I found it convenient to use the borders of the bounding box as the initial frame -- since bounding box was also used as a referential marker for finding landmark points, much of the computation for this had been done in preprocessing.</p>
-			</div>
-
-			-->
-
 		</div>
 	</div>
 
@@ -422,82 +380,6 @@ permalink: /projects/triangulation/
 			</div>
 
 		</div>
-	</div>
-
-
-	<h2 class = "gallery-title"> Voronoi Mapping on an Input Image </h2>
-	<div class = "slideshow-gallery">	
-	
-		{% for image in site.static_files %}
-			{% if image.path contains 'images/163images/triangulationImages/steiner1' %}
-				<div class= "mySlides">
-					<div class = "numbertext"> 1 / 6 </div>
-					<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
-				</div>
-			{% elsif image.path contains 'images/163images/triangulationImages/steiner3' %}
-				<div class= "mySlides">
-					<div class = "numbertext"> 2 / 6 </div>
-					<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
-				</div>
-			{% elsif image.path contains 'images/163images/triangulationImages/steiner4' %}
-				<div class= "mySlides">
-					<div class = "numbertext"> 3 / 6 </div>
-					<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
-				</div>
-			{% elsif image.path contains 'images/163images/triangulationImages/steiner5' %}
-				<div class= "mySlides">
-					<div class = "numbertext"> 4 / 6 </div>
-					<img class = "galleryImage" src="{{site.url}}/{{image.path}}">
-				</div>
-			{% elsif image.path contains 'images/163images/triangulationImages/steiner6' %}
-				<div class= "mySlides">
-					<div class = "numbertext"> 5 / 6 </div>
-				</div>
-			{% elsif image.path contains 'images/163images/triangulationImages/steiner8' %}
-				<div class= "mySlides">
-					<div class = "numbertext"> 6 / 6 </div>
-				</div>
-			{% endif %}
-		{% endfor %}
-
-		<a class ="prev" onclick="plusSlides(-1)">&#10094;</a>
-		<a class ="next" onclick="plusSlides(1)">&#10095;</a>
-
-		<div class ="caption-container">
-			<p id="caption"></p>
-		</div>
-
-		<div class = "row">
-			{% for image in site.static_files %}
-				{% if image.path contains 'images/163images/triangulationImages/steiner1' %}
-					<div class = "col-sm-2 col-m-2 col-2">
-						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(1)" class = "demo" alt = "Voronoi1">
-					</div>
-				{% elsif image.path contains 'images/163images/triangulationImages/steiner3' %}
-					<div class = "col-sm-2 col-m-2 col-2">
-						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(2)" class = "demo" alt = "voronoi3">
-					</div>
-				{% elsif image.path contains 'images/163images/triangulationImages/steiner4' %}
-					<div class = "col-sm-2 col-m-2 col-2">
-						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(3)" class = "demo" alt = "voronoi4">
-					</div>
-				{% elsif image.path contains 'images/163images/triangulationImages/steiner5' %}
-					<div class = "col-sm-2 col-m-2 col-2">
-						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(4)" class = "demo" alt = "voronoi5">
-					</div>
-				{% elsif image.path contains 'images/163images/triangulationImages/steiner6' %}
-					<div class = "col-sm-2 col-m-2 col-2">
-						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(5)" class = "demo" alt = "voronoi6">
-					</div>
-				{% elsif image.path contains 'images/163images/triangulationImages/steiner8' %}
-					<div class = "col-sm-2 col-m-2 col-2">
-						<img src="{{site.url}}/{{image.path}}" onclick= "currentSlide(6)" class = "demo" alt = "voronoi7">
-					</div>
-				{% endif %}
-			{% endfor %}
-		</div>
-		<script src= "/assets/js/gallery.js"></script>
-		
 	</div>
 
 
@@ -582,12 +464,3 @@ permalink: /projects/triangulation/
 	</div>
 </div>
 
-<!--
-	<div>
-
-			<a href="http://www.cse.psu.edu/~rtc12/CSE486/lecture06.pdf"></a>
-			<a href="https://classes.soe.ucsc.edu/cmpe264/Fall06/Lec5.pdf"></a>
-			<a href="http://web.stanford.edu/class/ee368/Handouts/Lectures/2014_Spring/Combined_Slides/11-Edge-Detection-Combined.pdf"></a>
-			<a href= "http://www.owlnet.rice.edu/~elec539/Projects97/morphjrks/morph.html"></a>
-	</div>
--->
