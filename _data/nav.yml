@@ -18,6 +18,12 @@
       url: "/backtraceLambdaCalculus"
     - subtitle: "REVERSE ENGINEERING EMBEDDED DEVICE FIRMWARE"
       url: "/reverseEngineeringFirmware"
+      subfolderitems:
+        - subtitle: "ARM ASSEMBLY INTRODUCTION"
+          url: "/arm_assembly_c_idioms"
+          subfolderitems:
+            - subtitle: "ARM ASSEMBLY INTRODUCTION - SUM AND DIFFERENCE"
+              url: "/arm_basics_sum_and_diff"
     - subtitle: "LIVING ARCHIVE"
       url: "/livingArchive"
     - subtitle: "TRIANGULATION"

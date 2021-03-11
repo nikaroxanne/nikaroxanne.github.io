@@ -413,37 +413,73 @@ h2#siriTitle {
 	color: #333;
 }
 
-h2.running_backtrace_lambda_calculus, h2.reverse_engineering_embedded_firmware {
+div.arm_assembly_c_idioms_content {
+	background-color: black;
+	background-size: contain;
+	padding: 10px;
+	margin: 20%;
+	border: 1px solid lime;
+	border-radius: 3px;
+}
+
+div.arm_assembly_c_idioms_title {
+	background-color: black;
+	background-size: contain;
+	padding: 10px;
+	margin: 40px;
+	border: 1px solid lime;
+	border-radius: 3px;
 	color: lime;
+	text-align:center;
+}
+
+h2.running_backtrace_lambda_calculus, h2.reverse_engineering_embedded_firmware, h2.arm_assembly {
+	color: lime;
+	background-color: black;
+	max-width: 100%;
+	padding: 10px;
 	text-align: center;
 	font-size: 28px;
 	font-weight: 200;
 }
 
 
-div.running_backtrace_lambda_calculus_intro, div.reverse_engineering_embedded_firmware_intro {
-	background-color: #F5F5F5;
+div.running_backtrace_lambda_calculus_intro, div.reverse_engineering_embedded_firmware_intro, div.arm_assembly_c_idioms_section {
+	/*background-color: #F5F5F5; */
+	color: #90EE90;
+	background-color: black;
+	border: 1px solid lime;
 	background-size: contain;
 	padding: 10px;
 	margin: 40px;
 }
 
-p.running_backtrace_lambda_calculus, p.reverse_engineering_embedded_firmware {
-	padding: 10px;
+p.running_backtrace_lambda_calculus, p.reverse_engineering_embedded_firmware, p.arm_assembly {
+	/*padding: 10px; */
 	margin: 40px;
-	color: black;
-	font-family: 'Cormorant Garamond', serif;
-	font-size: 22px;
+	color: #90EE90;
+	/*color: black; */
+	/*font-family: 'Cormorant Garamond', serif; */
+	font-size: 24px;
 }
 
 .toc_running_backtrace_lambda_calculus, .toc_reverse_engineering_embedded_firmware_list {
 	padding: 30px;
 	margin: 40px;
 	list-style-type: none;
-	font-family: 'Cormorant Garamond', serif;
-	font-size: 22px;
+	/*font-family: 'Cormorant Garamond', serif; */
+	font-size: 24px;
 }
 
+
+.highlight {
+	background: rgb(50,50,50);
+	background-size: contain;
+	overflow: scroll;
+	border: 1px #ddd;
+	border-radius: 3px;
+	font-size: 22px;
+}
 
 #articles_section {
 	border: 5px solid black;
