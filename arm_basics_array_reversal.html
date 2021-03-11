@@ -1,0 +1,53 @@
+---
+layout: page 
+permalink: /projects/reverseEngineeringFirmware/arm_assembly_c_idioms/arm_basics_sum_and_diff
+c_source: arm_assembly_c_idioms/array_reversal/array_reversal.c
+arm_source: arm_assembly_c_idioms/array_reversal/dis_array_reversal_O0.txt
+---
+
+
+<div class="arm_assembly_c_idioms_title">
+	<h2 class="reverse_engineering_embedded_firmware"> ARM Assembly Intro  </h2>
+	<h3 class="arm_assembly"> Learning ARM Assembly through Idiomatic Usage </h3>
+	<h3 class="arm_assembly"> or </h3>
+	<h3 class="arm_assembly"> “What do you mean you don’t understand me??! I said exactly what Google Translate told me to say!” </h3>
+</div>
+
+<div class="arm_assembly_c_idioms_section">
+	<h2 class="arm_assembly">***************************</h2>
+	<h2 class="arm_assembly"> ARM Assembly Idioms and Constructs </h2>
+	<h2 class="arm_assembly">***************************</h2>
+	<h3 class="arm_assembly"> sum_and_difference.c</h2>
+	<div class="arm_basics row">
+		<div class="col-sm-6 col-m-6 col-6">
+			{% if page.c_source %}
+				{% highlight c linenos %}
+					{% include {{ page.c_source }} %}
+				{% endhighlight %}
+			{% endif %}
+		</div>
+		<div class="col-sm-6 col-m-6 col-6">
+			{% if page.arm_source %}
+				{% highlight nasm linenos %}
+					{% include {{ page.arm_source }} %}
+				{% endhighlight %}
+			{% endif %}
+		</div>
+	</div>
+	<h2 class="arm_assembly">***************************</h2>
+</div>
+<div class="arm_assembly_c_idioms_section">
+		<p class="arm_assembly">The notion of translation is important, as the function of a compiler is essentially that — to serve as a “translator,” between a higher-level programming language and an assembly language of a machine. As in natural languages, a translator can change the end result (the assembly language), by applying different rules.</p>
+</div>
+<div class="arm_assembly_c_idioms_section">
+	<h2 class="arm_assembly">***************************</h2>
+	<h2 class="arm_assembly">References </h2>
+	<h2 class="arm_assembly">***************************</h2>
+	<p class="arm_assembly">I refer the reader to two exceptional tutorials online:</p>
+	<div class="arm_assembly_c_idioms_section">
+		<p class="arm_assembly">Azeria Labs: <a href= “https://azeria-labs.com/writing-arm_assembly-part-1/>Introduction to ARM Assembly Basics</a></p>
+	</div>	
+	<div class="arm_assembly_c_idioms_section">
+		<p class="arm_assembly">Think in Geek <a href="https://thinkingeek.com/arm-assembler-raspberry-pi/">ARM Assembler in Raspberry Pi</a></p>
+	</div>
+</div>

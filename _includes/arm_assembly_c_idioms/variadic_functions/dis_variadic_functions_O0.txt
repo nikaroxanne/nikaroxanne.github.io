@@ -1,0 +1,185 @@
+
+variadic_functions_O0:     file format elf32-littlearm
+
+Disassembly of section .text:
+
+00000654 <sum>:
+ 654:	b40f      	push	{r0, r1, r2, r3}
+ 656:	b480      	push	{r7}
+ 658:	b085      	sub	sp, #20
+ 65a:	af00      	add	r7, sp, #0
+ 65c:	2300      	movs	r3, #0
+ 65e:	60fb      	str	r3, [r7, #12]
+ 660:	f107 031c 	add.w	r3, r7, #28
+ 664:	607b      	str	r3, [r7, #4]
+ 666:	2300      	movs	r3, #0
+ 668:	60bb      	str	r3, [r7, #8]
+ 66a:	e009      	b.n	680 <sum+0x2c>
+ 66c:	687b      	ldr	r3, [r7, #4]
+ 66e:	1d1a      	adds	r2, r3, #4
+ 670:	607a      	str	r2, [r7, #4]
+ 672:	681b      	ldr	r3, [r3, #0]
+ 674:	68fa      	ldr	r2, [r7, #12]
+ 676:	4413      	add	r3, r2
+ 678:	60fb      	str	r3, [r7, #12]
+ 67a:	68bb      	ldr	r3, [r7, #8]
+ 67c:	3301      	adds	r3, #1
+ 67e:	60bb      	str	r3, [r7, #8]
+ 680:	68ba      	ldr	r2, [r7, #8]
+ 682:	69bb      	ldr	r3, [r7, #24]
+ 684:	429a      	cmp	r2, r3
+ 686:	dbf1      	blt.n	66c <sum+0x18>
+ 688:	68fb      	ldr	r3, [r7, #12]
+ 68a:	4618      	mov	r0, r3
+ 68c:	3714      	adds	r7, #20
+ 68e:	46bd      	mov	sp, r7
+ 690:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 694:	b004      	add	sp, #16
+ 696:	4770      	bx	lr
+
+00000698 <min>:
+ 698:	b40f      	push	{r0, r1, r2, r3}
+ 69a:	b480      	push	{r7}
+ 69c:	b085      	sub	sp, #20
+ 69e:	af00      	add	r7, sp, #0
+ 6a0:	2300      	movs	r3, #0
+ 6a2:	60fb      	str	r3, [r7, #12]
+ 6a4:	f107 031c 	add.w	r3, r7, #28
+ 6a8:	603b      	str	r3, [r7, #0]
+ 6aa:	2300      	movs	r3, #0
+ 6ac:	60bb      	str	r3, [r7, #8]
+ 6ae:	e00d      	b.n	6cc <min+0x34>
+ 6b0:	683b      	ldr	r3, [r7, #0]
+ 6b2:	1d1a      	adds	r2, r3, #4
+ 6b4:	603a      	str	r2, [r7, #0]
+ 6b6:	681b      	ldr	r3, [r3, #0]
+ 6b8:	607b      	str	r3, [r7, #4]
+ 6ba:	687a      	ldr	r2, [r7, #4]
+ 6bc:	68fb      	ldr	r3, [r7, #12]
+ 6be:	429a      	cmp	r2, r3
+ 6c0:	da01      	bge.n	6c6 <min+0x2e>
+ 6c2:	687b      	ldr	r3, [r7, #4]
+ 6c4:	60fb      	str	r3, [r7, #12]
+ 6c6:	68bb      	ldr	r3, [r7, #8]
+ 6c8:	3301      	adds	r3, #1
+ 6ca:	60bb      	str	r3, [r7, #8]
+ 6cc:	68ba      	ldr	r2, [r7, #8]
+ 6ce:	69bb      	ldr	r3, [r7, #24]
+ 6d0:	429a      	cmp	r2, r3
+ 6d2:	dbed      	blt.n	6b0 <min+0x18>
+ 6d4:	68fb      	ldr	r3, [r7, #12]
+ 6d6:	4618      	mov	r0, r3
+ 6d8:	3714      	adds	r7, #20
+ 6da:	46bd      	mov	sp, r7
+ 6dc:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 6e0:	b004      	add	sp, #16
+ 6e2:	4770      	bx	lr
+
+000006e4 <max>:
+ 6e4:	b40f      	push	{r0, r1, r2, r3}
+ 6e6:	b480      	push	{r7}
+ 6e8:	b085      	sub	sp, #20
+ 6ea:	af00      	add	r7, sp, #0
+ 6ec:	2300      	movs	r3, #0
+ 6ee:	60fb      	str	r3, [r7, #12]
+ 6f0:	f107 031c 	add.w	r3, r7, #28
+ 6f4:	603b      	str	r3, [r7, #0]
+ 6f6:	2300      	movs	r3, #0
+ 6f8:	60bb      	str	r3, [r7, #8]
+ 6fa:	e00d      	b.n	718 <max+0x34>
+ 6fc:	683b      	ldr	r3, [r7, #0]
+ 6fe:	1d1a      	adds	r2, r3, #4
+ 700:	603a      	str	r2, [r7, #0]
+ 702:	681b      	ldr	r3, [r3, #0]
+ 704:	607b      	str	r3, [r7, #4]
+ 706:	687a      	ldr	r2, [r7, #4]
+ 708:	68fb      	ldr	r3, [r7, #12]
+ 70a:	429a      	cmp	r2, r3
+ 70c:	dd01      	ble.n	712 <max+0x2e>
+ 70e:	687b      	ldr	r3, [r7, #4]
+ 710:	60fb      	str	r3, [r7, #12]
+ 712:	68bb      	ldr	r3, [r7, #8]
+ 714:	3301      	adds	r3, #1
+ 716:	60bb      	str	r3, [r7, #8]
+ 718:	68ba      	ldr	r2, [r7, #8]
+ 71a:	69bb      	ldr	r3, [r7, #24]
+ 71c:	429a      	cmp	r2, r3
+ 71e:	dbed      	blt.n	6fc <max+0x18>
+ 720:	68fb      	ldr	r3, [r7, #12]
+ 722:	4618      	mov	r0, r3
+ 724:	3714      	adds	r7, #20
+ 726:	46bd      	mov	sp, r7
+ 728:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 72c:	b004      	add	sp, #16
+ 72e:	4770      	bx	lr
+
+00000ee8 <main>:
+ ee8:	b580      	push	{r7, lr}
+ eea:	b082      	sub	sp, #8
+ eec:	af00      	add	r7, sp, #0
+ eee:	1d3b      	adds	r3, r7, #4
+ ef0:	4619      	mov	r1, r3
+ ef2:	4b20      	ldr	r3, [pc, #128]	; (f74 <main+0x8c>)
+ ef4:	447b      	add	r3, pc
+ ef6:	4618      	mov	r0, r3
+ ef8:	f7ff eb18 	blx	52c <__isoc99_scanf@plt>
+ efc:	e02f      	b.n	f5e <main+0x76>
+ efe:	f7ff fc17 	bl	730 <test_implementations_by_sending_three_elements>
+ f02:	4603      	mov	r3, r0
+ f04:	2b00      	cmp	r3, #0
+ f06:	d005      	beq.n	f14 <main+0x2c>
+ f08:	4b1b      	ldr	r3, [pc, #108]	; (f78 <main+0x90>)
+ f0a:	447b      	add	r3, pc
+ f0c:	4618      	mov	r0, r3
+ f0e:	f7ff eaea 	blx	4e4 <puts@plt>
+ f12:	e004      	b.n	f1e <main+0x36>
+ f14:	4b19      	ldr	r3, [pc, #100]	; (f7c <main+0x94>)
+ f16:	447b      	add	r3, pc
+ f18:	4618      	mov	r0, r3
+ f1a:	f7ff eae4 	blx	4e4 <puts@plt>
+ f1e:	f7ff fcf5 	bl	90c <test_implementations_by_sending_five_elements>
+ f22:	4603      	mov	r3, r0
+ f24:	2b00      	cmp	r3, #0
+ f26:	d005      	beq.n	f34 <main+0x4c>
+ f28:	4b15      	ldr	r3, [pc, #84]	; (f80 <main+0x98>)
+ f2a:	447b      	add	r3, pc
+ f2c:	4618      	mov	r0, r3
+ f2e:	f7ff eada 	blx	4e4 <puts@plt>
+ f32:	e004      	b.n	f3e <main+0x56>
+ f34:	4b13      	ldr	r3, [pc, #76]	; (f84 <main+0x9c>)
+ f36:	447b      	add	r3, pc
+ f38:	4618      	mov	r0, r3
+ f3a:	f7ff ead4 	blx	4e4 <puts@plt>
+ f3e:	f7ff fe0f 	bl	b60 <test_implementations_by_sending_ten_elements>
+ f42:	4603      	mov	r3, r0
+ f44:	2b00      	cmp	r3, #0
+ f46:	d005      	beq.n	f54 <main+0x6c>
+ f48:	4b0f      	ldr	r3, [pc, #60]	; (f88 <main+0xa0>)
+ f4a:	447b      	add	r3, pc
+ f4c:	4618      	mov	r0, r3
+ f4e:	f7ff eaca 	blx	4e4 <puts@plt>
+ f52:	e004      	b.n	f5e <main+0x76>
+ f54:	4b0d      	ldr	r3, [pc, #52]	; (f8c <main+0xa4>)
+ f56:	447b      	add	r3, pc
+ f58:	4618      	mov	r0, r3
+ f5a:	f7ff eac4 	blx	4e4 <puts@plt>
+ f5e:	687b      	ldr	r3, [r7, #4]
+ f60:	1e5a      	subs	r2, r3, #1
+ f62:	607a      	str	r2, [r7, #4]
+ f64:	2b00      	cmp	r3, #0
+ f66:	d1ca      	bne.n	efe <main+0x16>
+ f68:	2300      	movs	r3, #0
+ f6a:	4618      	mov	r0, r3
+ f6c:	3708      	adds	r7, #8
+ f6e:	46bd      	mov	sp, r7
+ f70:	bd80      	pop	{r7, pc}
+ f72:	bf00      	nop
+ f74:	000001b0 	.word	0x000001b0
+ f78:	0000019e 	.word	0x0000019e
+ f7c:	000001a2 	.word	0x000001a2
+ f80:	0000017e 	.word	0x0000017e
+ f84:	00000182 	.word	0x00000182
+ f88:	0000015e 	.word	0x0000015e
+ f8c:	00000162 	.word	0x00000162
+
+

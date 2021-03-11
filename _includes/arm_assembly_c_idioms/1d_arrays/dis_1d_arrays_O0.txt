@@ -1,0 +1,77 @@
+
+1d_arrays_O0:     file format elf32-littlearm
+
+Disassembly of section .text:
+
+000005b4 <main>:
+ 5b4:	b580      	push	{r7, lr}
+ 5b6:	b086      	sub	sp, #24
+ 5b8:	af00      	add	r7, sp, #0
+ 5ba:	1d3b      	adds	r3, r7, #4
+ 5bc:	4619      	mov	r1, r3
+ 5be:	4b21      	ldr	r3, [pc, #132]	; (644 <main+0x90>)
+ 5c0:	447b      	add	r3, pc
+ 5c2:	4618      	mov	r0, r3
+ 5c4:	f7ff ef62 	blx	48c <__isoc99_scanf@plt>
+ 5c8:	687b      	ldr	r3, [r7, #4]
+ 5ca:	009b      	lsls	r3, r3, #2
+ 5cc:	4618      	mov	r0, r3
+ 5ce:	f7ff ef4c 	blx	468 <malloc@plt>
+ 5d2:	4603      	mov	r3, r0
+ 5d4:	60bb      	str	r3, [r7, #8]
+ 5d6:	2300      	movs	r3, #0
+ 5d8:	617b      	str	r3, [r7, #20]
+ 5da:	e00c      	b.n	5f6 <main+0x42>
+ 5dc:	697b      	ldr	r3, [r7, #20]
+ 5de:	009b      	lsls	r3, r3, #2
+ 5e0:	68ba      	ldr	r2, [r7, #8]
+ 5e2:	4413      	add	r3, r2
+ 5e4:	4619      	mov	r1, r3
+ 5e6:	4b18      	ldr	r3, [pc, #96]	; (648 <main+0x94>)
+ 5e8:	447b      	add	r3, pc
+ 5ea:	4618      	mov	r0, r3
+ 5ec:	f7ff ef4e 	blx	48c <__isoc99_scanf@plt>
+ 5f0:	697b      	ldr	r3, [r7, #20]
+ 5f2:	3301      	adds	r3, #1
+ 5f4:	617b      	str	r3, [r7, #20]
+ 5f6:	687b      	ldr	r3, [r7, #4]
+ 5f8:	697a      	ldr	r2, [r7, #20]
+ 5fa:	429a      	cmp	r2, r3
+ 5fc:	dbee      	blt.n	5dc <main+0x28>
+ 5fe:	2300      	movs	r3, #0
+ 600:	613b      	str	r3, [r7, #16]
+ 602:	2300      	movs	r3, #0
+ 604:	60fb      	str	r3, [r7, #12]
+ 606:	e00a      	b.n	61e <main+0x6a>
+ 608:	68fb      	ldr	r3, [r7, #12]
+ 60a:	009b      	lsls	r3, r3, #2
+ 60c:	68ba      	ldr	r2, [r7, #8]
+ 60e:	4413      	add	r3, r2
+ 610:	681b      	ldr	r3, [r3, #0]
+ 612:	693a      	ldr	r2, [r7, #16]
+ 614:	4413      	add	r3, r2
+ 616:	613b      	str	r3, [r7, #16]
+ 618:	68fb      	ldr	r3, [r7, #12]
+ 61a:	3301      	adds	r3, #1
+ 61c:	60fb      	str	r3, [r7, #12]
+ 61e:	687b      	ldr	r3, [r7, #4]
+ 620:	68fa      	ldr	r2, [r7, #12]
+ 622:	429a      	cmp	r2, r3
+ 624:	dbf0      	blt.n	608 <main+0x54>
+ 626:	6939      	ldr	r1, [r7, #16]
+ 628:	4b08      	ldr	r3, [pc, #32]	; (64c <main+0x98>)
+ 62a:	447b      	add	r3, pc
+ 62c:	4618      	mov	r0, r3
+ 62e:	f7ff ef10 	blx	450 <printf@plt>
+ 632:	68b8      	ldr	r0, [r7, #8]
+ 634:	f7ff ef12 	blx	45c <free@plt>
+ 638:	2300      	movs	r3, #0
+ 63a:	4618      	mov	r0, r3
+ 63c:	3718      	adds	r7, #24
+ 63e:	46bd      	mov	sp, r7
+ 640:	bd80      	pop	{r7, pc}
+ 642:	bf00      	nop
+ 644:	000000dc 	.word	0x000000dc
+ 648:	000000b4 	.word	0x000000b4
+ 64c:	00000072 	.word	0x00000072
+

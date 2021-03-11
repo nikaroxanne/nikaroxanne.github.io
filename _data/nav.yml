@@ -24,6 +24,18 @@
           subfolderitems:
             - subtitle: "ARM ASSEMBLY INTRODUCTION - SUM AND DIFFERENCE"
               url: "/arm_basics_sum_and_diff"
+          subfolderitems:
+            - subtitle: "ARM ASSEMBLY INTRODUCTION - ONE-DIMENSIONAL ARRAYS"
+              url: "/arm_basics_1d_arrays"
+          subfolderitems:
+            - subtitle: "ARM ASSEMBLY INTRODUCTION - N LOWEST NUMBERS"
+              url: "/arm_basics_n_lowest_nums"
+          subfolderitems:
+            - subtitle: "ARM ASSEMBLY INTRODUCTION - VARIADIC FUNCTIONS"
+              url: "/arm_basics_variadic_functions"
+          subfolderitems:
+            - subtitle: "ARM ASSEMBLY INTRODUCTION - BITWISE OPERATORS"
+              url: "/arm_basics_bitwise_operators"
     - subtitle: "LIVING ARCHIVE"
       url: "/livingArchive"
     - subtitle: "TRIANGULATION"
