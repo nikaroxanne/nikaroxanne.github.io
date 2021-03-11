@@ -1,0 +1,114 @@
+000005b4 <main>:
+ 5b4:	b580      	push	{r7, lr}
+ 5b6:	b088      	sub	sp, #32
+ 5b8:	af00      	add	r7, sp, #0
+ 5ba:	1d3b      	adds	r3, r7, #4
+ 5bc:	4619      	mov	r1, r3
+ 5be:	4b38      	ldr	r3, [pc, #224]	; (6a0 <main+0xec>)
+ 5c0:	447b      	add	r3, pc
+ 5c2:	4618      	mov	r0, r3
+ 5c4:	f7ff ef62 	blx	48c <__isoc99_scanf@plt>
+ 5c8:	687b      	ldr	r3, [r7, #4]
+ 5ca:	009b      	lsls	r3, r3, #2
+ 5cc:	4618      	mov	r0, r3
+ 5ce:	f7ff ef4c 	blx	468 <malloc@plt>
+ 5d2:	4603      	mov	r3, r0
+ 5d4:	613b      	str	r3, [r7, #16]
+ 5d6:	2300      	movs	r3, #0
+ 5d8:	61fb      	str	r3, [r7, #28]
+ 5da:	e00c      	b.n	5f6 <main+0x42>
+ 5dc:	69fb      	ldr	r3, [r7, #28]
+ 5de:	009b      	lsls	r3, r3, #2
+ 5e0:	693a      	ldr	r2, [r7, #16]
+ 5e2:	4413      	add	r3, r2
+ 5e4:	4619      	mov	r1, r3
+ 5e6:	4b2f      	ldr	r3, [pc, #188]	; (6a4 <main+0xf0>)
+ 5e8:	447b      	add	r3, pc
+ 5ea:	4618      	mov	r0, r3
+ 5ec:	f7ff ef4e 	blx	48c <__isoc99_scanf@plt>
+ 5f0:	69fb      	ldr	r3, [r7, #28]
+ 5f2:	3301      	adds	r3, #1
+ 5f4:	61fb      	str	r3, [r7, #28]
+ 5f6:	687b      	ldr	r3, [r7, #4]
+ 5f8:	69fa      	ldr	r2, [r7, #28]
+ 5fa:	429a      	cmp	r2, r3
+ 5fc:	dbee      	blt.n	5dc <main+0x28>
+ 5fe:	687b      	ldr	r3, [r7, #4]
+ 600:	0fda      	lsrs	r2, r3, #31
+ 602:	4413      	add	r3, r2
+ 604:	105b      	asrs	r3, r3, #1
+ 606:	ee07 3a90 	vmov	s15, r3
+ 60a:	eeb8 7be7 	vcvt.f64.s32	d7, s15
+ 60e:	eefd 7bc7 	vcvt.s32.f64	s15, d7
+ 612:	ee17 3a90 	vmov	r3, s15
+ 616:	60fb      	str	r3, [r7, #12]
+ 618:	687b      	ldr	r3, [r7, #4]
+ 61a:	3b01      	subs	r3, #1
+ 61c:	61bb      	str	r3, [r7, #24]
+ 61e:	2300      	movs	r3, #0
+ 620:	617b      	str	r3, [r7, #20]
+ 622:	e01b      	b.n	65c <main+0xa8>
+ 624:	697b      	ldr	r3, [r7, #20]
+ 626:	009b      	lsls	r3, r3, #2
+ 628:	693a      	ldr	r2, [r7, #16]
+ 62a:	4413      	add	r3, r2
+ 62c:	681b      	ldr	r3, [r3, #0]
+ 62e:	60bb      	str	r3, [r7, #8]
+ 630:	69bb      	ldr	r3, [r7, #24]
+ 632:	009b      	lsls	r3, r3, #2
+ 634:	693a      	ldr	r2, [r7, #16]
+ 636:	441a      	add	r2, r3
+ 638:	697b      	ldr	r3, [r7, #20]
+ 63a:	009b      	lsls	r3, r3, #2
+ 63c:	6939      	ldr	r1, [r7, #16]
+ 63e:	440b      	add	r3, r1
+ 640:	6812      	ldr	r2, [r2, #0]
+ 642:	601a      	str	r2, [r3, #0]
+ 644:	69bb      	ldr	r3, [r7, #24]
+ 646:	009b      	lsls	r3, r3, #2
+ 648:	693a      	ldr	r2, [r7, #16]
+ 64a:	4413      	add	r3, r2
+ 64c:	68ba      	ldr	r2, [r7, #8]
+ 64e:	601a      	str	r2, [r3, #0]
+ 650:	69bb      	ldr	r3, [r7, #24]
+ 652:	3b01      	subs	r3, #1
+ 654:	61bb      	str	r3, [r7, #24]
+ 656:	697b      	ldr	r3, [r7, #20]
+ 658:	3301      	adds	r3, #1
+ 65a:	617b      	str	r3, [r7, #20]
+ 65c:	697a      	ldr	r2, [r7, #20]
+ 65e:	68fb      	ldr	r3, [r7, #12]
+ 660:	429a      	cmp	r2, r3
+ 662:	dbdf      	blt.n	624 <main+0x70>
+ 664:	2300      	movs	r3, #0
+ 666:	61fb      	str	r3, [r7, #28]
+ 668:	e00d      	b.n	686 <main+0xd2>
+ 66a:	69fb      	ldr	r3, [r7, #28]
+ 66c:	009b      	lsls	r3, r3, #2
+ 66e:	693a      	ldr	r2, [r7, #16]
+ 670:	4413      	add	r3, r2
+ 672:	681b      	ldr	r3, [r3, #0]
+ 674:	4619      	mov	r1, r3
+ 676:	4b0c      	ldr	r3, [pc, #48]	; (6a8 <main+0xf4>)
+ 678:	447b      	add	r3, pc
+ 67a:	4618      	mov	r0, r3
+ 67c:	f7ff eee8 	blx	450 <printf@plt>
+ 680:	69fb      	ldr	r3, [r7, #28]
+ 682:	3301      	adds	r3, #1
+ 684:	61fb      	str	r3, [r7, #28]
+ 686:	687b      	ldr	r3, [r7, #4]
+ 688:	69fa      	ldr	r2, [r7, #28]
+ 68a:	429a      	cmp	r2, r3
+ 68c:	dbed      	blt.n	66a <main+0xb6>
+ 68e:	6938      	ldr	r0, [r7, #16]
+ 690:	f7ff eee4 	blx	45c <free@plt>
+ 694:	2300      	movs	r3, #0
+ 696:	4618      	mov	r0, r3
+ 698:	3720      	adds	r7, #32
+ 69a:	46bd      	mov	sp, r7
+ 69c:	bd80      	pop	{r7, pc}
+ 69e:	bf00      	nop
+ 6a0:	00000138 	.word	0x00000138
+ 6a4:	00000110 	.word	0x00000110
+ 6a8:	00000084 	.word	0x00000084
+
