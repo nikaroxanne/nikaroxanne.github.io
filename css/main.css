@@ -417,7 +417,7 @@ div.arm_assembly_c_idioms_content {
 	background-color: black;
 	background-size: contain;
 	padding: 10px;
-	margin: 20%;
+	margin: 10%;
 	border: 1px solid lime;
 	border-radius: 3px;
 }
@@ -426,9 +426,10 @@ div.arm_assembly_c_idioms_title {
 	background-color: black;
 	background-size: contain;
 	padding: 10px;
-	margin: 40px;
+	margin: 20px;
 	border: 1px solid lime;
 	border-radius: 3px;
+	max-width: 100%;
 	color: lime;
 	text-align:center;
 }
@@ -450,7 +451,7 @@ div.running_backtrace_lambda_calculus_intro, div.reverse_engineering_embedded_fi
 	background-color: black;
 	border: 1px solid lime;
 	background-size: contain;
-	padding: 10px;
+	/*padding: 10px; */
 	margin: 40px;
 }
 
@@ -461,6 +462,19 @@ p.running_backtrace_lambda_calculus, p.reverse_engineering_embedded_firmware, p.
 	/*color: black; */
 	/*font-family: 'Cormorant Garamond', serif; */
 	font-size: 24px;
+}
+
+a.arm_assembly:visited, a.arm_assembly:hover, a.reverse_engineering:visited, a.reverse_engineering:hover {
+	color: lime;
+	border: 1px solid white;
+	background-color: #2f4f4f;
+	font-size:24px;
+	font-style: bold;
+}
+
+a.arm_assembly, a.reverse_engineering {
+	background-color: #2f4f4f;
+	color: #F0F0FF;
 }
 
 .toc_running_backtrace_lambda_calculus, .toc_reverse_engineering_embedded_firmware_list {
