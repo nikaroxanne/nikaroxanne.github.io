@@ -489,9 +489,11 @@ a.arm_assembly:visited, a.arm_assembly:hover, a.reverse_engineering:visited, a.r
 	background: rgb(50,50,50);
 	background-size: contain;
 	overflow: scroll;
-	border: 1px #ddd;
+	/*object-fit:contain;
+	border: 2px #ddd;
 	border-radius: 3px;
-	font-size: 20px;
+	font-size: 20px; */
+	font-size: 16px;
 }
 
 #articles_section {
