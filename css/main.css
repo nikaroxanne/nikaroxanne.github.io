@@ -43,7 +43,8 @@ p.triangulation {
 
 .post p{
 	color: #F5F5F5;
-	font-family: 'Cormorant Garamond', serif;
+	font-family: 'Ubuntu', sans-serif;
+	font-family: 'VT323', monospace;
 	font-size: 20px;
 }
 
@@ -351,7 +352,8 @@ svg {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'VT323', monospace;
     font-size: 1.2em;
     font-weight: bold;
     font-size: 24px;
@@ -373,7 +375,8 @@ svg {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'VT323', monospace;
     font-size: 24px;
     margin: 4px 2px;
     cursor: pointer;
@@ -406,7 +409,8 @@ h2#siriTitle {
 }
 
 .archive_sources p, {
-	font-family: 'Cormorant Garamond', serif;
+	font-family: 'Ubuntu', sans-serif;
+	font-family: 'VT323', monospace;
 	font-size: 1.2em;
 	font-weight: 200;
 	line-height: 1.4em;
@@ -425,6 +429,7 @@ div.arm_assembly_c_idioms_content {
 div.arm_assembly_c_idioms_title {
 	background-color: black;
 	background-size: contain;
+	font-family: 'VT323', monospace;
 	padding: 10px;
 	margin: 20px;
 	border: 1px solid lime;
@@ -437,16 +442,27 @@ div.arm_assembly_c_idioms_title {
 h2.running_backtrace_lambda_calculus, h2.reverse_engineering_embedded_firmware, h2.arm_assembly {
 	color: lime;
 	background-color: black;
+	font-family: 'VT323', monospace;
 	max-width: 100%;
 	padding: 10px;
+	text-align: center;
+	font-size: 32px;
+	font-weight: 200;
+}
+
+h3.running_backtrace_lambda_calculus, h3.reverse_engineering_embedded_firmware, h3.arm_assembly {
+	color: lime;
+	background-color: black;
+	font-family: 'VT323', monospace;
+	max-width: 100%;
 	text-align: center;
 	font-size: 28px;
 	font-weight: 200;
 }
 
-
 div.running_backtrace_lambda_calculus_intro, div.reverse_engineering_embedded_firmware_intro, div.arm_assembly_c_idioms_section {
-	color: #90EE90;
+	/*color: #90EE90; */
+	color: #f0fff0;
 	background-color: black;
 	border: 1px solid lime;
 	background-size: contain;
@@ -454,15 +470,24 @@ div.running_backtrace_lambda_calculus_intro, div.reverse_engineering_embedded_fi
 	margin: 40px;
 }
 
+div.arm_assembly_c_idioms_nav {
+	display: block;
+	flex-wrap: wrap;
+}
+
 p.running_backtrace_lambda_calculus, p.reverse_engineering_embedded_firmware, p.arm_assembly, p.reverse_engineering {
 	margin: 40px;
-	color: #90EE90;
-	font-size: 24px;
+	/*color: #90EE90; */
+    	font-family: 'Ubuntu', sans-serif;
+	color: #f0fff0;
+	font-size: 20px;
+	font-weight: 100;
 }
 
 a.arm_assembly, a.reverse_engineering {
 	background-color: #2f4f4f;
 	color: #F0F0FF;
+	font-family: 'VT323', monospace;
 	padding: 10px; 
 	margin: auto;
 	border: 2px solid white;
@@ -482,6 +507,7 @@ a.arm_assembly:visited, a.arm_assembly:hover, a.reverse_engineering:visited, a.r
 	margin: 40px;
 	list-style-type: none;
 	font-size: 24px;
+	font-family: 'VT323', monospace;
 }
 
 
@@ -606,7 +632,8 @@ li.living_archive_resource{
 	position: relative;
 	color: black;
 	font-size: 1.8em;
-	font-family: 'Cormorant Garamond', serif;
+	font-family: 'Ubuntu', sans-serif;
+	font-family: 'VT323', monospace;
 }
 
 
@@ -692,7 +719,8 @@ li.living_archive_resource{
 .numbertext {
 	color: white;
 	font-size: 0.9em;
-	font-family: 'Cormorant Garamond', serif;
+	font-family: 'Ubuntu', sans-serif;
+	font-family: 'VT323', monospace;
 	padding: 8px 12px;
 	position: absolute;
 	top: 0;
@@ -710,7 +738,8 @@ p#caption, p#caption_aluminum_0,  p#caption_aluminum_1, p#caption_aluminum_2, p#
 	/*color: white;*/
 	color: lime;
 	font-size: 1.2em;
-	font-family: 'Cormorant Garamond', serif;
+	font-family: 'Ubuntu', sans-serif;
+	font-family: 'VT323', monospace;
 }
 
 
@@ -723,7 +752,8 @@ p#caption, p#caption_aluminum_0,  p#caption_aluminum_1, p#caption_aluminum_2, p#
 p#living_archive {
 	color: white;
 	font-size: 1.2em;
-	font-family: 'Cormorant Garamond', serif;
+	font-family: 'Ubuntu', sans-serif;
+	font-family: 'VT323', monospace;
 }
 
 .row:after {
@@ -786,7 +816,7 @@ a.header:link, a.header:visited {
 	text-decoration: none;
 	display: inline-block;
 	font-size: 1.5em;
-	font-family: 'Cormorant Garamond', serif;
+	font-family: 'VT323', monospace;
 }
 
 a.header:hover, a.header:active {
@@ -808,7 +838,7 @@ a.header:hover, a.header:active {
 .nav-container, .nav-container2 {
 	list-style-type: none;
 	overflow: hidden;
-	font-family: 'Cormorant Garamond', serif;
+	font-family: 'VT323', monospace;
 	background-color: black;
 	margin: 0;
 	padding: 0;
@@ -819,8 +849,8 @@ a.header:hover, a.header:active {
 }
 
 .nav-container li a, .dropdown a, .nav-container2 li a, .dropdown2 a {
-	font-size: 0.9em;
-	color: white;
+	font-size: 1.2em;
+	color: #F0F0FF;
 	text-align: center;
 	padding: 15px 15px;
 	text-decoration: none;
@@ -1007,7 +1037,8 @@ a.header:hover, a.header:active {
 
 
 footer ul {
-	font-family: 'Cormorant Garamond', serif;
+	font-family: 'Ubuntu', sans-serif;
+	font-family: 'VT323', monospace;
 	padding: 0px;
 	list-style: none;
 	font-weight: bold;
@@ -1029,11 +1060,13 @@ a:hover {
 
 h1 {
 	font-size: 1.5em;
-	font-family: 'Cormorant Garamond', serif;
+	font-family: 'Ubuntu', sans-serif;
+	font-family: 'VT323', monospace;
 }
 
 p {
-	font-family: 'Cormorant Garamond', serif;
+	font-family: 'Ubuntu', sans-serif;
+	font-family: 'VT323', monospace;
 	font-size: 1.2em;
 	font-weight: normal;
 	line-height: 1.4em;
