@@ -26,11 +26,11 @@ permalink: /projects/reverseEngineeringFirmware/arm_assembly_c_idioms
 		<h2 class="arm_assembly"> References for mastering the ABC's of ARM</h2>
 		<h2 class="arm_assembly">*****************</h2>
 		<p class="arm_assembly">I refer the reader to two exceptional tutorials online:</p>
-		<div class="arm_assembly_c_idioms_section">
-			<p class="arm_assembly">Azeria Labs: <a href=“https://azeria-labs.com/writing-arm_assembly-part-1/>Introduction to ARM Assembly Basics</a></p>
+		<div class="arm_assembly_c_idioms_element">
+			<p class="arm_assembly">Azeria Labs: <a class="arm_assembly" target="_blank" rel="noopener noreferrer" href=“https://azeria-labs.com/writing-arm_assembly-part-1/">Introduction to ARM Assembly Basics</a> </p> 
 		</div>	
-		<div class="arm_assembly_c_idioms_section">
-			<p class="arm_assembly">Think in Geek <a href="https://thinkingeek.com/arm-assembler-raspberry-pi/">ARM Assembler in Raspberry Pi</a></p>
+		<div class="arm_assembly_c_idioms_element">
+			<p class="arm_assembly">Think in Geek <a class="arm_assembly" target="_blank" rel="noopener noreferrer" href="https://thinkingeek.com/arm-assembler-raspberry-pi/">ARM Assembler in Raspberry Pi</a></p>
 		</div>
 		<p class="arm_assembly">Both of these tutorials are detailed and comprehensive and are fantastic references that I have consulted while learning ARM Assembly. They also go into more detail than I will here in covering the aforementioned basics. </p>
 		<p class="arm_assembly">But what if you’re thinking, “I really don’t want to toggle between tabs just to remember what a branch instruction looks like in ARM, can’t you just have that on this page?” Fret not, dear reader, I’ve included images that list those basics here. The images in the next section are scans of my notes that I took while reading the Azeria labs tutorials religiously (I cannot recommend that resource enough, it’s a work of art. Those animations! That VM walkthrough! It is *chef’s kiss* a masterpiece.) </p>
@@ -82,7 +82,7 @@ permalink: /projects/reverseEngineeringFirmware/arm_assembly_c_idioms
 		<p class="arm_assembly">For these examples, I used programs in C that I had written for technical interview practice exercises on HackerRank, and compiled and disassembled each program on a Raspberry Pi, running on an ARMv7 core. Of course, the output for the assembly (or disassembly) will depend upon different factors, including the architecture of the machine, the assembler or disassembler used, and, in the case of disassembly, the type of disassembly pass implemented (i.e. linear or recursive disassembly).</p>
 		<p class="arm_assembly">Machine specs: Raspberry Pi, Model B, running Kali Linux; ARMv7 architecture</p>
 		<p class="arm_assembly">For each program, I generated the ARM executable file for each C source code program, by compiling with gcc using one of four optimization levels (O0, O1, O2, O3) and then disassembling the resultant executable using objdump. Compilation was performed with a Makefile and a compile script, which are both included in the Github repo for this page.  The Makefile and the compile script are essentially equivalent (the compile script is actually more verbose), and my explanation for the redundancy is that honestly I just like writing bash scripts and this one was fun.</p>
-		<p class="arm_assembly">Github repo with demo scripts: <a class="arm_assembly" href="https://github.com/nikaroxanne/arm_assembly_c_idioms">ARM_assembly_c_idioms</a></p>
+		<p class="arm_assembly">Github repo with demo scripts: <a class="arm_assembly"  target="_blank" rel="noopener noreferrer" href="https://github.com/nikaroxanne/arm_assembly_c_idioms">ARM_assembly_c_idioms</a></p>
 		<p class="arm_assembly">Since the disassembly of a program can also vary depending on compiler optimizations used at compile time, I have included five files produced as output from assembly and/or disassembly of the same program:</p>
 		<p class="arm_assembly">For all programs in this repo, let example.c represent a member of that set, and let the following five files be derived from that input example.c source</p>
 		<ul class="arm_assembly">

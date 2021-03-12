@@ -420,8 +420,16 @@ h2#siriTitle {
 div.arm_assembly_c_idioms_content {
 	background-color: black;
 	background-size: contain;
+	margin: 5%;
+	border: 1px solid lime;
+	border-radius: 3px;
+}
+
+div.arm_assembly_c_idioms_element {
+	background-color: black;
+	background-size: contain;
 	padding: 10px;
-	margin: 10%;
+	margin: 5%;
 	border: 1px solid lime;
 	border-radius: 3px;
 }
@@ -461,17 +469,20 @@ h3.running_backtrace_lambda_calculus, h3.reverse_engineering_embedded_firmware, 
 }
 
 div.running_backtrace_lambda_calculus_intro, div.reverse_engineering_embedded_firmware_intro, div.arm_assembly_c_idioms_section {
-	/*color: #90EE90; */
 	color: #f0fff0;
 	background-color: black;
 	border: 1px solid lime;
 	background-size: contain;
-	/*padding: 10px; */
 	margin: 40px;
 }
 
 div.arm_assembly_c_idioms_nav {
 	display: block;
+	flex-wrap: wrap;
+}
+
+div.arm-assembly-row{
+	display: flex;
 	flex-wrap: wrap;
 }
 
@@ -488,8 +499,8 @@ a.arm_assembly, a.reverse_engineering {
 	background-color: #2f4f4f;
 	color: #F0F0FF;
 	font-family: 'VT323', monospace;
-	padding: 10px; 
-	margin: auto;
+	padding: 15px; 
+	display:inline-block;
 	border: 2px solid white;
 	font-style: bold;
 	font-size:24px;
@@ -497,8 +508,6 @@ a.arm_assembly, a.reverse_engineering {
 
 a.arm_assembly:visited, a.arm_assembly:hover, a.reverse_engineering:visited, a.reverse_engineering:hover {
 	color: lime;
-	/*font-size:24px;
-	font-style: bold;*/
 }
 
 
