@@ -1,0 +1,59 @@
+
+bitwise_operators_O0:     file format elf32-littlearm
+
+Disassembly of section .text:
+
+0000055c <max_and>:
+ 55c:	b480      	push	{r7}
+ 55e:	b087      	sub	sp, #28
+ 560:	af00      	add	r7, sp, #0
+ 562:	60f8      	str	r0, [r7, #12]
+ 564:	60b9      	str	r1, [r7, #8]
+ 566:	607a      	str	r2, [r7, #4]
+ 568:	603b      	str	r3, [r7, #0]
+ 56a:	68fb      	ldr	r3, [r7, #12]
+ 56c:	3301      	adds	r3, #1
+ 56e:	617b      	str	r3, [r7, #20]
+ 570:	e01a      	b.n	5a8 <max_and+0x4c>
+ 572:	68fa      	ldr	r2, [r7, #12]
+ 574:	697b      	ldr	r3, [r7, #20]
+ 576:	4013      	ands	r3, r2
+ 578:	613b      	str	r3, [r7, #16]
+ 57a:	693a      	ldr	r2, [r7, #16]
+ 57c:	687b      	ldr	r3, [r7, #4]
+ 57e:	429a      	cmp	r2, r3
+ 580:	da05      	bge.n	58e <max_and+0x32>
+ 582:	693a      	ldr	r2, [r7, #16]
+ 584:	683b      	ldr	r3, [r7, #0]
+ 586:	429a      	cmp	r2, r3
+ 588:	dd01      	ble.n	58e <max_and+0x32>
+ 58a:	693b      	ldr	r3, [r7, #16]
+ 58c:	603b      	str	r3, [r7, #0]
+ 58e:	697b      	ldr	r3, [r7, #20]
+ 590:	3301      	adds	r3, #1
+ 592:	617b      	str	r3, [r7, #20]
+ 594:	697a      	ldr	r2, [r7, #20]
+ 596:	68bb      	ldr	r3, [r7, #8]
+ 598:	429a      	cmp	r2, r3
+ 59a:	ddea      	ble.n	572 <max_and+0x16>
+ 59c:	68fb      	ldr	r3, [r7, #12]
+ 59e:	3301      	adds	r3, #1
+ 5a0:	60fb      	str	r3, [r7, #12]
+ 5a2:	68fb      	ldr	r3, [r7, #12]
+ 5a4:	3301      	adds	r3, #1
+ 5a6:	617b      	str	r3, [r7, #20]
+ 5a8:	68fa      	ldr	r2, [r7, #12]
+ 5aa:	697b      	ldr	r3, [r7, #20]
+ 5ac:	429a      	cmp	r2, r3
+ 5ae:	da03      	bge.n	5b8 <max_and+0x5c>
+ 5b0:	697a      	ldr	r2, [r7, #20]
+ 5b2:	68bb      	ldr	r3, [r7, #8]
+ 5b4:	429a      	cmp	r2, r3
+ 5b6:	dded      	ble.n	594 <max_and+0x38>
+ 5b8:	683b      	ldr	r3, [r7, #0]
+ 5ba:	4618      	mov	r0, r3
+ 5bc:	371c      	adds	r7, #28
+ 5be:	46bd      	mov	sp, r7
+ 5c0:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 5c4:	4770      	bx	lr
+

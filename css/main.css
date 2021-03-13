@@ -510,6 +510,19 @@ a.arm_assembly:visited, a.arm_assembly:hover, a.reverse_engineering:visited, a.r
 	color: lime;
 }
 
+ol.arm_assembly {
+	list-style-type: decimal;
+}
+
+
+li.arm_assembly {
+	font-size: 1.4em;
+	color: #F0F0FF;
+	display: block;
+	font-family: 'VT323', monospace;
+	margin: 20px;
+	font-weight: bold;
+}
 
 .toc_running_backtrace_lambda_calculus, .toc_reverse_engineering_embedded_firmware_list {
 	padding: 30px;

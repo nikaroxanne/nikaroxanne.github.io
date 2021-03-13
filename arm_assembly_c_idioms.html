@@ -19,7 +19,7 @@ permalink: /projects/reverseEngineeringFirmware/arm_assembly_c_idioms
 		<p class="arm_assembly"> Don't worry, dear reader. I too, have responded "wódka... mleko... jabłko... dobrze" when asked by an acquaintance "Jak się masz?" and I am here to help you avoid making the same mortifying faux pas.  </p>
 		<p class="arm_assembly"> "I thought this was an ARM Assembly tutorial..." It is! 
 		<p class="arm_assembly"> Rather than approach this by repeating definitions of specific opcodes or registers or instructions — I refer the reader to the appropriately marked references in the References Section below for that information —- I am instead choosing to adopt a different didactic technique. </p>
-		<p class="arm_assembly"> Let’s learn ARM Assembly by approaching it as a study in language learning. As in the case of learning natural languages, knowing the component parts is important, but it is just as important to understand how to put those parts together, how to assemble those modular pieces into a coherent whole. </p>
+		<p class="arm_assembly"> Let’s learn ARM Assembly by approaching it as a study in language learning. As in the case of learning natural languages, knowing the component parts is important, but it is just as important to understand how to put those parts together, how to <strong><em> assemble </em></strong> those modular pieces into a coherent whole. </p>
 	</div>
 	<div class="arm_assembly_c_idioms_section">
 		<h2 class="arm_assembly">*****************</h2>
@@ -31,7 +31,8 @@ permalink: /projects/reverseEngineeringFirmware/arm_assembly_c_idioms
 			<a class="arm_assembly" target="_blank" rel="noopener noreferrer" href="https://azeria-labs.com/writing-arm-assembly-part-1/ ">Introduction to ARM Assembly Basics</a> 
 		</div>	
 		<div class="arm_assembly_c_idioms_element">
-			<p class="arm_assembly">Think in Geek <a class="arm_assembly" target="_blank" rel="noopener noreferrer" href="https://thinkingeek.com/arm-assembler-raspberry-pi/">ARM Assembler in Raspberry Pi</a></p>
+			<p class="arm_assembly">Think in Geek </p>
+			<a class="arm_assembly" target="_blank" rel="noopener noreferrer" href="https://thinkingeek.com/arm-assembler-raspberry-pi/">ARM Assembler in Raspberry Pi</a>
 		</div>
 		<p class="arm_assembly">Both of these tutorials are detailed and comprehensive and are fantastic references that I have consulted while learning ARM Assembly. They also go into more detail than I will here in covering the aforementioned basics. </p>
 		<p class="arm_assembly">But what if you’re thinking, “I really don’t want to toggle between tabs just to remember what a branch instruction looks like in ARM, can’t you just have that on this page?” Fret not, dear reader, I’ve included images that list those basics here. The images in the next section are scans of my notes that I took while reading the Azeria labs tutorials religiously (I cannot recommend that resource enough, it’s a work of art. Those animations! That VM walkthrough! It is *chef’s kiss* a masterpiece.) </p>
@@ -45,7 +46,7 @@ permalink: /projects/reverseEngineeringFirmware/arm_assembly_c_idioms
 		<h2 class="arm_assembly">*****************</h2>
 		<h2 class="arm_assembly"> A brief sidetrack on the notion of a “valid” word </h2>
 		<h2 class="arm_assembly">*****************</h2>
-		<p class="arm_assembly">For example, the word twa does not have a meaning in English, per Merriam-Webster; it may be defined in one context by a certain group (your friend group might use it as an acronym for “too weird alright?”), which would mean it had a valid use in a specific context, but not to all speakers of that language. </p>
+		<p class="arm_assembly">For example, the word <em> twah </em> does not have a meaning in English, per Merriam-Webster; it may be defined in one context by a certain group (your friend group might use it as an acronym for “too weird alright, honey?”), which would mean it had a valid use in a specific context, but not to all speakers of that language. </p>
 		<p class="arm_assembly">This is like the concept of local variables and global variables. A local variable is defined in one specific context, but does not have any meaning or the same meaning outside of that specific context. A global variable however, is defined for all contexts — it has a standard value and it is up to any specific user to modify, adapt, change that value based on their needs or interpretations. </p>
 		<p class="arm_assembly">However, the word “toi” has a meaning in French — as the word “you” — and the pronunciation of that word, makes it sound nearly identical to the Anglicized spelling of that sound “twa.” Here, we could consider sound to be the bits of the word, and the letters to be their “encoding,” or their value defined using a set of specific parameters. </p>
 		<h2 class="arm_assembly">*****************</h2>
@@ -86,23 +87,23 @@ permalink: /projects/reverseEngineeringFirmware/arm_assembly_c_idioms
 		<p class="arm_assembly">Github repo with demo scripts: <a class="arm_assembly"  target="_blank" rel="noopener noreferrer" href="https://github.com/nikaroxanne/arm_assembly_c_idioms">ARM_assembly_c_idioms</a></p>
 		<p class="arm_assembly">Since the disassembly of a program can also vary depending on compiler optimizations used at compile time, I have included five files produced as output from assembly and/or disassembly of the same program:</p>
 		<p class="arm_assembly">For all programs in this repo, let example.c represent a member of that set, and let the following five files be derived from that input example.c source</p>
-		<ul class="arm_assembly">
+		<ol class="arm_assembly">
 			<li class="arm_assembly">example_O0
 				<p class="arm_assembly">the compiled ARM binary executable file compiled using gcc with -O0 flag, from source example.c; gcc {$FLAGS} example.c</p>
 			</li>
 			<li class="arm_assembly"> example_O1.s 
-				<p class="arm_assembly"> the assembly file after O1 optimization; gcc -O1 {$FLAGS} example.c </p> 
+				<p class="arm_assembly"> the assembly file after O1 optimization; gcc -S -O1 {$FLAGS} example.c </p> 
 			</li>
 			<li class="arm_assembly"> example_O2.s
-				<p class="arm_assembly"> the assembly file after O2 optimization; gcc -O2 {$FLAGS} example.c</p>
+				<p class="arm_assembly"> the assembly file after O2 optimization; gcc -S -O2 {$FLAGS} example.c</p>
 			</li>
 			<li class="arm_assembly">example_O3.s, 
-				<p class="arm_assembly"> the assembly file after O3 optimization; gcc -O3 {$FLAGS} example.c</p>
+				<p class="arm_assembly"> the assembly file after O3 optimization; gcc -S -O3 {$FLAGS} example.c</p>
 			</li>
 			<li class="arm_assembly">example_dis.txt, 
 				<p class="arm_assembly">the disassembled binary; objdump -d example_O0 </p>
 			</li>
-		</ul>
+		</ol>
 		<p class="arm_assembly">For consistency, I used objdump for disassembly for each of these programs. This also provides another view of what you might encounter if you are reverse engineering a compiled ARM binary.</p>
 		<p class="arm_assembly">I chose these programs because they are all relatively small and straightforward, and they implement some common programming constructs, as well as well-known algorithms. I think that their generality makes them a prime candidate to use for disassembly. These programs aren’t particularly spectacular or novel — they implement staples of programming, and are thus less overwhelming than jumping right into disassembling firmware.</p>
 	</div>
