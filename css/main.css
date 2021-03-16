@@ -486,6 +486,22 @@ div.arm-assembly-row{
 	flex-wrap: wrap;
 }
 
+/*
+div.arm_stack_frame_table  > table {
+	margin: 10px;
+	border-spacing: 10px;
+	width: 80%;
+	border: 2px solid lime;
+}
+
+td {
+	height: 1.5em;
+	text-align: center;
+	max-width: 100%;
+	background-color: #2f4f4f;
+}
+*/
+
 p.running_backtrace_lambda_calculus, p.reverse_engineering_embedded_firmware, p.arm_assembly, p.reverse_engineering {
 	margin: 40px;
 	/*color: #90EE90; */
@@ -522,6 +538,31 @@ li.arm_assembly {
 	font-family: 'VT323', monospace;
 	margin: 20px;
 	font-weight: bold;
+}
+
+div.arm_stack_frame {
+	font-size: 1.2em;
+	background-color: #c0c0c0;
+	font-family: 'VT323', monospace;
+	border: 2px solid white;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.arm_stack_frame_row {
+	border: 2px solid silver;
+	background-color: #696969;
+	color: #f0f0ff;
+	/*background-color: #228b22; */
+}
+
+.arm_stack_frame_col {
+	font-size: 1.0em;
+	border: 2px solid lime;
+	padding: 2px;
+	text-align:center;
 }
 
 .toc_running_backtrace_lambda_calculus, .toc_reverse_engineering_embedded_firmware_list {
