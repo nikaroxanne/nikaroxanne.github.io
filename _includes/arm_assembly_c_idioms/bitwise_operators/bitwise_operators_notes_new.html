@@ -1,0 +1,252 @@
+<div class="arm_assembly_c_idioms_section">
+	<h2 class="arm_assembly">***************************</h2>
+	<h2 class="arm_assembly"> bitwise_operators: program specs </h2>
+	<h2 class="arm_assembly">***************************</h2>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> The program bitwise_operators.c initializes an int n and then defines the value of that variable n as the value that it reads from stdin using scanf("%d", &n). Then, the program allocates an array of integers, arr, of length n. </p>
+</div>
+
+<div class="arm_assembly_c_idioms_section">
+	<h2 class="arm_assembly">***************************</h2>
+	<h2 class="arm_assembly"> Stack Frame Set-up</h2>
+	<h2 class="arm_assembly">***************************</h2>
+	<p class="arm_assembly"> Okay, so let's start translating the ARM assembly, and try to find where some of those C idioms are found in the ARM binary and how they have been translated.</p>
+	<p class="arm_assembly">
+		{% highlight nasm %}
+		{% endhighlight %}
+	</p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> *****</p>
+	
+	<div class="arm_stack_frame">
+		<h3 class=""> Current Stack Frame </h3>
+		<pre> r7 + 24 		-->  	 	{lr} 	</pre>
+		<pre> r7 + 20 		-->  		{r7}	 </pre>
+		<pre> r7 + 16 		-->  		 </pre>
+		<pre> r7 + 12 		-->  	 	 </pre>
+		<pre> r7 + 8 		--> 			 </pre>
+		<pre> r7 + 4 		--> 			 </pre>
+		<pre> r7 			-->		sp   	 </pre>
+	</div>
+</div>
+<div class="arm_assembly_c_idioms_section">
+	<h2 class="arm_assembly">***************************</h2>
+	<h2 class="arm_assembly"> scanf() </h2>
+	<h2 class="arm_assembly">***************************</h2>
+	<h2 class="arm_assembly">***************************</h2>
+	<p class="arm_assembly">
+		{% highlight nasm %}
+		{% endhighlight %}
+	</p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+</div>
+<div class="arm_assembly_c_idioms_section">
+	<h2 class="arm_assembly">***************************</h2>
+	<h2 class="arm_assembly"> malloc() </h2>
+	<h2 class="arm_assembly">***************************</h2>
+	<p class="arm_assembly">
+		{% highlight nasm %}
+		{% endhighlight %}
+	</p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+</div>
+
+<div class="arm_assembly_c_idioms_section">
+	<h2 class="arm_assembly">***************************</h2>
+	<h2 class="arm_assembly"> storing address of newly allocated array arr </h2>
+	<h2 class="arm_assembly">***************************</h2>
+	<p class="arm_assembly">
+		{% highlight nasm %}
+		{% endhighlight %}
+	</p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+	<div class="arm_stack_frame">
+		<h3 class=""> Current Stack Frame </h3>
+		<p class="arm_assembly"> <pre> r7 + 24 		-->  	 	 </pre> </p>
+		<p class="arm_assembly"> <pre> r7 + 20 		-->  		0	 </pre> </p>
+		<p class="arm_assembly"> <pre> r7 + 16 		-->  		 </pre> </p>
+		<p class="arm_assembly"> <pre> r7 + 12 		-->  	 	 </pre> </p>
+		<p class="arm_assembly"> <pre> r7 + 8 		--> 		arr	 </pre> </p>
+		<p class="arm_assembly"> <pre> r7 + 4 		--> 		n	 </pre> </p>
+		<p class="arm_assembly"> <pre> r7 			-->		sp   	 </pre> </p>
+	</div>
+</div>
+<div class="arm_assembly_c_idioms_section">
+	<h2 class="arm_assembly">***************************</h2>
+	<h2 class="arm_assembly"> unconditional branch to start of for first for loop </h2>
+	<h2 class="arm_assembly">***************************</h2>
+	<p class="arm_assembly">
+		{% highlight nasm %}
+		{% endhighlight %}
+	</p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+</div>
+<div class="arm_assembly_c_idioms_section">
+	<h2 class="arm_assembly">***************************</h2>
+	<h2 class="arm_assembly"> evaluating conditional expression for the first for loop </h2>
+	<h2 class="arm_assembly">***************************</h2>
+	<p class="arm_assembly">
+		{% highlight nasm %}
+		{% endhighlight %}
+	</p>
+</div>
+<div class="arm_assembly_c_idioms_section">
+	<h2 class="arm_assembly">***************************</h2>
+	<h2 class="arm_assembly"> body of first for loop </h2>
+	<h2 class="arm_assembly">***************************</h2>
+	<p class="arm_assembly">
+		{% highlight nasm %}
+		{% endhighlight %}
+	</p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+</div>
+<div class="arm_assembly_c_idioms_section">
+	<h2 class="arm_assembly">***************************</h2>
+	<h2 class="arm_assembly"> body of first for loop, cont.</h2>
+	<h2 class="arm_assembly">***************************</h2>
+	<p class="arm_assembly">
+		{% highlight nasm %}
+		{% endhighlight %}
+	</p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+</div>
+<div class="arm_assembly_c_idioms_section">
+	<h2 class="arm_assembly">***************************</h2>
+	<h2 class="arm_assembly"> Initializing variables int sum and int j </h2>
+	<h2 class="arm_assembly">***************************</h2>
+
+	<p class="arm_assembly">
+		{% highlight nasm %}
+		{% endhighlight %}
+	</p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+</div>
+<div class="arm_assembly_c_idioms_section">
+	<h2 class="arm_assembly">***************************</h2>
+	<h2 class="arm_assembly"> Evaluating expression of the conditional for the second for loop </h2>
+	<h2 class="arm_assembly">***************************</h2>
+	
+	<p class="arm_assembly">
+		{% highlight nasm %}
+		{% endhighlight %}
+	</p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+</div>
+<div class="arm_assembly_c_idioms_section">
+	<h2 class="arm_assembly">***************************</h2>
+	<h2 class="arm_assembly"> Adding value of array element arr[i] to accumulator variable sum</h2>
+	<h2 class="arm_assembly">***************************</h2>
+	<p class="arm_assembly">
+		{% highlight nasm %}
+		{% endhighlight %}
+	</p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+</div>
+<div class="arm_assembly_c_idioms_section">
+	<h2 class="arm_assembly">***************************</h2>
+	<h2 class="arm_assembly"> Incrementing value of counter variable int j </h2>
+	<h2 class="arm_assembly">***************************</h2>
+	
+	<p class="arm_assembly">
+		{% highlight nasm %}
+		{% endhighlight %}
+	</p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+</div>
+<div class="arm_assembly_c_idioms_section">
+	<h2 class="arm_assembly">***************************</h2>
+	<p class="arm_assembly">
+		{% highlight nasm %}
+		{% endhighlight %}
+	</p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+</div>
+<div class="arm_assembly_c_idioms_section">
+	<h2 class="arm_assembly">***************************</h2>
+	<h2 class="arm_assembly"> printf() </h2>
+	<h2 class="arm_assembly">***************************</h2>
+
+	<p class="arm_assembly">
+		{% highlight nasm %}
+		{% endhighlight %}
+	</p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+</div>
+<div class="arm_assembly_c_idioms_section">
+	<h2 class="arm_assembly">***************************</h2>
+	<h2 class="arm_assembly"> free() </h2>
+	<h2 class="arm_assembly">***************************</h2>
+	<p class="arm_assembly">
+		{% highlight nasm %}
+		{% endhighlight %}
+	</p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+</div>
+<div class="arm_assembly_c_idioms_section">
+	<h2 class="arm_assembly">***************************</h2>
+	<h2 class="arm_assembly"> Miscellaneous tasks </h2>
+	<h2 class="arm_assembly">***************************</h2>
+	<p class="arm_assembly"> Okay, we're almost at the end of our program now... let's perform our last few housekeeping tasks.</p>
+	<p class="arm_assembly">
+		{% highlight nasm %}
+		{% endhighlight %}
+	</p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> </p>
+	<div class="arm_stack_frame">
+		<h3 class=""> Current Stack Frame </h3>
+		<p class="arm_assembly"><pre> sp 	->			{r7}</pre> </p>
+		<p class="arm_assembly"><pre> 				{lr}</pre> </p>
+	</div>
+	<p class="arm_assembly"> WOW WHAT AN ADVENTURE</p>
+	<p class="arm_assembly"> DID YOU HAVE FUN?!</p>
+	<p class="arm_assembly"> Well, I had fun. That was a journey. I'm glad we made it out alive.</p>
+</div>
+
+<div class="arm_assembly_c_idioms_section">
+	<h2 class="arm_assembly">***************************</h2>
+	<h2 class="arm_assembly"> Next steps... </h2>
+	<h2 class="arm_assembly">***************************</h2>
+	<p class="arm_assembly"> Okay, so we've learned some idioms... let's see if we can find some à la Waldo in a different binary.</p>
+	<p class="arm_assembly"> Below is the disassembly for a different ARM binary, that was compiled from a different C program that I wrote, that implements similar functionality but with additional complexity.</p>
+	<p class="arm_assembly"> See if you can find Waldo in this binary...</p>
+	<p class="arm_assembly"> Did you find the C idioms? Do you want a hint? Do you want me to just tell you? Did you even make it this far or did you just scroll through all the text above and now you're startled that I've called you out so abruptly? </p>
+	<p class="arm_assembly"> Well, if you want to see the original C source code, just click the link below and enter your credit card information and pay the small fee of $49.99 + the cost of shipping and handling...</p>
+	<p class="arm_assembly"> Just kidding, just click the button to the right of the screen.</p>
+	<p class="arm_assembly"> </p>
+	<p class="arm_assembly"> <button> Show me the MONEY </button></p>
+</div>
+
+

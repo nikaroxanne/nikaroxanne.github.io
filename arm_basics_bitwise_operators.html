@@ -1,14 +1,11 @@
 ---
 layout: page 
 permalink: /projects/reverseEngineeringFirmware/arm_assembly_c_idioms/arm_basics_bitwise_operators
-c_source: arm_assembly_c_idioms/bitwise_operators/bitwise_operators.c
+c_source: arm_assembly_c_idioms/bitwise_operators/bitwise_operators_new.c
 arm_source: arm_assembly_c_idioms/bitwise_operators/dis_bitwise_operators_O0.txt
-c_max_and: arm_assembly_c_idioms/bitwise_operators/bitwise_operators_max_and.c
-arm_max_and: arm_assembly_c_idioms/bitwise_operators/dis_bitwise_operators_max_and.txt
-c_max_or: arm_assembly_c_idioms/bitwise_operators/bitwise_operators_max_or.c
-arm_max_or: arm_assembly_c_idioms/bitwise_operators/dis_bitwise_operators_max_or.txt
-c_max_xor: arm_assembly_c_idioms/bitwise_operators/bitwise_operators_max_xor.c
-arm_max_xor: arm_assembly_c_idioms/bitwise_operators/dis_bitwise_operators_max_xor.txt
+c_max_and: arm_assembly_c_idioms/bitwise_operators/bitwise_operators_and.c
+c_max_or: arm_assembly_c_idioms/bitwise_operators/bitwise_operators_or.c
+c_max_xor: arm_assembly_c_idioms/bitwise_operators/bitwise_operators_xor.c
 ---
 
 
@@ -34,11 +31,6 @@ arm_max_xor: arm_assembly_c_idioms/bitwise_operators/dis_bitwise_operators_max_x
 			{% endif %}
 		</div>
 		<div class="col-sm-12 col-m-12 col-6">
-			{% if page.arm_source %}
-				{% highlight nasm linenos %}
-					{% include {{ page.arm_source }} %}
-				{% endhighlight %}
-			{% endif %}
 		</div>
 	</div>
 	<div class="arm-assembly-row">
@@ -50,11 +42,6 @@ arm_max_xor: arm_assembly_c_idioms/bitwise_operators/dis_bitwise_operators_max_x
 			{% endif %}
 		</div>
 		<div class="col-sm-12 col-m-12 col-6">
-			{% if page.arm_max_or %}
-				{% highlight nasm linenos %}
-					{% include {{ page.arm_max_or }} %}
-				{% endhighlight %}
-			{% endif %}
 		</div>
 	</div>
 	<div class="arm-assembly-row">
@@ -66,11 +53,6 @@ arm_max_xor: arm_assembly_c_idioms/bitwise_operators/dis_bitwise_operators_max_x
 			{% endif %}
 		</div>
 		<div class="col-sm-12 col-m-12 col-6">
-			{% if page.arm_max_xor %}
-				{% highlight nasm linenos %}
-					{% include {{ page.arm_max_xor }} %}
-				{% endhighlight %}
-			{% endif %}
 		</div>
 	</div>
 	<div class="arm-assembly-row">
@@ -82,11 +64,6 @@ arm_max_xor: arm_assembly_c_idioms/bitwise_operators/dis_bitwise_operators_max_x
 			{% endif %}
 		</div>
 		<div class="col-sm-12 col-m-12 col-6">
-			{% if page.arm_max_and %}
-				{% highlight nasm linenos %}
-					{% include {{ page.arm_max_and }} %}
-				{% endhighlight %}
-			{% endif %}
 		</div>
 	</div>
 	<h2 class="arm_assembly">***************************</h2>
