@@ -2,7 +2,6 @@
 1d_arrays_O0:     file format elf32-littlearm
 
 Disassembly of section .text:
-
 000005b4 <main>:
  5b4:	b580      	push	{r7, lr}
  5b6:	b086      	sub	sp, #24

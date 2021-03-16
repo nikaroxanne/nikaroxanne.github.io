@@ -3,6 +3,7 @@ layout: page
 permalink: /projects/reverseEngineeringFirmware/arm_assembly_c_idioms/arm_basics_1d_arrays
 c_source: arm_assembly_c_idioms/1d_arrays/1d_arrays.c
 arm_source: arm_assembly_c_idioms/1d_arrays/dis_1d_arrays_O0.txt
+arm_notes : arm_assembly_c_idioms/1d_arrays/1d_arrays_notes_final.html
 ---
 
 
@@ -35,7 +36,9 @@ arm_source: arm_assembly_c_idioms/1d_arrays/dis_1d_arrays_O0.txt
 		</div>
 	</div>
 	<div class="arm_assembly_c_idioms_section">
-		<p class="arm_assembly"></p>
+		{% if page.arm_notes %}
+			{% include {{ page.arm_notes }} %}
+		{% endif %}
 	</div>
 	<h2 class="arm_assembly">***************************</h2>
 </div>
