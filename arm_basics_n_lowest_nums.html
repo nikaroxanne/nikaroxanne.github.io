@@ -3,6 +3,9 @@ layout: page
 permalink: /projects/reverseEngineeringFirmware/arm_assembly_c_idioms/arm_basics_n_lowest_nums
 c_source: arm_assembly_c_idioms/n_lowest_nums/n_lowest_nums.c
 c_documentation: arm_assembly_c_idioms/n_lowest_nums/n_lowest_nums_documentation.c
+arm_source : arm_assembly_c_idioms/n_lowest_nums/dis_n_lowest_nums_O0.txt
+arm_notes : arm_assembly_c_idioms/n_lowest_nums/n_lowest_nums_notes.html
+
 ---
 
 
@@ -29,14 +32,15 @@ c_documentation: arm_assembly_c_idioms/n_lowest_nums/n_lowest_nums_documentation
 		<div class="col-sm-12 col-m-12 col-6">
 			{% if page.c_documentation %}
 				{% highlight c linenos %}
-					{% include {{ page.c_documentation }} %}
+					{% include {{ page.arm_source }} %}
 				{% endhighlight %}
 			{% endif %}
 		</div>
 	</div>
-	<div class="arm_assembly_terminal">
-		<div class="arm_assembly_scanline">
-		</div>
+	<div class="arm_assembly_c_idioms_section">
+		{% if page.arm_notes %}
+			{% include {{ page.arm_notes }} %}
+		{% endif %}
 	</div>
 	<h2 class="arm_assembly">***************************</h2>
 </div>

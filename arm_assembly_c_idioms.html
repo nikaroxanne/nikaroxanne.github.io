@@ -87,21 +87,21 @@ permalink: /projects/reverseEngineeringFirmware/arm_assembly_c_idioms
 		<p class="arm_assembly">Github repo with demo scripts: <a class="arm_assembly"  target="_blank" rel="noopener noreferrer" href="https://github.com/nikaroxanne/arm_assembly_c_idioms">ARM_assembly_c_idioms</a></p>
 		<p class="arm_assembly">Since the disassembly of a program can also vary depending on compiler optimizations used at compile time, I have included five files produced as output from assembly and/or disassembly of the same program:</p>
 		<p class="arm_assembly">For all programs in this repo, let example.c represent a member of that set, and let the following five files be derived from that input example.c source</p>
-		<ol class="arm_assembly">
+		<p class="arm_assembly"> For the sake of simplicity, the write ups in the C Idioms section will all use the disassembly of the compiled program with the default -O0 optimization. The executables and disassembled ARM assembly for optimization levels O1-O3 are available in the aforementioned GitHub repo. Feel free to peruse them at your leisure.</p>
 			<li class="arm_assembly">example_O0
 				<p class="arm_assembly">the compiled ARM binary executable file compiled using gcc with -O0 flag, from source example.c; gcc {$FLAGS} example.c</p>
 			</li>
-			<li class="arm_assembly"> example_O1.s 
-				<p class="arm_assembly"> the assembly file after O1 optimization; gcc -S -O1 {$FLAGS} example.c </p> 
+			<li class="arm_assembly"> example_O1 
+				<p class="arm_assembly">the compiled ARM binary executable file compiled using gcc with -O1 optimization, from source example.c; gcc {$FLAGS} -O1 example.c</p>
 			</li>
-			<li class="arm_assembly"> example_O2.s
-				<p class="arm_assembly"> the assembly file after O2 optimization; gcc -S -O2 {$FLAGS} example.c</p>
+			<li class="arm_assembly"> example_O2
+				<p class="arm_assembly">the compiled ARM binary executable file compiled using gcc with -O2 optimization, from source example.c; gcc {$FLAGS} -O2 example.c</p>
 			</li>
-			<li class="arm_assembly">example_O3.s, 
-				<p class="arm_assembly"> the assembly file after O3 optimization; gcc -S -O3 {$FLAGS} example.c</p>
+			<li class="arm_assembly">example_O3, 
+				<p class="arm_assembly">the compiled ARM binary executable file compiled using gcc with -O3 optimization, from source example.c; gcc {$FLAGS} -O3 example.c</p>
 			</li>
-			<li class="arm_assembly">example_dis.txt, 
-				<p class="arm_assembly">the disassembled binary; objdump -d example_O0 </p>
+			<li class="arm_assembly">dis_example_O0.txt, 
+				<p class="arm_assembly">the disassembled binary compiled with default -O0 optimization; objdump -d example_O0 </p>
 			</li>
 		</ol>
 		<p class="arm_assembly">For consistency, I used objdump for disassembly for each of these programs. This also provides another view of what you might encounter if you are reverse engineering a compiled ARM binary.</p>
@@ -112,10 +112,11 @@ permalink: /projects/reverseEngineeringFirmware/arm_assembly_c_idioms
 		<h2 class="arm_assembly">*************</h2>
 		<h2 class="arm_assembly">C Idioms </h2>
 		<h2 class="arm_assembly">*************</h2>
-		<p class="arm_assembly"><a class="arm_assembly" href="{{ page.url }}/arm_basics_sum_and_diff.html">Sum and Difference</a></p>
+		<p class="arm_assembly"> All pages in the C Idioms section use the following format: present the C source code and a relevant excerpt of the disassembled binary, compiled from the C source file with default -O0 optimization. I have not included the entire disassembly output, for the sake of not overwhelming the reader with an even larger wall of text. On each page, the C source code will be shown in a column to the left and the relevant ARM assembly will be in a column to the right — unless you are viewing this on mobile, in which case, the columns will be stacked and the C source will be in a column above the ARM assembly. The entire disassembly file is available in the GitHub repo linked above. </p> 
+		<p class="arm_assembly"> Each page features as verbose a walkthrough of the disassembly as I determined was relevant to understanding the inner workings of the ARM assembly and its relationship to its C source equivalent. In most cases, I go line by line and explain what each ARM instruction is doing and how it relates to a specific C idiom. In some cases, the later walkthroughs specifically, I only highlight the most important instructions as they pertain to the idioms in question. At the end of each walkthrough, I have included a section to ~*apply what you’ve learned*~ where I present the disassembled output for a different but related C program, as an exercise for the reader. You can work through the ARM assembly and ~*reverse engineer*~ the original C program. To check if you have the right idea, the corresponding ARM disassembly is available to view by toggling the button at the bottom of that section.</p> 
+		<p class="arm_assembly"> If you have questions, feel free to reach out on Twitter or by email (both are linked in the footer of this site). </p>
 		<p class="arm_assembly"><a class="arm_assembly" href="{{ page.url }}/arm_basics_1d_arrays.html">One-Dimensional Arrays</a></p>
-		<p class="arm_assembly"><a class="arm_assembly" href="{{ page.url }}/arm_basics_n_lowest_nums.html">N Lowest Numbers in a List</a></p>
-		<p class="arm_assembly"><a class="arm_assembly" href="{{ page.url }}/arm_basics_variadic_functions.html">Variadic Functions</a></p>
 		<p class="arm_assembly"><a class="arm_assembly" href="{{ page.url }}/arm_basics_bitwise_operators.html">Bitwise Operators</a></p>
+		<p class="arm_assembly"><a class="arm_assembly" href="{{ page.url }}/arm_basics_n_lowest_nums.html">N Lowest Numbers in a List</a></p>
 	</div>
 </div>

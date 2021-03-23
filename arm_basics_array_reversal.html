@@ -1,6 +1,6 @@
 ---
 layout: page 
-permalink: /projects/reverseEngineeringFirmware/arm_assembly_c_idioms/arm_basics_sum_and_diff
+permalink: /projects/reverseEngineeringFirmware/arm_assembly_c_idioms/arm_basics_array_reversal
 c_source: arm_assembly_c_idioms/array_reversal/array_reversal.c
 arm_source: arm_assembly_c_idioms/array_reversal/dis_array_reversal_O0.txt
 ---
@@ -17,16 +17,16 @@ arm_source: arm_assembly_c_idioms/array_reversal/dis_array_reversal_O0.txt
 	<h2 class="arm_assembly">***************************</h2>
 	<h2 class="arm_assembly"> ARM Assembly Idioms and Constructs </h2>
 	<h2 class="arm_assembly">***************************</h2>
-	<h3 class="arm_assembly"> sum_and_difference.c</h2>
-	<div class="arm_basics row">
-		<div class="col-sm-6 col-m-6 col-6">
+	<h3 class="arm_assembly"> array_reversal.c</h2>
+	<div class="arm-assembly-row">
+		<div class="col-sm-12 col-m-12 col-6">
 			{% if page.c_source %}
 				{% highlight c linenos %}
 					{% include {{ page.c_source }} %}
 				{% endhighlight %}
 			{% endif %}
 		</div>
-		<div class="col-sm-6 col-m-6 col-6">
+		<div class="col-sm-12 col-m-12 col-6">
 			{% if page.arm_source %}
 				{% highlight nasm linenos %}
 					{% include {{ page.arm_source }} %}
@@ -45,9 +45,9 @@ arm_source: arm_assembly_c_idioms/array_reversal/dis_array_reversal_O0.txt
 	<h2 class="arm_assembly">***************************</h2>
 	<p class="arm_assembly">I refer the reader to two exceptional tutorials online:</p>
 	<div class="arm_assembly_c_idioms_section">
-		<p class="arm_assembly">Azeria Labs: <a href= “https://azeria-labs.com/writing-arm_assembly-part-1/>Introduction to ARM Assembly Basics</a></p>
+		<p class="arm_assembly">Azeria Labs: <a target="_blank" rel="noopener noreferrer" href=“https://azeria-labs.com/writing-arm_assembly-part-1/">Introduction to ARM Assembly Basics</a></p>
 	</div>	
 	<div class="arm_assembly_c_idioms_section">
-		<p class="arm_assembly">Think in Geek <a href="https://thinkingeek.com/arm-assembler-raspberry-pi/">ARM Assembler in Raspberry Pi</a></p>
+		<p class="arm_assembly">Think in Geek <a target="_blank" rel="noopener noreferrer" href="https://thinkingeek.com/arm-assembler-raspberry-pi/">ARM Assembler in Raspberry Pi</a></p>
 	</div>
 </div>
