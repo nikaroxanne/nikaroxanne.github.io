@@ -1,0 +1,179 @@
+
+bitwise_operators:     file format elf32-littlearm
+
+0000055c <and_val>:
+ 55c:	b480      	push	{r7}
+ 55e:	b083      	sub	sp, #12
+ 560:	af00      	add	r7, sp, #0
+ 562:	6078      	str	r0, [r7, #4]
+ 564:	6039      	str	r1, [r7, #0]
+ 566:	687a      	ldr	r2, [r7, #4]
+ 568:	683b      	ldr	r3, [r7, #0]
+ 56a:	4013      	ands	r3, r2
+ 56c:	4618      	mov	r0, r3
+ 56e:	370c      	adds	r7, #12
+ 570:	46bd      	mov	sp, r7
+ 572:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 576:	4770      	bx	lr
+
+00000578 <or_val>:
+ 578:	b480      	push	{r7}
+ 57a:	b083      	sub	sp, #12
+ 57c:	af00      	add	r7, sp, #0
+ 57e:	6078      	str	r0, [r7, #4]
+ 580:	6039      	str	r1, [r7, #0]
+ 582:	687a      	ldr	r2, [r7, #4]
+ 584:	683b      	ldr	r3, [r7, #0]
+ 586:	4313      	orrs	r3, r2
+ 588:	4618      	mov	r0, r3
+ 58a:	370c      	adds	r7, #12
+ 58c:	46bd      	mov	sp, r7
+ 58e:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 592:	4770      	bx	lr
+
+00000594 <xor_val>:
+ 594:	b480      	push	{r7}
+ 596:	b083      	sub	sp, #12
+ 598:	af00      	add	r7, sp, #0
+ 59a:	6078      	str	r0, [r7, #4]
+ 59c:	6039      	str	r1, [r7, #0]
+ 59e:	687a      	ldr	r2, [r7, #4]
+ 5a0:	683b      	ldr	r3, [r7, #0]
+ 5a2:	4053      	eors	r3, r2
+ 5a4:	4618      	mov	r0, r3
+ 5a6:	370c      	adds	r7, #12
+ 5a8:	46bd      	mov	sp, r7
+ 5aa:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 5ae:	4770      	bx	lr
+
+000005b0 <max_val>:
+ 5b0:	b580      	push	{r7, lr}
+ 5b2:	b086      	sub	sp, #24
+ 5b4:	af00      	add	r7, sp, #0
+ 5b6:	60f8      	str	r0, [r7, #12]
+ 5b8:	60b9      	str	r1, [r7, #8]
+ 5ba:	607a      	str	r2, [r7, #4]
+ 5bc:	603b      	str	r3, [r7, #0]
+ 5be:	e01d      	b.n	5fc <max_val+0x4c>
+ 5c0:	68bb      	ldr	r3, [r7, #8]
+ 5c2:	617b      	str	r3, [r7, #20]
+ 5c4:	e013      	b.n	5ee <max_val+0x3e>
+ 5c6:	6a3b      	ldr	r3, [r7, #32]
+ 5c8:	6979      	ldr	r1, [r7, #20]
+ 5ca:	68f8      	ldr	r0, [r7, #12]
+ 5cc:	4798      	blx	r3
+ 5ce:	6138      	str	r0, [r7, #16]
+ 5d0:	693a      	ldr	r2, [r7, #16]
+ 5d2:	687b      	ldr	r3, [r7, #4]
+ 5d4:	429a      	cmp	r2, r3
+ 5d6:	da05      	bge.n	5e4 <max_val+0x34>
+ 5d8:	693a      	ldr	r2, [r7, #16]
+ 5da:	683b      	ldr	r3, [r7, #0]
+ 5dc:	429a      	cmp	r2, r3
+ 5de:	dd01      	ble.n	5e4 <max_val+0x34>
+ 5e0:	693b      	ldr	r3, [r7, #16]
+ 5e2:	e000      	b.n	5e6 <max_val+0x36>
+ 5e4:	683b      	ldr	r3, [r7, #0]
+ 5e6:	603b      	str	r3, [r7, #0]
+ 5e8:	697b      	ldr	r3, [r7, #20]
+ 5ea:	3b01      	subs	r3, #1
+ 5ec:	617b      	str	r3, [r7, #20]
+ 5ee:	697a      	ldr	r2, [r7, #20]
+ 5f0:	68fb      	ldr	r3, [r7, #12]
+ 5f2:	429a      	cmp	r2, r3
+ 5f4:	dce7      	bgt.n	5c6 <max_val+0x16>
+ 5f6:	68fb      	ldr	r3, [r7, #12]
+ 5f8:	3301      	adds	r3, #1
+ 5fa:	60fb      	str	r3, [r7, #12]
+ 5fc:	68fa      	ldr	r2, [r7, #12]
+ 5fe:	68bb      	ldr	r3, [r7, #8]
+ 600:	429a      	cmp	r2, r3
+ 602:	dbdd      	blt.n	5c0 <max_val+0x10>
+ 604:	683b      	ldr	r3, [r7, #0]
+ 606:	4618      	mov	r0, r3
+ 608:	3718      	adds	r7, #24
+ 60a:	46bd      	mov	sp, r7
+ 60c:	bd80      	pop	{r7, pc}
+
+0000060e <calculate_the_maximum>:
+ 60e:	b580      	push	{r7, lr}
+ 610:	b088      	sub	sp, #32
+ 612:	af02      	add	r7, sp, #8
+ 614:	6078      	str	r0, [r7, #4]
+ 616:	6039      	str	r1, [r7, #0]
+ 618:	4b19      	ldr	r3, [pc, #100]	; (680 <calculate_the_maximum+0x72>)
+ 61a:	447b      	add	r3, pc
+ 61c:	9300      	str	r3, [sp, #0]
+ 61e:	2300      	movs	r3, #0
+ 620:	683a      	ldr	r2, [r7, #0]
+ 622:	6879      	ldr	r1, [r7, #4]
+ 624:	2001      	movs	r0, #1
+ 626:	f7ff ffc3 	bl	5b0 <max_val>
+ 62a:	6178      	str	r0, [r7, #20]
+ 62c:	4b15      	ldr	r3, [pc, #84]	; (684 <calculate_the_maximum+0x76>)
+ 62e:	447b      	add	r3, pc
+ 630:	9300      	str	r3, [sp, #0]
+ 632:	2300      	movs	r3, #0
+ 634:	683a      	ldr	r2, [r7, #0]
+ 636:	6879      	ldr	r1, [r7, #4]
+ 638:	2001      	movs	r0, #1
+ 63a:	f7ff ffb9 	bl	5b0 <max_val>
+ 63e:	6138      	str	r0, [r7, #16]
+ 640:	4b11      	ldr	r3, [pc, #68]	; (688 <calculate_the_maximum+0x7a>)
+ 642:	447b      	add	r3, pc
+ 644:	9300      	str	r3, [sp, #0]
+ 646:	2300      	movs	r3, #0
+ 648:	683a      	ldr	r2, [r7, #0]
+ 64a:	6879      	ldr	r1, [r7, #4]
+ 64c:	2001      	movs	r0, #1
+ 64e:	f7ff ffaf 	bl	5b0 <max_val>
+ 652:	60f8      	str	r0, [r7, #12]
+ 654:	6979      	ldr	r1, [r7, #20]
+ 656:	4b0d      	ldr	r3, [pc, #52]	; (68c <calculate_the_maximum+0x7e>)
+ 658:	447b      	add	r3, pc
+ 65a:	4618      	mov	r0, r3
+ 65c:	f7ff eed8 	blx	410 <printf@plt>
+ 660:	6939      	ldr	r1, [r7, #16]
+ 662:	4b0b      	ldr	r3, [pc, #44]	; (690 <calculate_the_maximum+0x82>)
+ 664:	447b      	add	r3, pc
+ 666:	4618      	mov	r0, r3
+ 668:	f7ff eed2 	blx	410 <printf@plt>
+ 66c:	68f9      	ldr	r1, [r7, #12]
+ 66e:	4b09      	ldr	r3, [pc, #36]	; (694 <calculate_the_maximum+0x86>)
+ 670:	447b      	add	r3, pc
+ 672:	4618      	mov	r0, r3
+ 674:	f7ff eecc 	blx	410 <printf@plt>
+ 678:	bf00      	nop
+ 67a:	3718      	adds	r7, #24
+ 67c:	46bd      	mov	sp, r7
+ 67e:	bd80      	pop	{r7, pc}
+ 680:	ffffff3f 	.word	0xffffff3f
+ 684:	ffffff47 	.word	0xffffff47
+ 688:	ffffff4f 	.word	0xffffff4f
+ 68c:	0000014c 	.word	0x0000014c
+ 690:	00000140 	.word	0x00000140
+ 694:	00000134 	.word	0x00000134
+
+00000698 <main>:
+ 698:	b580      	push	{r7, lr}
+ 69a:	b082      	sub	sp, #8
+ 69c:	af00      	add	r7, sp, #0
+ 69e:	463a      	mov	r2, r7
+ 6a0:	1d3b      	adds	r3, r7, #4
+ 6a2:	4619      	mov	r1, r3
+ 6a4:	4b07      	ldr	r3, [pc, #28]	; (6c4 <main+0x2c>)
+ 6a6:	447b      	add	r3, pc
+ 6a8:	4618      	mov	r0, r3
+ 6aa:	f7ff eec4 	blx	434 <__isoc99_scanf@plt>
+ 6ae:	687b      	ldr	r3, [r7, #4]
+ 6b0:	683a      	ldr	r2, [r7, #0]
+ 6b2:	4611      	mov	r1, r2
+ 6b4:	4618      	mov	r0, r3
+ 6b6:	f7ff ffaa 	bl	60e <calculate_the_maximum>
+ 6ba:	2300      	movs	r3, #0
+ 6bc:	4618      	mov	r0, r3
+ 6be:	3708      	adds	r7, #8
+ 6c0:	46bd      	mov	sp, r7
+ 6c2:	bd80      	pop	{r7, pc}
+ 6c4:	00000106 	.word	0x00000106
+

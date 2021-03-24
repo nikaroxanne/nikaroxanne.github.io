@@ -1,0 +1,85 @@
+
+bitwise_operators:     file format elf32-littlearm
+
+0000060e <calculate_the_maximum>:
+ 60e:	b580      	push	{r7, lr}
+ 610:	b088      	sub	sp, #32
+ 612:	af02      	add	r7, sp, #8
+ 614:	6078      	str	r0, [r7, #4]
+ 616:	6039      	str	r1, [r7, #0]
+ 618:	4b19      	ldr	r3, [pc, #100]	; (680 <calculate_the_maximum+0x72>)
+ 61a:	447b      	add	r3, pc
+ 61c:	9300      	str	r3, [sp, #0]
+ 61e:	2300      	movs	r3, #0
+ 620:	683a      	ldr	r2, [r7, #0]
+ 622:	6879      	ldr	r1, [r7, #4]
+ 624:	2001      	movs	r0, #1
+ 626:	f7ff ffc3 	bl	5b0 <max_val>
+ 62a:	6178      	str	r0, [r7, #20]
+ 62c:	4b15      	ldr	r3, [pc, #84]	; (684 <calculate_the_maximum+0x76>)
+ 62e:	447b      	add	r3, pc
+ 630:	9300      	str	r3, [sp, #0]
+ 632:	2300      	movs	r3, #0
+ 634:	683a      	ldr	r2, [r7, #0]
+ 636:	6879      	ldr	r1, [r7, #4]
+ 638:	2001      	movs	r0, #1
+ 63a:	f7ff ffb9 	bl	5b0 <max_val>
+ 63e:	6138      	str	r0, [r7, #16]
+ 640:	4b11      	ldr	r3, [pc, #68]	; (688 <calculate_the_maximum+0x7a>)
+ 642:	447b      	add	r3, pc
+ 644:	9300      	str	r3, [sp, #0]
+ 646:	2300      	movs	r3, #0
+ 648:	683a      	ldr	r2, [r7, #0]
+ 64a:	6879      	ldr	r1, [r7, #4]
+ 64c:	2001      	movs	r0, #1
+ 64e:	f7ff ffaf 	bl	5b0 <max_val>
+ 652:	60f8      	str	r0, [r7, #12]
+ 654:	6979      	ldr	r1, [r7, #20]
+ 656:	4b0d      	ldr	r3, [pc, #52]	; (68c <calculate_the_maximum+0x7e>)
+ 658:	447b      	add	r3, pc
+ 65a:	4618      	mov	r0, r3
+ 65c:	f7ff eed8 	blx	410 <printf@plt>
+ 660:	6939      	ldr	r1, [r7, #16]
+ 662:	4b0b      	ldr	r3, [pc, #44]	; (690 <calculate_the_maximum+0x82>)
+ 664:	447b      	add	r3, pc
+ 666:	4618      	mov	r0, r3
+ 668:	f7ff eed2 	blx	410 <printf@plt>
+ 66c:	68f9      	ldr	r1, [r7, #12]
+ 66e:	4b09      	ldr	r3, [pc, #36]	; (694 <calculate_the_maximum+0x86>)
+ 670:	447b      	add	r3, pc
+ 672:	4618      	mov	r0, r3
+ 674:	f7ff eecc 	blx	410 <printf@plt>
+ 678:	bf00      	nop
+ 67a:	3718      	adds	r7, #24
+ 67c:	46bd      	mov	sp, r7
+ 67e:	bd80      	pop	{r7, pc}
+ 680:	ffffff3f 	.word	0xffffff3f
+ 684:	ffffff47 	.word	0xffffff47
+ 688:	ffffff4f 	.word	0xffffff4f
+ 68c:	0000014c 	.word	0x0000014c
+ 690:	00000140 	.word	0x00000140
+ 694:	00000134 	.word	0x00000134
+
+00000698 <main>:
+ 698:	b580      	push	{r7, lr}
+ 69a:	b082      	sub	sp, #8
+ 69c:	af00      	add	r7, sp, #0
+ 69e:	463a      	mov	r2, r7
+ 6a0:	1d3b      	adds	r3, r7, #4
+ 6a2:	4619      	mov	r1, r3
+ 6a4:	4b07      	ldr	r3, [pc, #28]	; (6c4 <main+0x2c>)
+ 6a6:	447b      	add	r3, pc
+ 6a8:	4618      	mov	r0, r3
+ 6aa:	f7ff eec4 	blx	434 <__isoc99_scanf@plt>
+ 6ae:	687b      	ldr	r3, [r7, #4]
+ 6b0:	683a      	ldr	r2, [r7, #0]
+ 6b2:	4611      	mov	r1, r2
+ 6b4:	4618      	mov	r0, r3
+ 6b6:	f7ff ffaa 	bl	60e <calculate_the_maximum>
+ 6ba:	2300      	movs	r3, #0
+ 6bc:	4618      	mov	r0, r3
+ 6be:	3708      	adds	r7, #8
+ 6c0:	46bd      	mov	sp, r7
+ 6c2:	bd80      	pop	{r7, pc}
+ 6c4:	00000106 	.word	0x00000106
+

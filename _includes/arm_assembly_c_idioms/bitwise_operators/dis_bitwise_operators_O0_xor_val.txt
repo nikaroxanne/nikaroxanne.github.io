@@ -1,0 +1,18 @@
+
+bitwise_operators:     file format elf32-littlearm
+
+00000594 <xor_val>:
+ 594:	b480      	push	{r7}
+ 596:	b083      	sub	sp, #12
+ 598:	af00      	add	r7, sp, #0
+ 59a:	6078      	str	r0, [r7, #4]
+ 59c:	6039      	str	r1, [r7, #0]
+ 59e:	687a      	ldr	r2, [r7, #4]
+ 5a0:	683b      	ldr	r3, [r7, #0]
+ 5a2:	4053      	eors	r3, r2
+ 5a4:	4618      	mov	r0, r3
+ 5a6:	370c      	adds	r7, #12
+ 5a8:	46bd      	mov	sp, r7
+ 5aa:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 5ae:	4770      	bx	lr
+
