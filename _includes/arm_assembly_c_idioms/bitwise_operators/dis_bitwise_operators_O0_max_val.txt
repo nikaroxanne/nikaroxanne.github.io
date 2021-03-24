@@ -1,0 +1,52 @@
+
+bitwise_operators:     file format elf32-littlearm
+
+000005b0 <max_val>:
+ 5b0:	b580      	push	{r7, lr}
+ 5b2:	b086      	sub	sp, #24
+ 5b4:	af00      	add	r7, sp, #0
+ 5b6:	60f8      	str	r0, [r7, #12]
+ 5b8:	60b9      	str	r1, [r7, #8]
+ 5ba:	607a      	str	r2, [r7, #4]
+ 5bc:	603b      	str	r3, [r7, #0]
+ 5be:	e01d      	b.n	5fc <max_val+0x4c>
+ 5c0:	68bb      	ldr	r3, [r7, #8]
+ 5c2:	617b      	str	r3, [r7, #20]
+ 5c4:	e013      	b.n	5ee <max_val+0x3e>
+ 5c6:	6a3b      	ldr	r3, [r7, #32]
+ 5c8:	6979      	ldr	r1, [r7, #20]
+ 5ca:	68f8      	ldr	r0, [r7, #12]
+ 5cc:	4798      	blx	r3
+ 5ce:	6138      	str	r0, [r7, #16]
+ 5d0:	693a      	ldr	r2, [r7, #16]
+ 5d2:	687b      	ldr	r3, [r7, #4]
+ 5d4:	429a      	cmp	r2, r3
+ 5d6:	da05      	bge.n	5e4 <max_val+0x34>
+ 5d8:	693a      	ldr	r2, [r7, #16]
+ 5da:	683b      	ldr	r3, [r7, #0]
+ 5dc:	429a      	cmp	r2, r3
+ 5de:	dd01      	ble.n	5e4 <max_val+0x34>
+ 5e0:	693b      	ldr	r3, [r7, #16]
+ 5e2:	e000      	b.n	5e6 <max_val+0x36>
+ 5e4:	683b      	ldr	r3, [r7, #0]
+ 5e6:	603b      	str	r3, [r7, #0]
+ 5e8:	697b      	ldr	r3, [r7, #20]
+ 5ea:	3b01      	subs	r3, #1
+ 5ec:	617b      	str	r3, [r7, #20]
+ 5ee:	697a      	ldr	r2, [r7, #20]
+ 5f0:	68fb      	ldr	r3, [r7, #12]
+ 5f2:	429a      	cmp	r2, r3
+ 5f4:	dce7      	bgt.n	5c6 <max_val+0x16>
+ 5f6:	68fb      	ldr	r3, [r7, #12]
+ 5f8:	3301      	adds	r3, #1
+ 5fa:	60fb      	str	r3, [r7, #12]
+ 5fc:	68fa      	ldr	r2, [r7, #12]
+ 5fe:	68bb      	ldr	r3, [r7, #8]
+ 600:	429a      	cmp	r2, r3
+ 602:	dbdd      	blt.n	5c0 <max_val+0x10>
+ 604:	683b      	ldr	r3, [r7, #0]
+ 606:	4618      	mov	r0, r3
+ 608:	3718      	adds	r7, #24
+ 60a:	46bd      	mov	sp, r7
+ 60c:	bd80      	pop	{r7, pc}
+
